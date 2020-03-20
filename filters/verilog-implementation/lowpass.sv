@@ -40,11 +40,11 @@ module lowpass #( parameter L = 3 ) (
             // data[L-1] <= lowpassIn;
 
             // differnce equation
-            yn <= y1_coeff*y1 + y2_coeff*y2 + lowpassIn*xn + x1_coeff*x1 + x2_coeff*x2;
+            yn <= y1_coeff*y1 + y2_coeff*y2 + x0_coeff*lowpassIn + x1_coeff*x1 + x2_coeff*x2;
 
             // rotate buffer
             x2 <= x1;
-            x1 <= xn;
+            x1 <= lowpassIn;
             y2 <= y1;
             y1 <= yn;
 
