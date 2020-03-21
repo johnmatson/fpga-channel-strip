@@ -3,6 +3,7 @@ module lowpass #( parameter L = 3 ) (
                 input logic [15:0] lowpassIn,
                 output logic [31:0] lowpassOut2, // for testing only
                 output logic [15:0] lowpassOut3, // for testing only
+                output logic [31:0] lowpassOut4, // for testing only
                 output logic [15:0] lowpassOut);
 
     logic [15:0] data [L-1:0];
@@ -17,6 +18,7 @@ module lowpass #( parameter L = 3 ) (
     // buffer
     logic [31:0] y1;
     logic [31:0] y2;
+    logic [31:0] x0;
     logic [31:0] x1;
     logic [31:0] x2;
 
@@ -25,12 +27,15 @@ module lowpass #( parameter L = 3 ) (
 
     always_ff @ (posedge clk, negedge reset_n) begin
 
-        // reset buffer
+        // reset buffer & outputs
         if (~reset_n) begin
             y1 <= 0;
             y2 <= 0;
+            x0 <= 0;
             x1 <= 0;
             x2 <= 0;
+
+            yn <= '0;
         end
 
         else begin
@@ -39,18 +44,23 @@ module lowpass #( parameter L = 3 ) (
             //     data[i] <= data[i+1];
             // data[L-1] <= lowpassIn;
 
+            // 16 to 32 bit transfer with sign preservation
+            x0 <= { {16{lowpassIn[15]}}, lowpassIn };
+
             // differnce equation
-            yn <= y1_coeff*y1 + y2_coeff*y2 + x0_coeff*lowpassIn + x1_coeff*x1 + x2_coeff*x2;
+            yn <= y1_coeff*y1 + y2_coeff*y2 + x0_coeff*x0 + x1_coeff*x1 + x2_coeff*x2;
 
             // rotate buffer
             x2 <= x1;
-            x1 <= lowpassIn;
+            x1 <= x0;
             y2 <= y1;
             y1 <= yn;
 
             lowpassOut2 <= yn; // testing
 
             lowpassOut3 <= yn / 1024; // testing
+
+            lowpassOut4 <= x0_coeff*x0 + x1_coeff*x1; // testing
 
             // divide by 1024 (10 bits) & assign to output
             lowpassOut <= yn >>> 10;

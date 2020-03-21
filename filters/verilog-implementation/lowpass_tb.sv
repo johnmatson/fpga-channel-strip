@@ -5,8 +5,9 @@ module lowpass_tb;
     logic clk, reset_n;
     logic [15:0] lowpassIn;
     logic [15:0] lowpassOut;
-    logic [31:0] lowpassOut2;
-    logic [15:0] lowpassOut3;
+    logic [31:0] lowpassOut2; // test only
+    logic [15:0] lowpassOut3; // test only
+    logic [31:0] lowpassOut4; // test only
 
     lowpass dut_0 (.*);
 
@@ -15,14 +16,10 @@ module lowpass_tb;
         reset_n = 0;
 
         repeat(2) @(posedge clk);
-        //#416.66us;
-
-        reset_n = 1;
-
-        repeat(2) @(posedge clk);
-        //#416.66us;
 
         forever begin// (int i = 0; i<50; i++) begin
+            reset_n = 1;
+
             lowpassIn = 16'b0111111111111111;
 
             repeat(4) @(posedge clk);
@@ -39,6 +36,6 @@ module lowpass_tb;
     end
 
     always
-    #208.33us clk = ~clk;
+    #20.833333us clk = ~clk;
 
 endmodule
