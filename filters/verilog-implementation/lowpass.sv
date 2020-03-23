@@ -11,9 +11,9 @@ module lowpass #( parameter L = 3 ) (
     // coefficients
     logic [31:0] y1_coeff = 1.982*1024;
     logic [31:0] y2_coeff = -0.982*1024;
-    logic [31:0] x0_coeff = 1*1024;
-    logic [31:0] x1_coeff = 2*1024;
-    logic [31:0] x2_coeff = 1*1024;
+    logic [31:0] x0_coeff = 1*0.991*1024;
+    logic [31:0] x1_coeff = 2*0.991*1024;
+    logic [31:0] x2_coeff = 1*0.991*1024;
 
     // buffer
     logic [31:0] y1;

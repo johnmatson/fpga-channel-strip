@@ -23,10 +23,10 @@ module lowpass_tb;
 
             lowpassIn = 16'b0111111111111111;
 
-/*
+
         forever begin// (int i = 0; i<50; i++) begin
             reset_n = 1;
-
+/*
             lowpassIn = 16'b0111111111111111;
 
             repeat(4) @(posedge clk);
@@ -34,7 +34,7 @@ module lowpass_tb;
             lowpassIn = 16'b1000000000000000;
 
             repeat(4) @(posedge clk);
-
+*/
             // 3kHz sine wave
             lowpassIn = 0;
             repeat(1) @(posedge clk);
@@ -71,7 +71,7 @@ module lowpass_tb;
             lowpassIn = 0;
         end
         //$stop;
-        */
+        
     end
 
     initial begin
