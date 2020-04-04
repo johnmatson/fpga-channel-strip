@@ -9,21 +9,21 @@ module lowpass #( parameter L = 3 ) (
     logic [15:0] data [L-1:0];
 
     // coefficients
-    logic [63:0] y1_coeff = 1.982*1024;
-    logic [63:0] y2_coeff = -0.982*1024;
-    logic [63:0] x0_coeff = 1*0.991*1024;
-    logic [63:0] x1_coeff = 2*0.991*1024;
-    logic [63:0] x2_coeff = 1*0.991*1024;
+    logic [127:0] y1_coeff = 1.8125*1024*1024*1024;
+    logic [127:0] y2_coeff = -0.828125*1024*1024*1024;
+    logic [127:0] x0_coeff = 1*0.9140625*1024*1024*1024;
+    logic [127:0] x1_coeff = -2*0.9140625*1024*1024*1024;
+    logic [127:0] x2_coeff = 1*0.9140625*1024*1024*1024;
 
     // buffer
-    logic [63:0] y1;
-    logic [63:0] y2;
-    logic [63:0] x0;
-    logic [63:0] x1;
-    logic [63:0] x2;
+    logic [127:0] y1;
+    logic [127:0] y2;
+    logic [127:0] x0;
+    logic [127:0] x1;
+    logic [127:0] x2;
 
     // temp output
-    logic [63:0] yn;
+    logic [127:0] yn;
 
     always_ff @ (posedge clk, negedge reset_n) begin
 
@@ -45,7 +45,7 @@ module lowpass #( parameter L = 3 ) (
             // data[L-1] <= lowpassIn;
 
             // 16 to 32 bit transfer with sign preservation
-            x0 <= { {47{lowpassIn[15]}}, lowpassIn };
+            x0 <= { {112{lowpassIn[15]}}, lowpassIn };
 
             // differnce equation
             yn <= y1_coeff*y1 + y2_coeff*y2 + x0_coeff*x0 + x1_coeff*x1 + x2_coeff*x2;
@@ -63,7 +63,7 @@ module lowpass #( parameter L = 3 ) (
             lowpassOut4 <= x0_coeff*x0 + x1_coeff*x1; // testing
 
             // divide by 1024 (10 bits) & assign to output
-            lowpassOut <= yn >>> 10;
+            lowpassOut <= yn >>> 30;
         end
         
     end

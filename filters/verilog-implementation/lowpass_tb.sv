@@ -36,37 +36,58 @@ module lowpass_tb;
             repeat(4) @(posedge clk);
 */
             // 3kHz sine wave
+            /*lowpassIn = 0;
+            repeat(1) @(posedge clk);
+            lowpassIn = 12540*0.25;
+            repeat(1) @(posedge clk);
+            lowpassIn = 23170*0.25;
+            repeat(1) @(posedge clk);
+            lowpassIn = 30273*0.25;
+            repeat(1) @(posedge clk);
+            lowpassIn = 32767*0.25;
+            repeat(1) @(posedge clk);
+            lowpassIn = 30273*0.25;
+            repeat(1) @(posedge clk);
+            lowpassIn = 23170*0.25;
+            repeat(1) @(posedge clk);
+            lowpassIn = 12540*0.25;
+            repeat(1) @(posedge clk);
             lowpassIn = 0;
             repeat(1) @(posedge clk);
-            lowpassIn = 12540*0.5;
+            lowpassIn = -12540*0.25;
             repeat(1) @(posedge clk);
-            lowpassIn = 23170*0.5;
+            lowpassIn = -23170*0.25;
             repeat(1) @(posedge clk);
-            lowpassIn = 30273*0.5;
+            lowpassIn = -30273*0.25;
             repeat(1) @(posedge clk);
-            lowpassIn = 32767*0.5;
+            lowpassIn = -32767*0.25;
             repeat(1) @(posedge clk);
-            lowpassIn = 30273*0.5;
+            lowpassIn = -30273*0.25;
             repeat(1) @(posedge clk);
-            lowpassIn = 23170*0.5;
+            lowpassIn = -23170*0.25;
             repeat(1) @(posedge clk);
-            lowpassIn = 12540*0.5;
+            lowpassIn = -12540*0.25;
+            repeat(1) @(posedge clk);*/
+
+
+            // 1kHz sine wave
+            lowpassIn =     0;
             repeat(1) @(posedge clk);
-            lowpassIn = 0;
+            lowpassIn =  7094;
             repeat(1) @(posedge clk);
-            lowpassIn = -12540*0.5;
+            lowpassIn = -7094;
             repeat(1) @(posedge clk);
-            lowpassIn = -23170*0.5;
+            lowpassIn =    -0;
             repeat(1) @(posedge clk);
-            lowpassIn = -30273*0.5;
+            lowpassIn =  7094;
             repeat(1) @(posedge clk);
-            lowpassIn = -32767*0.5;
+            lowpassIn = -7094;
             repeat(1) @(posedge clk);
-            lowpassIn = -30273*0.5;
+            lowpassIn =    -0;
             repeat(1) @(posedge clk);
-            lowpassIn = -23170*0.5;
+            lowpassIn =  7094;
             repeat(1) @(posedge clk);
-            lowpassIn = -12540*0.5;
+            lowpassIn = -7094;
             repeat(1) @(posedge clk);
         end
         //$stop;
