@@ -1,0 +1,2 @@
+C:\Users\John Matson\iCloudDrive\Documents\Admin\Repositories\Projects\fpga-channel-strip\filters\cpp-implementation\highpass\Debug\highpass.exe
+C:\Users\John Matson\iCloudDrive\Documents\Admin\Repositories\Projects\fpga-channel-strip\filters\cpp-implementation\highpass\Debug\highpass.pdb

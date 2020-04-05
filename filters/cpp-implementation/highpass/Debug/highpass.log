@@ -1,0 +1,4 @@
+﻿  highpass.cpp
+C:\Users\John Matson\iCloudDrive\Documents\Admin\Repositories\Projects\fpga-channel-strip\filters\cpp-implementation\highpass.cpp(24,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\John Matson\iCloudDrive\Documents\Admin\Repositories\Projects\fpga-channel-strip\filters\cpp-implementation\highpass.cpp(32,50): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  highpass.vcxproj -> C:\Users\John Matson\iCloudDrive\Documents\Admin\Repositories\Projects\fpga-channel-strip\filters\cpp-implementation\highpass\Debug\highpass.exe
