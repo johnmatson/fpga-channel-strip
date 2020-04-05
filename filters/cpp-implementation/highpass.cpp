@@ -5,7 +5,7 @@
 
 #define PI 3.14159
 #define N 1000
-#define fIN 3000.0
+#define fIN 1000.0
 #define fSAMP 48000.0
 
 // fc = 1 kHz
@@ -42,14 +42,29 @@ int main () {
     std::ofstream outfile;
     outfile.open("highpass.m", std::ios::out | std::ios::trunc);
 
-    // write to .m file
+    // write xn to .m file
+    outfile << "xn = [";
+    for (int i = 0; i < N; i++) {
+        outfile << xn[i];
+        if (i < N - 1)
+            outfile << ",";
+    }
+    outfile << "];\n";
+
+    // write yn to .m file
     outfile << "yn = [";
     for(int i = 0; i<N; i++) {
         outfile << yn[i];
         if (i < N-1)
             outfile << ",";
     }
-    outfile << "];";
+    outfile << "];\n";
+
+    // write code to plot input & output
+    outfile << "T = " << 1 / fSAMP << ";\n";
+    outfile << "t = [0:T:(length(yn) - 1) * T];\n\n";
+    outfile << "plot(t, xn, t, yn)\n";
+    outfile << "xlim([0, T * 4 * " << fSAMP << " / " << fIN << "])";
 
     outfile.close();
     
