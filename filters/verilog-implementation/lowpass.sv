@@ -25,13 +25,24 @@ module lowpass #( parameter L = 3 ) (
     // temp output
     logic [127:0] yn;
 
+    // state counter
+    logic [1:0] state;
+
+
+    always_comb begin
+        // 16 to 128 bit transfer with sign preservation
+        x0 <= { {112{lowpassIn[15]}}, lowpassIn };
+
+        // divide by 2^30 (30 bits) & assign to output
+        lowpassOut <= yn >>> 30;
+    end
+ 
     always_ff @ (posedge clk, negedge reset_n) begin
 
         // reset buffer & outputs
         if (~reset_n) begin
             y1 <= 0;
             y2 <= 0;
-            x0 <= 0;
             x1 <= 0;
             x2 <= 0;
 
@@ -39,31 +50,38 @@ module lowpass #( parameter L = 3 ) (
         end
 
         else begin
-            // FIR buffer - NOT USED FOR IIR
-            // for (int i = 0; i < L-1; i++)
-            //     data[i] <= data[i+1];
-            // data[L-1] <= lowpassIn;
 
-            // 16 to 32 bit transfer with sign preservation
-            x0 <= { {112{lowpassIn[15]}}, lowpassIn };
+            case (state) begin
+                0 : begin
+                    // differnce equation
+                    yn <= y1_coeff*y1 + y2_coeff*y2 + x0_coeff*x0 + x1_coeff*x1 + x2_coeff*x2;
 
-            // differnce equation
-            yn <= y1_coeff*y1 + y2_coeff*y2 + x0_coeff*x0 + x1_coeff*x1 + x2_coeff*x2;
+                    state <= 1;
+                end
+                1 : begin
+                    // rotate buffer 2
+                    x2 <= x1;
+                    y2 <= y1;
+                    
+                    state <= 2;
+                end
+                2 : begin
+                    // rotate buffer 1
+                    x1 <= x0;
+                    y1 <= yn;
 
-            // rotate buffer
-            x2 <= x1;
-            x1 <= x0;
-            y2 <= y1;
-            y1 <= yn;
+                    state <= 0;
+                end
+                default : begin
+                    y1 <= 0;
+                    y2 <= 0;
+                    x1 <= 0;
+                    x2 <= 0;
 
-            lowpassOut2 <= yn; // testing
+                    yn <= '0;
+                end
+            end
 
-            lowpassOut3 <= yn / 1024; // testing
-
-            lowpassOut4 <= x0_coeff*x0 + x1_coeff*x1; // testing
-
-            // divide by 1024 (10 bits) & assign to output
-            lowpassOut <= yn >>> 30;
         end
         
     end
