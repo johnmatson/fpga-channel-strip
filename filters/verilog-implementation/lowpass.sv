@@ -1,30 +1,30 @@
-module lowpass #( parameter L = 3 ) (
+module lowpass #( parameter L = 3, N = 63 ) (
                 input logic clk, reset_n,
                 input logic signed [15:0] lowpassIn,
                 output logic [31:0] lowpassOut2, // for testing only
                 output logic [15:0] lowpassOut3, // for testing only
                 output logic [31:0] lowpassOut4, // for testing only
-                output logic signed [255:0] lowpassOut);
+                output logic signed [15:0] lowpassOut);
 
     logic [15:0] data [L-1:0];
 
     // coefficients
-    logic signed [255:0] y1_coeff = 1.8125*1024*1024*1024;
-    logic signed [255:0] y2_coeff = -0.828125*1024*1024*1024;
-    logic signed [255:0] x0_coeff = 1*0.9140625*1024*1024*1024;
-    logic signed [255:0] x1_coeff = -2*0.9140625*1024*1024*1024;
-    logic signed [255:0] x2_coeff = 1*0.9140625*1024*1024*1024;
+    logic signed [N:0] y1_coeff = 1.8125*1024*1024*1024;
+    logic signed [N:0] y2_coeff = -0.828125*1024*1024*1024;
+    logic signed [N:0] x0_coeff = 1*0.9140625*1024*1024*1024;
+    logic signed [N:0] x1_coeff = -2*0.9140625*1024*1024*1024;
+    logic signed [N:0] x2_coeff = 1*0.9140625*1024*1024*1024;
 
     // buffer
-    logic signed [255:0] Y1,Y2,X0,X1,X2;
-    logic signed [255:0] y1;
-    logic signed [255:0] y2;
-    logic signed [255:0] x0;
-    logic signed [255:0] x1;
-    logic signed [255:0] x2;
+    logic signed [N:0] Y1,Y2,X0,X1,X2;
+    logic signed [N:0] y1;
+    logic signed [N:0] y2;
+    logic signed [N:0] x0;
+    logic signed [N:0] x1;
+    logic signed [N:0] x2;
 
     // temp output
-    logic signed [255:0] yn;
+    logic signed [N:0] yn;
 
     // state counter
     logic [1:0] state;
@@ -32,7 +32,7 @@ module lowpass #( parameter L = 3 ) (
 
     always_comb begin
         // 16 to 128 bit transfer with sign preservation
-        x0 = { {240{lowpassIn[15]}}, lowpassIn };
+        x0 = lowpassIn; //{ {240{lowpassIn[15]}}, lowpassIn };
 
         // divide by 2^30 (30 bits) & assign to output
         lowpassOut = yn; /// (2**30);
