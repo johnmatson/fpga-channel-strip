@@ -1,4 +1,1 @@
-﻿  highpass.cpp
-C:\Users\John Matson\iCloudDrive\Documents\Admin\Repositories\Projects\fpga-channel-strip\filters\cpp-implementation\highpass.cpp(24,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\John Matson\iCloudDrive\Documents\Admin\Repositories\Projects\fpga-channel-strip\filters\cpp-implementation\highpass.cpp(32,50): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  highpass.vcxproj -> C:\Users\John Matson\iCloudDrive\Documents\Admin\Repositories\Projects\fpga-channel-strip\filters\cpp-implementation\highpass\x64\Debug\highpass.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Platform.targets(57,5): error MSB8020: The build tools for v142 (Platform Toolset = 'v142') cannot be found. To build using the v142 build tools, please install v142 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution".

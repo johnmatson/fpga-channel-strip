@@ -3,8 +3,8 @@
 module lowpass_tb;
 
     logic clk, reset_n;
-    logic [15:0] lowpassIn;
-    logic [15:0] lowpassOut;
+    logic signed [15:0] lowpassIn;
+    logic signed [255:0] lowpassOut;
     logic [31:0] lowpassOut2; // test only
     logic [15:0] lowpassOut3; // test only
     logic [31:0] lowpassOut4; // test only
@@ -70,7 +70,7 @@ module lowpass_tb;
             repeat(3) @(posedge clk);
 
 
-            // 1kHz sine wave
+            // 16kHz sine wave
             /*lowpassIn =     0;
             repeat(3) @(posedge clk);
             lowpassIn =  7094;

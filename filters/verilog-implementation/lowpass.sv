@@ -1,29 +1,30 @@
 module lowpass #( parameter L = 3 ) (
                 input logic clk, reset_n,
-                input logic [15:0] lowpassIn,
+                input logic signed [15:0] lowpassIn,
                 output logic [31:0] lowpassOut2, // for testing only
                 output logic [15:0] lowpassOut3, // for testing only
                 output logic [31:0] lowpassOut4, // for testing only
-                output logic [15:0] lowpassOut);
+                output logic signed [255:0] lowpassOut);
 
     logic [15:0] data [L-1:0];
 
     // coefficients
-    logic [127:0] y1_coeff = 1.8125*1024*1024*1024;
-    logic [127:0] y2_coeff = -0.828125*1024*1024*1024;
-    logic [127:0] x0_coeff = 1*0.9140625*1024*1024*1024;
-    logic [127:0] x1_coeff = -2*0.9140625*1024*1024*1024;
-    logic [127:0] x2_coeff = 1*0.9140625*1024*1024*1024;
+    logic signed [255:0] y1_coeff = 1.8125*1024*1024*1024;
+    logic signed [255:0] y2_coeff = -0.828125*1024*1024*1024;
+    logic signed [255:0] x0_coeff = 1*0.9140625*1024*1024*1024;
+    logic signed [255:0] x1_coeff = -2*0.9140625*1024*1024*1024;
+    logic signed [255:0] x2_coeff = 1*0.9140625*1024*1024*1024;
 
     // buffer
-    logic [127:0] y1;
-    logic [127:0] y2;
-    logic [127:0] x0;
-    logic [127:0] x1;
-    logic [127:0] x2;
+    logic signed [255:0] Y1,Y2,X0,X1,X2;
+    logic signed [255:0] y1;
+    logic signed [255:0] y2;
+    logic signed [255:0] x0;
+    logic signed [255:0] x1;
+    logic signed [255:0] x2;
 
     // temp output
-    logic [127:0] yn;
+    logic signed [255:0] yn;
 
     // state counter
     logic [1:0] state;
@@ -31,10 +32,10 @@ module lowpass #( parameter L = 3 ) (
 
     always_comb begin
         // 16 to 128 bit transfer with sign preservation
-        x0 <= { {112{lowpassIn[15]}}, lowpassIn };
+        x0 = { {240{lowpassIn[15]}}, lowpassIn };
 
         // divide by 2^30 (30 bits) & assign to output
-        lowpassOut <= yn >>> 30;
+        lowpassOut = yn; /// (2**30);
     end
  
     always_ff @ (posedge clk, negedge reset_n) begin
@@ -47,14 +48,22 @@ module lowpass #( parameter L = 3 ) (
             x2 <= 0;
 
             yn <= '0;
+
+            state <= '0;
         end
 
         else begin
 
-            case (state) begin
+            case (state)
                 0 : begin
                     // differnce equation
-                    yn <= y1_coeff*y1 + y2_coeff*y2 + x0_coeff*x0 + x1_coeff*x1 + x2_coeff*x2;
+                    yn <= ((y1_coeff*y1)>>>30) + ((y2_coeff*y2)>>>30) + ((x0_coeff*x0)>>>30) + ((x1_coeff*x1)>>>30) + ((x2_coeff*x2)>>>30);
+                    
+                    Y1 <= ((y1_coeff*y1)>>>30);
+                    Y2 <= ((y2_coeff*y2)>>>30);
+                    X0 <= ((x0_coeff*x0)>>>30);
+                    X1 <= ((x1_coeff*x1)>>>30);
+                    X2 <= ((x2_coeff*x2)>>>30);
 
                     state <= 1;
                 end
@@ -73,14 +82,15 @@ module lowpass #( parameter L = 3 ) (
                     state <= 0;
                 end
                 default : begin
+                    // reset
                     y1 <= 0;
                     y2 <= 0;
                     x1 <= 0;
                     x2 <= 0;
-
                     yn <= '0;
+                    state <= '0;
                 end
-            end
+            endcase
 
         end
         
