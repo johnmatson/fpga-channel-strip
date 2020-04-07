@@ -4,6 +4,8 @@ module sineWaveGen_tb;
     logic [2:0] freq;
     logic signed [15:0] wave;
 
+    sineWaveGen dut_0 (.*);
+
     initial begin
         clk = 0;
         reset_n = 0;
