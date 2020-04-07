@@ -2,7 +2,7 @@ module sineWaveGen_tb;
 
     logic clk, reset_n;
     logic [2:0] freq;
-    logic signed [15:0] wave;
+    logic signed [15:0] outWave;
 
     sineWaveGen dut_0 (.*);
 

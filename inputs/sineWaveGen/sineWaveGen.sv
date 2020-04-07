@@ -1,8 +1,11 @@
-module sineWaveGen (input logic clk, reset_n,
+module sineWaveGen #( parameter scale = 0.9 ) (
+                    input logic clk, reset_n,
                     input logic [2:0] freq,
-                    output logic signed [15:0] wave);
+                    output logic signed [15:0] outWave);
 
     logic [15:0] sample;
+
+    logic signed [15:0] wave;
 
     // Sampling Points:
     // 0: 100 Hz - line 26
@@ -13,6 +16,9 @@ module sineWaveGen (input logic clk, reset_n,
     // 5: 5 kHz - line 3399
     // 6: 10 kHz - line 3444
 
+    always_comb begin
+        outWave = wave*scale;
+    end
 
     always_ff @  (posedge clk, negedge reset_n) begin
         
