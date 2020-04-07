@@ -1,0 +1,60 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1
+vsineWaveGen
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1586297634
+!i10b 1
+!s100 QY8ac@CiMEXHC;hH23K333
+IJ0fRBClEPFW9Q;jOEMGE@2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 sineWaveGen_sv_unit
+S1
+Z3 dC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen
+w1586297622
+8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv
+FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1586297634.000000
+!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+nsine@wave@gen
+vsineWaveGen_tb
+R0
+R1
+!i10b 1
+!s100 ZRieG2b@AJ83lJJRgDaZT2
+I_7cljB8`EZ`8WCkTC7h<A0
+R2
+!s105 sineWaveGen_tb_sv_unit
+S1
+R3
+w1586295426
+8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen_tb.sv
+FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen_tb.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen_tb.sv|
+!i113 1
+R6
+R7
+nsine@wave@gen_tb
