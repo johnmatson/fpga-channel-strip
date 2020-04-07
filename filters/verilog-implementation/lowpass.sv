@@ -32,7 +32,7 @@ module lowpass #( parameter L = 3, N = 63 ) (
 
     always_comb begin
         // 16 to 128 bit transfer with sign preservation
-        x0 = lowpassIn; //{ {240{lowpassIn[15]}}, lowpassIn };
+        x0 = { {(N-15){lowpassIn[15]}}, lowpassIn };
 
         // divide by 2^30 (30 bits) & assign to output
         lowpassOut = yn; /// (2**30);
