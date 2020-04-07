@@ -1,9 +1,8 @@
-C:/Users/igorg/Desktop/fpga-channel-strip/filters/verilog-implementation/lowpass_tb.sv {2 {vlog -work work_igor -sv -stats=none C:/Users/igorg/Desktop/fpga-channel-strip/filters/verilog-implementation/lowpass_tb.sv
+C:/Users/igorg/Desktop/fpga-channel-strip/filters/verilog-implementation/lowpass.sv {1 {vlog -work work_igor -sv -stats=none C:/Users/igorg/Desktop/fpga-channel-strip/filters/verilog-implementation/lowpass.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module lowpass_tb
-** Warning: C:/Users/igorg/Desktop/fpga-channel-strip/filters/verilog-implementation/lowpass_tb.sv(201): (vlog-13227) Time value '6.944444333us' exceeds 32-bit capacity. Rightmost digits will be truncated.
+-- Compiling module lowpass
 
 Top level modules:
-	lowpass_tb
+	lowpass
 
 } {} {}}

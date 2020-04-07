@@ -3,17 +3,16 @@
 module lowpass_tb;
 
     logic clk, reset_n;
+    logic [1:0] filter;
     logic signed [15:0] lowpassIn;
     logic signed [15:0] lowpassOut;
-    logic [31:0] lowpassOut2; // test only
-    logic [15:0] lowpassOut3; // test only
-    logic [31:0] lowpassOut4; // test only
 
     lowpass dut_0 (.*);
 
     initial begin
         clk = 0;
         reset_n = 0;
+        filter = 0;
         lowpassIn = '0;
 
         repeat(2) @(posedge clk);
@@ -24,17 +23,9 @@ module lowpass_tb;
             lowpassIn = 16'b0111111111111111;
 
 
-        forever begin// (int i = 0; i<50; i++) begin
+        forever begin
             reset_n = 1;
-/*
-            lowpassIn = 16'b0111111111111111;
 
-            repeat(4) @(posedge clk);
-
-            lowpassIn = 16'b1000000000000000;
-
-            repeat(4) @(posedge clk);
-*/
             /*/ 1kHz sine wave
             lowpassIn = 0.000000;
             repeat(3) @(posedge clk);
@@ -137,40 +128,40 @@ module lowpass_tb;
             // 3kHz sine wave
             lowpassIn = 0;
             repeat(3) @(posedge clk);
-            lowpassIn = 12540*0.5;
+            lowpassIn = 12540;
             repeat(3) @(posedge clk);
-            lowpassIn = 23170*0.5;
+            lowpassIn = 23170;
             repeat(3) @(posedge clk);
-            lowpassIn = 30273*0.5;
+            lowpassIn = 30273;
             repeat(3) @(posedge clk);
-            lowpassIn = 32767*0.5;
+            lowpassIn = 32767;
             repeat(3) @(posedge clk);
-            lowpassIn = 30273*0.5;
+            lowpassIn = 30273;
             repeat(3) @(posedge clk);
-            lowpassIn = 23170*0.5;
+            lowpassIn = 23170;
             repeat(3) @(posedge clk);
-            lowpassIn = 12540*0.5;
+            lowpassIn = 12540;
             repeat(3) @(posedge clk);
             lowpassIn = 0;
             repeat(3) @(posedge clk);
-            lowpassIn = -12540*0.5;
+            lowpassIn = -12540;
             repeat(3) @(posedge clk);
-            lowpassIn = -23170*0.5;
+            lowpassIn = -23170;
             repeat(3) @(posedge clk);
-            lowpassIn = -30273*0.5;
+            lowpassIn = -30273;
             repeat(3) @(posedge clk);
-            lowpassIn = -32767*0.5;
+            lowpassIn = -32767;
             repeat(3) @(posedge clk);
-            lowpassIn = -30273*0.5;
+            lowpassIn = -30273;
             repeat(3) @(posedge clk);
-            lowpassIn = -23170*0.5;
+            lowpassIn = -23170;
             repeat(3) @(posedge clk);
-            lowpassIn = -12540*0.5;
+            lowpassIn = -12540;
             repeat(3) @(posedge clk);
 
 
-            /*/ 16kHz sine wave
-            lowpassIn =     0;
+            // 16kHz sine wave
+            /*lowpassIn =     0;
             repeat(3) @(posedge clk);
             lowpassIn =  7094;
             repeat(3) @(posedge clk);
@@ -189,7 +180,6 @@ module lowpass_tb;
             lowpassIn = -7094;
             repeat(3) @(posedge clk);*/
         end
-        //$stop;
         
     end
 
@@ -199,6 +189,5 @@ module lowpass_tb;
 
     always
     #6.944444333us clk = ~clk;
-    //#20.833333us clk = ~clk;
 
 endmodule
