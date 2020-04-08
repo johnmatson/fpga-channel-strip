@@ -1,5 +1,5 @@
 module lowpass #( parameter L = 3, N = 63, shift = 30 ) (
-                input logic clk_144_144, reset_n,
+                input logic clk_144, reset_n,
                 input logic [2:0] filter,
                 input logic signed [15:0] highpassIn,
                 output logic signed [15:0] highpassOut);
@@ -11,33 +11,40 @@ module lowpass #( parameter L = 3, N = 63, shift = 30 ) (
     logic signed [N:0] x1_coeff;
     logic signed [N:0] x2_coeff;
 
+    // allpass coefficients
+    logic signed [N:0] y1_coeff0 = 0*(2**shift);
+    logic signed [N:0] y2_coeff0 = 0*(2**shift);
+    logic signed [N:0] x0_coeff0 = 1*(2**shift);
+    logic signed [N:0] x1_coeff0 = 0*(2**shift);
+    logic signed [N:0] x2_coeff0 = 0*(2**shift);
+
     // 100 Hz coefficients
-    logic signed [N:0] y1_coeff0 = 1.984375*(2**shift);
-    logic signed [N:0] y2_coeff0 = -0.984375*(2**shift);
-    logic signed [N:0] x0_coeff0 = 1*0.9921875*(2**shift);
-    logic signed [N:0] x1_coeff0 = -2*0.9921875*(2**shift);
-    logic signed [N:0] x2_coeff0 = 1*0.9921875*(2**shift);
+    logic signed [N:0] y1_coeff1 = 1.9814453125*(2**shift);
+    logic signed [N:0] y2_coeff1 = -0.981689453125*(2**shift);
+    logic signed [N:0] x0_coeff1 = 1*0.9908447265625*(2**shift);
+    logic signed [N:0] x1_coeff1 = -2*0.990844726562*(2**shift);
+    logic signed [N:0] x2_coeff1 = 1*0.990844726562*(2**shift);
     
     // 250 Hz coefficients
-    logic signed [N:0] y1_coeff1 = 1.953125*(2**shift);
-    logic signed [N:0] y2_coeff1 = -0.953125*(2**shift);
-    logic signed [N:0] x0_coeff1 = 1*0.9765625*(2**shift);
-    logic signed [N:0] x1_coeff1 = -2*0.9765625*(2**shift);
-    logic signed [N:0] x2_coeff1 = 1*0.9765625*(2**shift);
+    logic signed [N:0] y1_coeff2 = 1.95361328125*(2**shift);
+    logic signed [N:0] y2_coeff2 = -0.954833984375*(2**shift);
+    logic signed [N:0] x0_coeff2 = 1*0.9771728515625*(2**shift);
+    logic signed [N:0] x1_coeff2 = -2*0.9771728515625*(2**shift);
+    logic signed [N:0] x2_coeff2 = 1*0.9771728515625*(2**shift);
     
     // 500 Hz coefficients
-    logic signed [N:0] y1_coeff2 = 1.90625*(2**shift);
-    logic signed [N:0] y2_coeff2 = -0.90625*(2**shift);
-    logic signed [N:0] x0_coeff2 = 1*0.953125*(2**shift);
-    logic signed [N:0] x1_coeff2 = -2*0.953125*(2**shift);
-    logic signed [N:0] x2_coeff2 = 1*0.953125*(2**shift);
+    logic signed [N:0] y1_coeff3 = 1.90625*(2**shift);
+    logic signed [N:0] y2_coeff3 = -0.90625*(2**shift);
+    logic signed [N:0] x0_coeff3 = 1*0.953125*(2**shift);
+    logic signed [N:0] x1_coeff3 = -2*0.953125*(2**shift);
+    logic signed [N:0] x2_coeff3 = 1*0.953125*(2**shift);
     
     // 1 kHz coefficients
-    logic signed [N:0] y1_coeff3 = 1.8125*(2**shift);
-    logic signed [N:0] y2_coeff3 = -0.828125*(2**shift);
-    logic signed [N:0] x0_coeff3 = 1*0.9140625*(2**shift);
-    logic signed [N:0] x1_coeff3 = -2*0.9140625*(2**shift);
-    logic signed [N:0] x2_coeff3 = 1*0.9140625*(2**shift);
+    logic signed [N:0] y1_coeff4 = 1.8125*(2**shift);
+    logic signed [N:0] y2_coeff4 = -0.828125*(2**shift);
+    logic signed [N:0] x0_coeff4 = 1*0.9140625*(2**shift);
+    logic signed [N:0] x1_coeff4 = -2*0.9140625*(2**shift);
+    logic signed [N:0] x2_coeff4 = 1*0.9140625*(2**shift);
 
     // buffer
     logic signed [N:0] y1;
@@ -57,8 +64,13 @@ module lowpass #( parameter L = 3, N = 63, shift = 30 ) (
         // 16 to 64 bit transfer with sign preservation
         x0 = { {(N-15){highpassIn[15]}}, highpassIn };
 
-        // assign yn to output
-        highpassOut = yn;
+        // assign yn to output, clip for 16-bit output
+        if (yn > 32767)
+            highpassOut = 32767;
+        else if (yn < -32767)
+            highpassOut = -32767;
+        else
+            highpassOut = yn;
         
         // determine filter coefficients
         case (filter)
@@ -89,6 +101,20 @@ module lowpass #( parameter L = 3, N = 63, shift = 30 ) (
             x0_coeff = x0_coeff3;
             x1_coeff = x1_coeff3;
             x2_coeff = x2_coeff3;
+        end
+        4 : begin
+            y1_coeff = y1_coeff4;
+            y2_coeff = y2_coeff4;
+            x0_coeff = x0_coeff4;
+            x1_coeff = x1_coeff4;
+            x2_coeff = x2_coeff4;
+        end
+        default : begin
+            y1_coeff = y1_coeff0;
+            y2_coeff = y2_coeff0;
+            x0_coeff = x0_coeff0;
+            x1_coeff = x1_coeff0;
+            x2_coeff = x2_coeff0;
         end
         endcase
         

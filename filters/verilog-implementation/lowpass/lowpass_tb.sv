@@ -12,7 +12,7 @@ module lowpass_tb;
     initial begin
         clk_144 = 0;
         reset_n = 0;
-        filter = 0;
+        filter = 4;
         lowpassIn = '0;
 
         repeat(2) @(posedge clk_144);
@@ -26,7 +26,7 @@ module lowpass_tb;
         forever begin
             reset_n = 1;
 
-            /*/ 1kHz sine wave
+            // 1kHz sine wave
             lowpassIn = 0.000000;
             repeat(3) @(posedge clk_144);
             lowpassIn = 4276.951740;
@@ -122,10 +122,10 @@ module lowpass_tb;
             lowpassIn = -8480.723651;
             repeat(3) @(posedge clk_144);
             lowpassIn = -4276.951740;
-            repeat(3) @(posedge clk_144);*/
+            repeat(3) @(posedge clk_144);
 
 
-            // 3kHz sine wave
+            /*/ 3kHz sine wave
             lowpassIn = 0;
             repeat(3) @(posedge clk_144);
             lowpassIn = 12540;
