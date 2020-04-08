@@ -18,8 +18,12 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
     logic [3:0] num;
 
     logic [3:0] buttonNum;
-    logic kphit;
+    //logic kphit;
     logic [15:0] buttons;
+
+
+    always_ff @(posedge clk_48) 
+        digit <= digit + 1'b1 ;
 
 
     sineWaveGen sineWaveGen_0 ( .clk_48, .reset_n,
@@ -61,8 +65,8 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
                                 .kpc);
                                 
     kpdecode kpdecode_0 (       .kpr, .kpc,
-                                .buttonNum,
-                                .kphit);
+                                .buttonNum/*,
+                                .kphit*/);
     
     decodeButton decodeButton_0(.buttonNum,
                                 .buttons);

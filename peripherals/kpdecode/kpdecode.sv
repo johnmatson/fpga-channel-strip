@@ -4,19 +4,19 @@
 // Lab 2 - Matrix Keypad Input
 
 module kpdecode (   input logic [3:0] kpr, kpc, // keypad rows and columns
-                    output logic [3:0] buttonNum, // button value
-					output logic kphit); // keypad hit signal for 7-segment LSD control
+                    output logic [3:0] buttonNum/*, // button value
+					output logic kphit*/); // keypad hit signal for 7-segment LSD control
 
     always_comb begin
-		kphit = 0;
+		//kphit = 0;
 		buttonbuttonNum = 0;
 
 		if (kpr != 15) begin
-		kphit = 1;
+		//kphit = 1;
 			case (kpc)
 
 				'b0111 : begin
-					kphit = 1;
+					//kphit = 1;
 					case (kpr)
 						'b0111 : buttonNum = 1;
 						'b1011 : buttonNum = 4;
@@ -26,7 +26,7 @@ module kpdecode (   input logic [3:0] kpr, kpc, // keypad rows and columns
 				end
 
 				'b1011 : begin
-					kphit = 1;
+					//kphit = 1;
 					case (kpr)
 						'b0111 : buttonNum = 2;
 						'b1011 : buttonNum = 5;
@@ -36,7 +36,7 @@ module kpdecode (   input logic [3:0] kpr, kpc, // keypad rows and columns
 				end
 
 				'b1101 : begin
-					kphit = 1;
+					//kphit = 1;
 					case (kpr)
 						'b0111 : buttonNum = 3;
 						'b1011 : buttonNum = 6;
@@ -46,7 +46,7 @@ module kpdecode (   input logic [3:0] kpr, kpc, // keypad rows and columns
 				end
 
 				'b1110 : begin
-					kphit = 1;
+					//kphit = 1;
 					case (kpr)
 						'b0111 : buttonNum = 10;
 						'b1011 : buttonNum = 11;
@@ -55,7 +55,7 @@ module kpdecode (   input logic [3:0] kpr, kpc, // keypad rows and columns
 					endcase
 				end
 
-				default : kphit = 0;
+				//default : kphit = 0;
 
 			endcase
 		end
