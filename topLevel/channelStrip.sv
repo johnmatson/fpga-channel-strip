@@ -60,7 +60,7 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
                                 .leds);
 
 
-    colseq colseq_0 (           .clk(.clk_48), .reset_n,
+    colseq colseq_0 (           .clk(clk_48), .reset_n,
                                 .kpr,
                                 .kpc);
                                 
@@ -79,7 +79,7 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
 
     pll pll_0 ( .inclk0(CLOCK_50), .c0(clk_144) );
 
-    clkDivider clkDivider_0 ( .clk_144, .clk_48 );
+    clkDivider clkDivider_0 ( .reset_n, .clkIn(clk_144), .clkOut(clk_48) );
 
 endmodule
 

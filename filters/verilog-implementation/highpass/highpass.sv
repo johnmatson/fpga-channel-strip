@@ -1,4 +1,4 @@
-module lowpass #( parameter L = 3, N = 63, shift = 30 ) (
+module highpass #( parameter L = 3, N = 63, shift = 30 ) (
                 input logic clk_144, reset_n,
                 input logic [2:0] filter,
                 input logic signed [15:0] highpassIn,

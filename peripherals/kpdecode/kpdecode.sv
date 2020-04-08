@@ -9,7 +9,7 @@ module kpdecode (   input logic [3:0] kpr, kpc, // keypad rows and columns
 
     always_comb begin
 		//kphit = 0;
-		buttonbuttonNum = 0;
+		buttonNum = 0;
 
 		if (kpr != 15) begin
 		//kphit = 1;

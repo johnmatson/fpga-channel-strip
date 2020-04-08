@@ -1,13 +1,13 @@
 `define fs 48000
 
-module lowpass_tb;
+module highpass_tb;
 
     logic clk_144, reset_n;
     logic [2:0] filter;
     logic signed [15:0] highpassIn;
     logic signed [15:0] highpassOut;
 
-    lowpass dut_0 (.*);
+    highpass dut_0 (.*);
 
     initial begin
         clk_144 = 0;

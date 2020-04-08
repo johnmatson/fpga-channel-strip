@@ -29,33 +29,36 @@ module outputLevel #( parameter samples = 12000 ) (
         else
             neg = 0;
 
-        for (int i2 = 900; i2 >= 100; i2 -= 100) begin
-            if (level >= i2) begin
-                num2 = i2/100;
-                level -= i2;
-                i2 = 0;
+        if (level < 100)
+            num2 = 0;
+        else begin
+            for (int i2 = 900; i2 >= 100; i2 -= 100) begin
+                if (level >= i2) begin
+                    num2 = i2/100;
+                    level -= i2;
+                end
             end
-            else
-                num2 = 0;
         end
 
-        for (int i1 = 90; i1 >= 10; i1 -= 10) begin
-            if (level >= i1) begin
-                num1 = i1/10;
-                level -= i1;
-                i1 = 0;
+        if (level < 10)
+            num1 = 0;
+        else begin
+            for (int i1 = 90; i1 >= 10; i1 -= 10) begin
+                if (level >= i1) begin
+                    num1 = i1/10;
+                    level -= i1;
+                end
             end
-            else
-                num1 = 0;
         end
 
-        for (int i0 = 9; i0 >= 1; i0--) begin
-            if (level >= i0) begin
-                num0 = i0;
-                i0 = 0;
+        if (level < 1)
+            num0 = 0;
+        else begin
+            for (int i0 = 9; i0 >= 1; i0--) begin
+                if (level >= i0) begin
+                    num0 = i0;
+                end      
             end
-            else
-                num0 = 0;            
         end
     end
 

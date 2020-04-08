@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at colseq.sv(12): always construct contains both blocking and non-blocking assignments File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/colseq/colseq.sv Line: 12

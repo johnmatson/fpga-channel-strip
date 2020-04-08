@@ -3,6 +3,8 @@ module sineWaveGen #( parameter scale = 0.9 ) (
                     input logic [2:0] freq,
                     output logic signed [15:0] outWave);
 
+    logic signed [15:0] shiftedScale;
+
     logic [15:0] sample;
 
     logic signed [15:0] wave;
@@ -18,7 +20,8 @@ module sineWaveGen #( parameter scale = 0.9 ) (
     // 7: 10 kHz - line 3444
 
     always_comb begin
-        outWave = wave*scale;
+        shiftedScale = 0.9 * (2**8);
+        outWave = (wave*shiftedScale) / (2**8);
     end
 
     always_ff @  (posedge clk_48, negedge reset_n) begin
