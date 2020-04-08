@@ -9,7 +9,7 @@ module sineWaveGen_tb;
     initial begin
         clk_48 = 0;
         reset_n = 0;
-        freq = 0;
+        freq = 4;
 
         repeat(2) @(posedge clk_48);
         reset_n = 1;

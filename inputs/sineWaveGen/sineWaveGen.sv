@@ -8,13 +8,14 @@ module sineWaveGen #( parameter scale = 0.9 ) (
     logic signed [15:0] wave;
 
     // Sampling Points:
-    // 0: 100 Hz - line 26
-    // 1: 250 Hz - line 1951
-    // 2: 500 Hz - line 2724
-    // 3: 1 kHz - line 3113
-    // 4: 2.5 kHz - line 3314
-    // 5: 5 kHz - line 3399
-    // 6: 10 kHz - line 3444
+    // 0: no output
+    // 1: 100 Hz - line 26
+    // 2: 250 Hz - line 1951
+    // 3: 500 Hz - line 2724
+    // 4: 1 kHz - line 3113
+    // 5: 2.5 kHz - line 3314
+    // 6: 5 kHz - line 3399
+    // 7: 10 kHz - line 3444
 
     always_comb begin
         outWave = wave*scale;
@@ -29,7 +30,11 @@ module sineWaveGen #( parameter scale = 0.9 ) (
 
         else begin
             case (freq)
-            0: begin    // 100 Hz Sine Wave
+            0: begin
+                wave <= 0;
+                sample <= 0;
+            end
+            1: begin    // 100 Hz Sine Wave
                 case (sample)
                 0: begin
                     wave <= 0.000000;
@@ -1958,7 +1963,7 @@ module sineWaveGen #( parameter scale = 0.9 ) (
                 endcase
             end
 
-            1: begin    // 250 Hz Sine Wave
+            2: begin    // 250 Hz Sine Wave
                 case (sample)
                 0: begin
                     wave <= 0.000000;
@@ -2735,7 +2740,7 @@ module sineWaveGen #( parameter scale = 0.9 ) (
                 endcase
             end
 
-            2: begin    // 500 Hz Sine Wave
+            3: begin    // 500 Hz Sine Wave
                 case (sample)
                 0: begin
                     wave <= 0.000000;
@@ -3128,7 +3133,7 @@ module sineWaveGen #( parameter scale = 0.9 ) (
                 endcase
             end
 
-            3: begin    //1kHz Sine Wave
+            4: begin    //1kHz Sine Wave
                 case (sample)
                 0: begin
                     wave <= 0.000000;
@@ -3329,7 +3334,7 @@ module sineWaveGen #( parameter scale = 0.9 ) (
                 endcase
             end
             
-            4: begin    // 2.5kHz Sine Wave
+            5: begin    // 2.5kHz Sine Wave
                 case (sample)
                 0: begin
                     wave <= 0.000000;
@@ -3414,7 +3419,7 @@ module sineWaveGen #( parameter scale = 0.9 ) (
                 endcase
             end
 
-            5: begin    // 5 kHz Sine Wave
+            6: begin    // 5 kHz Sine Wave
                 case (sample)
                 0: begin
                     wave <= 0.000000;
@@ -3459,7 +3464,7 @@ module sineWaveGen #( parameter scale = 0.9 ) (
                 endcase
             end
 
-            6: begin    // 10 kHz Sine Wave
+            7: begin    // 10 kHz Sine Wave
                 case (sample)
                 0: begin
                     wave <= 0.000000;

@@ -19,6 +19,7 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
 
     logic [3:0] buttonNum;
     logic kphit;
+    logic [15:0] buttons;
 
     sineWaveGen sineWaveGen_0 ( .clk_48, .reset_n,
                                 .freq(freqSelect),
