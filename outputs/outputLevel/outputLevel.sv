@@ -1,5 +1,5 @@
 module outputLevel #( parameter samples = 12000 ) (
-                    input logic clk, reset_n,
+                    input logic clk_48, reset_n,
                     input logic signed [15:0] inWave, outWave,
                     output logic [3:0] num2, num1, num0,
                     output logic neg );
@@ -59,7 +59,7 @@ module outputLevel #( parameter samples = 12000 ) (
         end
     end
 
-    always_ff @( posedge clk, negedge reset_n ) begin
+    always_ff @( posedge clk_48, negedge reset_n ) begin
         if (~reset_n) begin
             inSum <= 0;
             outSum <= 0;

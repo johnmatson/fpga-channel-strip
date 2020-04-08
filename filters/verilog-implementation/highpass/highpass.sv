@@ -1,6 +1,6 @@
 module lowpass #( parameter L = 3, N = 63, shift = 30 ) (
-                input logic clk, reset_n,
-                input logic [1:0] filter,
+                input logic clk_144_144, reset_n,
+                input logic [2:0] filter,
                 input logic signed [15:0] highpassIn,
                 output logic signed [15:0] highpassOut);
 
@@ -95,7 +95,7 @@ module lowpass #( parameter L = 3, N = 63, shift = 30 ) (
     end
     
  
-    always_ff @ (posedge clk, negedge reset_n) begin
+    always_ff @ (posedge clk_144, negedge reset_n) begin
 
         // reset buffer & outputs
         if (~reset_n) begin

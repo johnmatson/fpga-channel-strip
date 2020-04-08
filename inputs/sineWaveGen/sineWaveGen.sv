@@ -1,5 +1,5 @@
 module sineWaveGen #( parameter scale = 0.9 ) (
-                    input logic clk, reset_n,
+                    input logic clk_48, reset_n,
                     input logic [2:0] freq,
                     output logic signed [15:0] outWave);
 
@@ -20,7 +20,7 @@ module sineWaveGen #( parameter scale = 0.9 ) (
         outWave = wave*scale;
     end
 
-    always_ff @  (posedge clk, negedge reset_n) begin
+    always_ff @  (posedge clk_48, negedge reset_n) begin
         
         if (~reset_n) begin
             sample <= 0;

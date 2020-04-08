@@ -1,17 +1,17 @@
 module sineWaveGen_tb;
 
-    logic clk, reset_n;
+    logic clk_48, reset_n;
     logic [2:0] freq;
     logic signed [15:0] outWave;
 
     sineWaveGen dut_0 (.*);
 
     initial begin
-        clk = 0;
+        clk_48 = 0;
         reset_n = 0;
         freq = 0;
 
-        repeat(2) @(posedge clk);
+        repeat(2) @(posedge clk_48);
         reset_n = 1;
     end
 
@@ -20,6 +20,6 @@ module sineWaveGen_tb;
     end
 
     always
-    #20.833333us clk = ~clk;
+    #20.833333us clk_48 = ~clk_48;
 
 endmodule
