@@ -49,7 +49,6 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
                                 .num);
 
     decode2 decode2_0 (         .digit,
-                                .digit,
                                 .ct);
 
     decode7 decode7_0 (         .num,

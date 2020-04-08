@@ -1,0 +1,15 @@
+{C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/displayMux/displayMux.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/displayMux/displayMux.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module displayMux
+
+Top level modules:
+	displayMux
+
+} {} {}} {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/displayMux/displayMux_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/displayMux/displayMux_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module displayMux_tb
+
+Top level modules:
+	displayMux_tb
+
+} {} {}}

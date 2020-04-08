@@ -1,0 +1,58 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1
+vdecode7
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1586374908
+!i10b 1
+!s100 zS@:2V;AkD=Va2<DSba>W1
+I]VTF1[E6C?AkHEPJ0E;?X1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 decode7_sv_unit
+S1
+Z3 dC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decode7
+w1586374903
+8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decode7/decode7.sv
+FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decode7/decode7.sv
+L0 8
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1586374908.000000
+!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decode7/decode7.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decode7/decode7.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+vdecode7_tb
+R0
+R1
+!i10b 1
+!s100 ;FA1<o[WA4ecbnXYX<R7g3
+I?l9IzRzaoNbXoE`PeQ7k]0
+R2
+!s105 decode7_tb_sv_unit
+S1
+R3
+w1586374629
+8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decode7/decode7_tb.sv
+FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decode7/decode7_tb.sv
+L0 4
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decode7/decode7_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decode7/decode7_tb.sv|
+!i113 1
+R6
+R7

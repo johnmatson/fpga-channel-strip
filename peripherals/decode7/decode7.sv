@@ -9,7 +9,7 @@ module decode7 (input logic [3:0] num, // 4-bit input vector for 0-9
                 input logic decimal,
                 output logic [7:0] leds); // 8-bit output vecctor to 7-segment
     
-    always_comb // specify combinational 
+    always_comb begin
         case (num) // 4-bit to 8-bit decoder for 7-segment display
             0 : leds = 'b11000000;
             1 : leds = 'b11111001;
@@ -26,6 +26,7 @@ module decode7 (input logic [3:0] num, // 4-bit input vector for 0-9
         endcase
 
         if (decimal)
-            leds = leds & 'b01111111;
+            leds = (leds & 'b01111111);
+    end
 
 endmodule
