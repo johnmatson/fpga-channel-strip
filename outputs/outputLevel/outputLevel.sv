@@ -8,7 +8,6 @@ module outputLevel #( parameter samples = 12000 ) (
 
     logic signed [63:0] inWave_64, outWave_64;
     logic signed [63:0] inSum, outSum;
-    logic signed [63:0] inTemp, outTemp;
     logic [15:0] count;
 
     // math for deciding output/input
@@ -34,26 +33,29 @@ module outputLevel #( parameter samples = 12000 ) (
             if (level >= i2) begin
                 num2 = i2/100;
                 level -= i2;
-
-                for (int i1 = 90; i1 >= 10; i1 -= 10) begin
-                    if (level >= i1) begin
-                        num1 = i1/10;
-                        level -= i1;
-
-                        for (int i0 = 9; i0 >= 1; i0--) begin
-                            if (level >= i0) begin
-                                num0 = i0;
-                            end
-                            else
-                                num0 = 0;
-                        end
-                    end
-                    else
-                        num1 = 0;
-                end
+                i2 = 0;
             end
             else
                 num2 = 0;
+        end
+
+        for (int i1 = 90; i1 >= 10; i1 -= 10) begin
+            if (level >= i1) begin
+                num1 = i1/10;
+                level -= i1;
+                i1 = 0;
+            end
+            else
+                num1 = 0;
+        end
+
+        for (int i0 = 9; i0 >= 1; i0--) begin
+            if (level >= i0) begin
+                num0 = i0;
+                i0 = 0;
+            end
+            else
+                num0 = 0;            
         end
     end
 
@@ -61,9 +63,8 @@ module outputLevel #( parameter samples = 12000 ) (
         if (~reset_n) begin
             inSum <= 0;
             outSum <= 0;
-            inTemp <= 0;
-            outTemp <= 0;
             count <= 0;
+            dB <= 0;
         end
 
         else begin
@@ -72,9 +73,7 @@ module outputLevel #( parameter samples = 12000 ) (
             count <= count + 1;
 
             if (count >= samples) begin
-                inTemp <= ((inSum / samples) ** 0.5);
-                outTemp <= ((outSum / samples) ** 0.5);
-                dB <= 200 * $log10(outTemp / inTemp);
+                dB <= 200 * ($log10($sqrt(outSum / samples)) - $log10($sqrt(inSum / samples)));
                 count <= 0;
             end
         end
