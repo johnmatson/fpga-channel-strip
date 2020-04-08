@@ -1,0 +1,60 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1
+vencodeButton
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1586370276
+!i10b 1
+!s100 7:U]a[NoWXBAgSB@9Ekb61
+IA0VRzbO5d4T1N;B@4LaW`1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 encodeButton_sv_unit
+S1
+Z3 dC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton
+w1586370080
+8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv
+FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1586370276.000000
+!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+nencode@button
+vencodeButton_tb
+R0
+R1
+!i10b 1
+!s100 8@I1H_h6Jao;Fj9R`5=_f1
+IPD2fMAEA36kFO=P536Hdg0
+R2
+!s105 encodeButton_tb_sv_unit
+S1
+R3
+w1586370219
+8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton_tb.sv
+FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton_tb.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton_tb.sv|
+!i113 1
+R6
+R7
+nencode@button_tb
