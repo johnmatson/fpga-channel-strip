@@ -1,5 +1,5 @@
 Analysis & Synthesis report for channelStrip
-Wed Apr 08 16:34:32 2020
+Wed Apr 08 16:54:11 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Wed Apr 08 16:34:32 2020           ;
+; Analysis & Synthesis Status ; Failed - Wed Apr 08 16:54:11 2020           ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; channelStrip                                ;
 ; Top-level Entity Name       ; channelStrip                                ;
@@ -161,7 +161,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Apr 08 16:34:23 2020
+    Info: Processing started: Wed Apr 08 16:54:02 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off channelStrip -c channelStrip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -630,21 +630,17 @@ Info (12128): Elaborating entity "highpass" for hierarchy "highpass:highpass_0" 
 Warning (10230): Verilog HDL assignment warning at highpass.sv(71): truncated value with size 32 to match size of target (16) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/filters/verilog-implementation/highpass/highpass.sv Line: 71
 Warning (10230): Verilog HDL assignment warning at highpass.sv(73): truncated value with size 64 to match size of target (16) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/filters/verilog-implementation/highpass/highpass.sv Line: 73
 Info (12128): Elaborating entity "outputLevel" for hierarchy "outputLevel:outputLevel_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 46
-Warning (10230): Verilog HDL assignment warning at outputLevel.sv(37): truncated value with size 32 to match size of target (4) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 37
-Warning (10230): Verilog HDL assignment warning at outputLevel.sv(48): truncated value with size 32 to match size of target (4) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 48
-Warning (10230): Verilog HDL assignment warning at outputLevel.sv(59): truncated value with size 32 to match size of target (4) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 59
-Warning (10240): Verilog HDL Always Construct warning at outputLevel.sv(19): inferring latch(es) for variable "num2", which holds its previous value in one or more paths through the always construct File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 19
-Warning (10240): Verilog HDL Always Construct warning at outputLevel.sv(19): inferring latch(es) for variable "num1", which holds its previous value in one or more paths through the always construct File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 19
-Warning (10240): Verilog HDL Always Construct warning at outputLevel.sv(19): inferring latch(es) for variable "num0", which holds its previous value in one or more paths through the always construct File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 19
-Error (10166): SystemVerilog RTL Coding error at outputLevel.sv(19): always_comb construct does not infer purely combinational logic. File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 19
-Warning (10230): Verilog HDL assignment warning at outputLevel.sv(76): truncated value with size 32 to match size of target (16) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 76
-Error (10174): Verilog HDL Unsupported Feature error at outputLevel.sv(79): system function "$log10" is not supported for synthesis File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 79
-Warning (10240): Verilog HDL Always Construct warning at outputLevel.sv(65): inferring latch(es) for variable "dB", which holds its previous value in one or more paths through the always construct File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 65
+Warning (10230): Verilog HDL assignment warning at outputLevel.sv(40): truncated value with size 32 to match size of target (4) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 40
+Warning (10230): Verilog HDL assignment warning at outputLevel.sv(51): truncated value with size 32 to match size of target (4) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 51
+Warning (10230): Verilog HDL assignment warning at outputLevel.sv(62): truncated value with size 32 to match size of target (4) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 62
+Warning (10230): Verilog HDL assignment warning at outputLevel.sv(79): truncated value with size 32 to match size of target (16) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 79
+Error (10127): Verilog HDL unsupported feature error at outputLevel.sv(82): real numbers are not supported File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 82
+Warning (10240): Verilog HDL Always Construct warning at outputLevel.sv(68): inferring latch(es) for variable "dB", which holds its previous value in one or more paths through the always construct File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 68
 Error (12152): Can't elaborate user hierarchy "outputLevel:outputLevel_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 46
 Info (144001): Generated suppressed messages file C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/output_files/channelStrip.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 442 warnings
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 439 warnings
     Error: Peak virtual memory: 4788 megabytes
-    Error: Processing ended: Wed Apr 08 16:34:32 2020
+    Error: Processing ended: Wed Apr 08 16:54:11 2020
     Error: Elapsed time: 00:00:09
     Error: Total CPU time (on all processors): 00:00:22
 

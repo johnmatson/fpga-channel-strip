@@ -14,6 +14,9 @@ module outputLevel #( parameter samples = 12000 ) (
     // gives us 3 digit level in dB resolution 3210
 
     always_comb begin
+        num2 = 0;
+        num1 = 0;
+        num0 = 0;
 
         // 16 to 64 bit conversion with sign preservation
         inWave_64 = { {(48){inWave[15]}}, inWave };
@@ -76,7 +79,7 @@ module outputLevel #( parameter samples = 12000 ) (
             count <= count + 1;
 
             if (count >= samples) begin
-                dB <= 200 * ($log10($sqrt(outSum / samples)) - $log10($sqrt(inSum / samples)));
+                dB <= 200 * (($clog2($sqrt(outSum / samples)) / $clog2(10)) - ($clog2($sqrt(inSum / samples)) / $clog2(10)));
                 count <= 0;
             end
         end

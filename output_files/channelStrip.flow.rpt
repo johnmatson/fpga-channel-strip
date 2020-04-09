@@ -1,5 +1,5 @@
 Flow report for channelStrip
-Wed Apr 08 16:34:32 2020
+Wed Apr 08 16:54:11 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Flow Failed - Wed Apr 08 16:34:32 2020      ;
+; Flow Status                 ; Flow Failed - Wed Apr 08 16:54:11 2020      ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; channelStrip                                ;
 ; Top-level Entity Name       ; channelStrip                                ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/08/2020 16:34:24 ;
+; Start date & time ; 04/08/2020 16:54:03 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; channelStrip        ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 40637412675754.158638886308296         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 40637412675754.158639004218096         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
