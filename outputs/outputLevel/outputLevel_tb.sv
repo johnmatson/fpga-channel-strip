@@ -2,8 +2,7 @@ module outputLevel_tb;
 
     logic clk_48, reset_n;
     logic signed [15:0] inWave, outWave;
-    logic [3:0] num2, num1, num0;
-    logic neg;
+    logic [3:0] num3, num2, num1, num0;
 
     outputLevel dut_0 (.*);
 
