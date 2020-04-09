@@ -3,20 +3,32 @@ module clkDivider #( parameter divide = 3 ) (
                     input logic clkIn,
                     output logic clkOut );
 
-    logic [1:0] count;
+    logic [1:0] posCount, negCount;
 
-    always_ff @ ( posedge clkIn, negedge clkIn, negedge reset_n ) begin
+    always_ff @ ( posedge clkIn, negedge reset_n ) begin
         if (~reset_n) begin
-            clkOut <= 0;
-            count <= 0;
+            posCount <= 0;
         end
         else begin
-            if (count >= divide - 1) begin
-                count <= 0;
-                clkOut <= ~clkOut;
-            end
+            if (posCount == 2)
+                posCount <= 0;
             else
-                count <= count + 1;
+                posCount <= posCount + 1;
         end
     end
+
+    always_ff @ ( negedge clkIn, negedge reset_n ) begin
+        if (~reset_n) begin
+            negCount <= 0;
+        end
+        else begin
+            if (negCount == 2)
+                negCount <= 0;
+            else
+                negCount <= negCount + 1;
+        end
+    end
+
+    assign clkOut = ((posCount == 2) | (negCount == 2));
+
 endmodule
