@@ -1,7 +1,8 @@
 module decodeButton (   input logic [3:0] buttonNum,
                         output logic [15:0] buttons);
     
-    always_comb 
+    always_comb  begin
+        buttons = 0;
         case (buttonNum)
             0   : buttons = 'b0000000000000001;
             1   : buttons = 'b0000000000000010;
@@ -21,5 +22,6 @@ module decodeButton (   input logic [3:0] buttonNum,
 			15  : buttons = 'b1000000000000000;
             default : buttons = 0;
         endcase
+    end
 
 endmodule

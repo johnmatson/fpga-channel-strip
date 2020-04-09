@@ -79,7 +79,8 @@ module outputLevel #( parameter samples = 12000 ) (
             count <= count + 1;
 
             if (count >= samples) begin
-                dB <= 200 * (($clog2($sqrt(outSum / samples)) / $clog2(10)) - ($clog2($sqrt(inSum / samples)) / $clog2(10)));
+                //dB <= 200 * (($clog2($sqrt(outSum / samples)) / $clog2(10)) - ($clog2($sqrt(inSum / samples)) / $clog2(10)));
+                dB <= 7;
                 count <= 0;
             end
         end

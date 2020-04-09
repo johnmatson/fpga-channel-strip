@@ -1,5 +1,5 @@
 Analysis & Synthesis report for channelStrip
-Wed Apr 08 16:54:11 2020
+Wed Apr 08 19:22:02 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Wed Apr 08 16:54:11 2020           ;
+; Analysis & Synthesis Status ; Failed - Wed Apr 08 19:22:02 2020           ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; channelStrip                                ;
 ; Top-level Entity Name       ; channelStrip                                ;
@@ -161,7 +161,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Apr 08 16:54:02 2020
+    Info: Processing started: Wed Apr 08 19:21:48 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off channelStrip -c channelStrip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -634,15 +634,102 @@ Warning (10230): Verilog HDL assignment warning at outputLevel.sv(40): truncated
 Warning (10230): Verilog HDL assignment warning at outputLevel.sv(51): truncated value with size 32 to match size of target (4) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 51
 Warning (10230): Verilog HDL assignment warning at outputLevel.sv(62): truncated value with size 32 to match size of target (4) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 62
 Warning (10230): Verilog HDL assignment warning at outputLevel.sv(79): truncated value with size 32 to match size of target (16) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 79
-Error (10127): Verilog HDL unsupported feature error at outputLevel.sv(82): real numbers are not supported File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 82
-Warning (10240): Verilog HDL Always Construct warning at outputLevel.sv(68): inferring latch(es) for variable "dB", which holds its previous value in one or more paths through the always construct File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 68
-Error (12152): Can't elaborate user hierarchy "outputLevel:outputLevel_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 46
+Info (12128): Elaborating entity "displayMux" for hierarchy "displayMux:displayMux_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 53
+Info (12128): Elaborating entity "decode2" for hierarchy "decode2:decode2_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 56
+Info (12128): Elaborating entity "decode7" for hierarchy "decode7:decode7_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 60
+Warning (10230): Verilog HDL assignment warning at decode7.sv(29): truncated value with size 32 to match size of target (8) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decode7/decode7.sv Line: 29
+Info (12128): Elaborating entity "colseq" for hierarchy "colseq:colseq_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 65
+Info (12128): Elaborating entity "kpdecode" for hierarchy "kpdecode:kpdecode_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 69
+Warning (10270): Verilog HDL Case Statement warning at kpdecode.sv(20): incomplete case statement has no default case item File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv Line: 20
+Warning (10270): Verilog HDL Case Statement warning at kpdecode.sv(30): incomplete case statement has no default case item File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv Line: 30
+Warning (10270): Verilog HDL Case Statement warning at kpdecode.sv(40): incomplete case statement has no default case item File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv Line: 40
+Warning (10270): Verilog HDL Case Statement warning at kpdecode.sv(50): incomplete case statement has no default case item File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv Line: 50
+Warning (10270): Verilog HDL Case Statement warning at kpdecode.sv(16): incomplete case statement has no default case item File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv Line: 16
+Info (12128): Elaborating entity "decodeButton" for hierarchy "decodeButton:decodeButton_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 72
+Info (12128): Elaborating entity "encodeButton" for hierarchy "encodeButton:encodeButton_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 77
+Info (10264): Verilog HDL Case Statement information at encodeButton.sv(31): all case item expressions in this case statement are onehot File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 31
+Warning (10240): Verilog HDL Always Construct warning at encodeButton.sv(6): inferring latch(es) for variable "freqSelect", which holds its previous value in one or more paths through the always construct File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
+Warning (10240): Verilog HDL Always Construct warning at encodeButton.sv(6): inferring latch(es) for variable "lowpassSelect", which holds its previous value in one or more paths through the always construct File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
+Warning (10240): Verilog HDL Always Construct warning at encodeButton.sv(6): inferring latch(es) for variable "highpassSelect", which holds its previous value in one or more paths through the always construct File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
+Info (10041): Inferred latch for "highpassSelect[0]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
+Info (10041): Inferred latch for "highpassSelect[1]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
+Info (10041): Inferred latch for "highpassSelect[2]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
+Info (10041): Inferred latch for "lowpassSelect[0]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
+Info (10041): Inferred latch for "lowpassSelect[1]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
+Info (10041): Inferred latch for "lowpassSelect[2]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
+Info (10041): Inferred latch for "freqSelect[0]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
+Info (10041): Inferred latch for "freqSelect[1]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
+Info (10041): Inferred latch for "freqSelect[2]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
+Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 80
+Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll_0|altpll:altpll_component" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 117
+Info (12130): Elaborated megafunction instantiation "pll:pll_0|altpll:altpll_component" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 117
+Info (12133): Instantiated megafunction "pll:pll_0|altpll:altpll_component" with the following parameter: File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 117
+    Info (12134): Parameter "bandwidth_type" = "AUTO"
+    Info (12134): Parameter "clk0_divide_by" = "347"
+    Info (12134): Parameter "clk0_duty_cycle" = "50"
+    Info (12134): Parameter "clk0_multiply_by" = "1"
+    Info (12134): Parameter "clk0_phase_shift" = "0"
+    Info (12134): Parameter "compensate_clock" = "CLK0"
+    Info (12134): Parameter "inclk0_input_frequency" = "20000"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "CBX_MODULE_PREFIX=lab1clk"
+    Info (12134): Parameter "lpm_type" = "altpll"
+    Info (12134): Parameter "operation_mode" = "NORMAL"
+    Info (12134): Parameter "pll_type" = "AUTO"
+    Info (12134): Parameter "port_activeclock" = "PORT_UNUSED"
+    Info (12134): Parameter "port_areset" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkbad0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkbad1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkloss" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkswitch" = "PORT_UNUSED"
+    Info (12134): Parameter "port_configupdate" = "PORT_UNUSED"
+    Info (12134): Parameter "port_fbin" = "PORT_UNUSED"
+    Info (12134): Parameter "port_inclk0" = "PORT_USED"
+    Info (12134): Parameter "port_inclk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_locked" = "PORT_UNUSED"
+    Info (12134): Parameter "port_pfdena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasecounterselect" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasedone" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasestep" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phaseupdown" = "PORT_UNUSED"
+    Info (12134): Parameter "port_pllena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanaclr" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanclk" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanclkena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandata" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandataout" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandone" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanread" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanwrite" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk0" = "PORT_USED"
+    Info (12134): Parameter "port_clk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk4" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk5" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena4" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena5" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
+    Info (12134): Parameter "width_clock" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lab1clk_altpll.v
+    Info (12023): Found entity 1: lab1clk_altpll File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/db/lab1clk_altpll.v Line: 29
+Info (12128): Elaborating entity "lab1clk_altpll" for hierarchy "pll:pll_0|altpll:altpll_component|lab1clk_altpll:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
+Info (12128): Elaborating entity "clkDivider" for hierarchy "clkDivider:clkDivider_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 82
+Error (10239): Verilog HDL Always Construct error at clkDivider.sv(8): event control cannot test for both positive and negative edges of variable "clkIn" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/clocks/clkDivider/clkDivider.sv Line: 8
+Error (12152): Can't elaborate user hierarchy "clkDivider:clkDivider_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 82
 Info (144001): Generated suppressed messages file C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/output_files/channelStrip.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 439 warnings
-    Error: Peak virtual memory: 4788 megabytes
-    Error: Processing ended: Wed Apr 08 16:54:11 2020
-    Error: Elapsed time: 00:00:09
-    Error: Total CPU time (on all processors): 00:00:22
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 447 warnings
+    Error: Peak virtual memory: 4799 megabytes
+    Error: Processing ended: Wed Apr 08 19:22:02 2020
+    Error: Elapsed time: 00:00:14
+    Error: Total CPU time (on all processors): 00:00:21
 
 
 +------------------------------------------+

@@ -1,5 +1,5 @@
 Flow report for channelStrip
-Wed Apr 08 16:54:11 2020
+Wed Apr 08 19:22:02 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Flow Failed - Wed Apr 08 16:54:11 2020      ;
+; Flow Status                 ; Flow Failed - Wed Apr 08 19:22:02 2020      ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; channelStrip                                ;
 ; Top-level Entity Name       ; channelStrip                                ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/08/2020 16:54:03 ;
+; Start date & time ; 04/08/2020 19:21:49 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; channelStrip        ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 40637412675754.158639004218096         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 40637412675754.158639890913152         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -90,8 +90,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4788 MB             ; 00:00:22                           ;
-; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:22                           ;
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4799 MB             ; 00:00:21                           ;
+; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:21                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
