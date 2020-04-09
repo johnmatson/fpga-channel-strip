@@ -12,8 +12,7 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
     logic [2:0] lowpassSelect, highpassSelect;
 
     logic [1:0] digit;
-    logic [3:0] num2, num1, num0;
-    logic neg;
+    logic [3:0] num3, num2, num1, num0;
     logic decimal;
     logic [3:0] num;
 
@@ -42,13 +41,11 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
 
     outputLevel outputLevel_0 ( .clk_48, .reset_n,
                                 .inWave(stage1), .outWave(stage3),
-                                .num2, .num1, .num0,
-                                .neg);
+                                .num3, .num2, .num1, .num0 );
 
 
     displayMux displayMux_0 (   .digit,
-                                .num2, .num1, .num0,
-                                .neg,
+                                .num3, .num2, .num1, .num0,
                                 .decimal,
                                 .num);
 
