@@ -1,5 +1,5 @@
 Flow report for channelStrip
-Fri Apr 10 00:32:48 2020
+Fri Apr 10 15:09:09 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,19 +40,19 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Apr 10 00:32:25 2020       ;
+; Flow Status                     ; Successful - Fri Apr 10 15:08:48 2020       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; channelStrip                                ;
 ; Top-level Entity Name           ; channelStrip                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA4U23C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 6,227 / 15,880 ( 39 % )                     ;
-; Total registers                 ; 367                                         ;
+; Logic utilization (in ALMs)     ; 5,942 / 15,880 ( 37 % )                     ;
+; Total registers                 ; 267                                         ;
 ; Total pins                      ; 22 / 314 ( 7 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 2,764,800 ( 0 % )                       ;
-; Total DSP Blocks                ; 74 / 84 ( 88 % )                            ;
+; Total DSP Blocks                ; 39 / 84 ( 46 % )                            ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/10/2020 00:27:16 ;
+; Start date & time ; 04/10/2020 15:04:11 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; channelStrip        ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 40637412675754.158650363612164         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 40637412675754.158655625119824         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -95,11 +95,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:47     ; 1.0                     ; 4982 MB             ; 00:01:00                           ;
-; Fitter               ; 00:04:09     ; 1.2                     ; 7041 MB             ; 00:20:46                           ;
-; Assembler            ; 00:00:07     ; 1.0                     ; 4936 MB             ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:22     ; 3.9                     ; 5333 MB             ; 00:00:58                           ;
-; Total                ; 00:05:25     ; --                      ; --                  ; 00:22:51                           ;
+; Analysis & Synthesis ; 00:00:47     ; 1.0                     ; 4969 MB             ; 00:01:00                           ;
+; Fitter               ; 00:03:38     ; 1.2                     ; 6974 MB             ; 00:18:20                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 4916 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:20     ; 3.9                     ; 5305 MB             ; 00:00:54                           ;
+; Total                ; 00:04:52     ; --                      ; --                  ; 00:20:21                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

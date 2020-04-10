@@ -33,7 +33,7 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
 
 
     assign freqSelect = 4;
-    assign lowpassSelect = 1;
+    assign lowpassSelect = 0;
     assign highpassSelect = 3;
 
     //assign stage1 = 32767;

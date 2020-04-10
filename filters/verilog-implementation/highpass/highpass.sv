@@ -119,15 +119,6 @@ module highpass #( parameter L = 3, N = 63, shift = 30 ) (
         endcase
         
     end
-
-
-    // ensure state zero executes first on new sample
-    always_ff @ (negedge state[1], negedge reset_n) begin
-        if (~reset_n)
-            x0 <= 0;
-        else
-            x0 <= x0_buffer;
-    end
     
  
     always_ff @ (posedge clk_144, negedge reset_n) begin
@@ -136,6 +127,7 @@ module highpass #( parameter L = 3, N = 63, shift = 30 ) (
         if (~reset_n) begin
             y1 <= 0;
             y2 <= 0;
+            x0 <= 0;
             x1 <= 0;
             x2 <= 0;
 
@@ -164,6 +156,8 @@ module highpass #( parameter L = 3, N = 63, shift = 30 ) (
                     // rotate buffer 1
                     x1 <= x0;
                     y1 <= yn;
+
+                    x0 <= x0_buffer;
 
                     state <= 0;
                 end

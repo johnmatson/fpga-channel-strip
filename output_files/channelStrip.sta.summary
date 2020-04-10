@@ -3,48 +3,24 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'clkDivider:clkDivider_0|negCount[0]'
-Slack : -199.063
-TNS   : -13869.942
+Slack : -196.348
+TNS   : -13560.882
 
 Type  : Slow 1100mV 85C Model Setup 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : -11.480
-TNS   : -4512.567
-
-Type  : Slow 1100mV 85C Model Setup 'lowpass:lowpass_0|state[1]'
-Slack : -8.658
-TNS   : -1438.419
-
-Type  : Slow 1100mV 85C Model Setup 'highpass:highpass_0|state[1]'
-Slack : -6.494
-TNS   : -1029.598
+Slack : -6.788
+TNS   : -111.524
 
 Type  : Slow 1100mV 85C Model Hold 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.295
+Slack : 0.226
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'clkDivider:clkDivider_0|negCount[0]'
-Slack : 0.613
+Slack : 0.544
 TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'highpass:highpass_0|state[1]'
-Slack : 0.859
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'lowpass:lowpass_0|state[1]'
-Slack : 1.360
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'highpass:highpass_0|state[1]'
-Slack : -3.000
-TNS   : -455.326
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'lowpass:lowpass_0|state[1]'
-Slack : -3.000
-TNS   : -452.682
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clkDivider:clkDivider_0|negCount[0]'
 Slack : -2.225
-TNS   : -275.879
+TNS   : -275.921
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
@@ -55,52 +31,28 @@ Slack : 9.900
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 425.954
+Slack : 425.953
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'clkDivider:clkDivider_0|negCount[0]'
-Slack : -203.705
-TNS   : -14126.354
+Slack : -201.501
+TNS   : -13865.122
 
 Type  : Slow 1100mV 0C Model Setup 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : -11.708
-TNS   : -4089.601
-
-Type  : Slow 1100mV 0C Model Setup 'lowpass:lowpass_0|state[1]'
-Slack : -8.608
-TNS   : -1430.095
-
-Type  : Slow 1100mV 0C Model Setup 'highpass:highpass_0|state[1]'
-Slack : -6.321
-TNS   : -1003.322
+Slack : -6.693
+TNS   : -108.964
 
 Type  : Slow 1100mV 0C Model Hold 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.144
+Slack : 0.283
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'clkDivider:clkDivider_0|negCount[0]'
-Slack : 0.569
+Slack : 0.531
 TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'highpass:highpass_0|state[1]'
-Slack : 1.101
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'lowpass:lowpass_0|state[1]'
-Slack : 1.359
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'highpass:highpass_0|state[1]'
-Slack : -3.000
-TNS   : -455.165
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'lowpass:lowpass_0|state[1]'
-Slack : -3.000
-TNS   : -452.700
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clkDivider:clkDivider_0|negCount[0]'
 Slack : -2.225
-TNS   : -269.814
+TNS   : -273.013
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
@@ -111,52 +63,28 @@ Slack : 9.926
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 425.815
+Slack : 425.807
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'clkDivider:clkDivider_0|negCount[0]'
-Slack : -113.241
-TNS   : -7898.574
+Slack : -110.937
+TNS   : -7643.080
 
 Type  : Fast 1100mV 85C Model Setup 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : -6.524
-TNS   : -2856.855
-
-Type  : Fast 1100mV 85C Model Setup 'lowpass:lowpass_0|state[1]'
-Slack : -4.714
-TNS   : -770.061
-
-Type  : Fast 1100mV 85C Model Setup 'highpass:highpass_0|state[1]'
-Slack : -3.593
-TNS   : -559.689
+Slack : -3.438
+TNS   : -58.470
 
 Type  : Fast 1100mV 85C Model Hold 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.171
+Slack : 0.143
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'clkDivider:clkDivider_0|negCount[0]'
-Slack : 0.296
+Slack : 0.251
 TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'highpass:highpass_0|state[1]'
-Slack : 0.382
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'lowpass:lowpass_0|state[1]'
-Slack : 0.699
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'highpass:highpass_0|state[1]'
-Slack : -2.225
-TNS   : -333.797
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'lowpass:lowpass_0|state[1]'
-Slack : -2.225
-TNS   : -332.208
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clkDivider:clkDivider_0|negCount[0]'
 Slack : -1.702
-TNS   : -147.998
+TNS   : -144.750
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
@@ -167,52 +95,28 @@ Slack : 9.643
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 426.197
+Slack : 426.195
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'clkDivider:clkDivider_0|negCount[0]'
-Slack : -107.905
-TNS   : -7469.546
+Slack : -105.908
+TNS   : -7262.204
 
 Type  : Fast 1100mV 0C Model Setup 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : -6.033
-TNS   : -2257.244
-
-Type  : Fast 1100mV 0C Model Setup 'lowpass:lowpass_0|state[1]'
-Slack : -4.354
-TNS   : -711.573
-
-Type  : Fast 1100mV 0C Model Setup 'highpass:highpass_0|state[1]'
-Slack : -3.219
-TNS   : -509.229
+Slack : -3.082
+TNS   : -51.698
 
 Type  : Fast 1100mV 0C Model Hold 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.177
+Slack : 0.151
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'clkDivider:clkDivider_0|negCount[0]'
-Slack : 0.259
+Slack : 0.218
 TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'highpass:highpass_0|state[1]'
-Slack : 0.507
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'lowpass:lowpass_0|state[1]'
-Slack : 0.703
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'highpass:highpass_0|state[1]'
-Slack : -2.225
-TNS   : -333.197
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'lowpass:lowpass_0|state[1]'
-Slack : -2.225
-TNS   : -332.218
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clkDivider:clkDivider_0|negCount[0]'
 Slack : -1.702
-TNS   : -139.548
+TNS   : -138.770
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
@@ -223,7 +127,7 @@ Slack : 9.632
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 426.207
+Slack : 426.206
 TNS   : 0.000
 
 ------------------------------------------------------------

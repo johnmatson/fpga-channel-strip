@@ -1,5 +1,5 @@
 Analysis & Synthesis report for channelStrip
-Fri Apr 10 00:28:04 2020
+Fri Apr 10 15:04:58 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -59,17 +59,17 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Apr 10 00:28:04 2020       ;
+; Analysis & Synthesis Status     ; Successful - Fri Apr 10 15:04:58 2020       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; channelStrip                                ;
 ; Top-level Entity Name           ; channelStrip                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 470                                         ;
+; Total registers                 ; 306                                         ;
 ; Total pins                      ; 22                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 74                                          ;
+; Total DSP Blocks                ; 39                                          ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -228,27 +228,27 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimate of Logic utilization (ALMs needed) ; 6382          ;
+; Estimate of Logic utilization (ALMs needed) ; 6151          ;
 ;                                             ;               ;
-; Combinational ALUT usage for logic          ; 10857         ;
+; Combinational ALUT usage for logic          ; 10422         ;
 ;     -- 7 input functions                    ; 1             ;
-;     -- 6 input functions                    ; 1879          ;
-;     -- 5 input functions                    ; 969           ;
-;     -- 4 input functions                    ; 3581          ;
-;     -- <=3 input functions                  ; 4427          ;
+;     -- 6 input functions                    ; 1864          ;
+;     -- 5 input functions                    ; 960           ;
+;     -- 4 input functions                    ; 3577          ;
+;     -- <=3 input functions                  ; 4020          ;
 ;                                             ;               ;
-; Dedicated logic registers                   ; 470           ;
+; Dedicated logic registers                   ; 306           ;
 ;                                             ;               ;
 ; I/O pins                                    ; 22            ;
 ;                                             ;               ;
-; Total DSP Blocks                            ; 74            ;
+; Total DSP Blocks                            ; 39            ;
 ;                                             ;               ;
 ; Total PLLs                                  ; 1             ;
 ;     -- PLLs                                 ; 1             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; reset_n~input ;
-; Maximum fan-out                             ; 468           ;
-; Total fan-out                               ; 48464         ;
+; Maximum fan-out                             ; 304           ;
+; Total fan-out                               ; 45705         ;
 ; Average fan-out                             ; 4.23          ;
 +---------------------------------------------+---------------+
 
@@ -258,15 +258,14 @@ refer to the applicable agreement for further details.
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Entity Name     ; Library Name ;
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |channelStrip                            ; 10857 (2)           ; 470 (2)                   ; 0                 ; 74         ; 22   ; 0            ; |channelStrip                                                                                                                        ; channelStrip    ; work         ;
+; |channelStrip                            ; 10422 (2)           ; 306 (2)                   ; 0                 ; 39         ; 22   ; 0            ; |channelStrip                                                                                                                        ; channelStrip    ; work         ;
 ;    |clkDivider:clkDivider_0|             ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|clkDivider:clkDivider_0                                                                                                ; clkDivider      ; work         ;
 ;    |colseq:colseq_0|                     ; 6 (6)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|colseq:colseq_0                                                                                                        ; colseq          ; work         ;
 ;    |decode2:decode2_0|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|decode2:decode2_0                                                                                                      ; decode2         ; work         ;
 ;    |decode7:decode7_0|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|decode7:decode7_0                                                                                                      ; decode7         ; work         ;
 ;    |displayMux:displayMux_0|             ; 60 (60)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|displayMux:displayMux_0                                                                                                ; displayMux      ; work         ;
 ;    |highpass:highpass_0|                 ; 439 (439)           ; 164 (164)                 ; 0                 ; 35         ; 0    ; 0            ; |channelStrip|highpass:highpass_0                                                                                                    ; highpass        ; work         ;
-;    |lowpass:lowpass_0|                   ; 437 (437)           ; 164 (164)                 ; 0                 ; 35         ; 0    ; 0            ; |channelStrip|lowpass:lowpass_0                                                                                                      ; lowpass         ; work         ;
-;    |outputLevel:outputLevel_0|           ; 9858 (4503)         ; 112 (112)                 ; 0                 ; 3          ; 0    ; 0            ; |channelStrip|outputLevel:outputLevel_0                                                                                              ; outputLevel     ; work         ;
+;    |outputLevel:outputLevel_0|           ; 9860 (4505)         ; 112 (112)                 ; 0                 ; 3          ; 0    ; 0            ; |channelStrip|outputLevel:outputLevel_0                                                                                              ; outputLevel     ; work         ;
 ;       |lpm_divide:Div0|                  ; 5355 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|outputLevel:outputLevel_0|lpm_divide:Div0                                                                              ; lpm_divide      ; work         ;
 ;          |lpm_divide_5ro:auto_generated| ; 5355 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|outputLevel:outputLevel_0|lpm_divide:Div0|lpm_divide_5ro:auto_generated                                                ; lpm_divide_5ro  ; work         ;
 ;             |abs_divider_edg:divider|    ; 5355 (65)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|outputLevel:outputLevel_0|lpm_divide:Div0|lpm_divide_5ro:auto_generated|abs_divider_edg:divider                        ; abs_divider_edg ; work         ;
@@ -286,14 +285,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------+-------------+
 ; Statistic                         ; Number Used ;
 +-----------------------------------+-------------+
-; Two Independent 18x18             ; 21          ;
+; Two Independent 18x18             ; 11          ;
 ; Independent 18x18 plus 36         ; 1           ;
-; Sum of two 18x18                  ; 10          ;
-; Independent 27x27                 ; 42          ;
-; Total number of DSP blocks        ; 74          ;
+; Sum of two 18x18                  ; 5           ;
+; Independent 27x27                 ; 22          ;
+; Total number of DSP blocks        ; 39          ;
 ;                                   ;             ;
-; Fixed Point Unsigned Multiplier   ; 72          ;
-; Fixed Point Mixed Sign Multiplier ; 12          ;
+; Fixed Point Unsigned Multiplier   ; 37          ;
+; Fixed Point Mixed Sign Multiplier ; 7           ;
 +-----------------------------------+-------------+
 
 
@@ -311,13 +310,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; highpass:highpass_0|y2[38..63]           ; Merged with highpass:highpass_0|y2[37]           ;
 ; highpass:highpass_0|x0[16..63]           ; Merged with highpass:highpass_0|x0[15]           ;
 ; highpass:highpass_0|x2[16..63]           ; Merged with highpass:highpass_0|x2[15]           ;
-; lowpass:lowpass_0|yn[38..63]             ; Merged with lowpass:lowpass_0|yn[37]             ;
-; lowpass:lowpass_0|x1[16..63]             ; Merged with lowpass:lowpass_0|x1[15]             ;
-; lowpass:lowpass_0|y1[38..63]             ; Merged with lowpass:lowpass_0|y1[37]             ;
-; lowpass:lowpass_0|y2[38..63]             ; Merged with lowpass:lowpass_0|y2[37]             ;
-; lowpass:lowpass_0|x0[16..63]             ; Merged with lowpass:lowpass_0|x0[15]             ;
-; lowpass:lowpass_0|x2[16..63]             ; Merged with lowpass:lowpass_0|x2[15]             ;
-; Total Number of Removed Registers = 550  ;                                                  ;
+; Total Number of Removed Registers = 328  ;                                                  ;
 +------------------------------------------+--------------------------------------------------+
 
 
@@ -326,12 +319,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 470   ;
-; Number of registers using Synchronous Clear  ; 357   ;
+; Total registers                              ; 306   ;
+; Number of registers using Synchronous Clear  ; 196   ;
 ; Number of registers using Synchronous Load   ; 65    ;
-; Number of registers using Asynchronous Clear ; 468   ;
+; Number of registers using Asynchronous Clear ; 304   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 388   ;
+; Number of registers using Clock Enable       ; 258   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -341,23 +334,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|y1[36]          ;
-; 4:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|y2[9]           ;
-; 4:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|yn[13]          ;
+; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|y1[14]          ;
+; 4:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|y2[15]          ;
+; 4:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|yn[10]          ;
 ; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|x2[13]          ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|x1[6]           ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|x0[12]          ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |channelStrip|lowpass:lowpass_0|y1[14]            ;
-; 4:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |channelStrip|lowpass:lowpass_0|y2[28]            ;
-; 4:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |channelStrip|lowpass:lowpass_0|yn[11]            ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |channelStrip|lowpass:lowpass_0|x2[14]            ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |channelStrip|lowpass:lowpass_0|x1[7]             ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |channelStrip|highpass:highpass_0|highpassOut[1]  ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|x1[12]          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |channelStrip|highpass:highpass_0|highpassOut[9]  ;
 ; 3:1                ; 60 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |channelStrip|outputLevel:outputLevel_0|level     ;
 ; 3:1                ; 61 bits   ; 122 LEs       ; 122 LEs              ; 0 LEs                  ; No         ; |channelStrip|outputLevel:outputLevel_0|level     ;
-; 3:1                ; 62 bits   ; 124 LEs       ; 124 LEs              ; 0 LEs                  ; No         ; |channelStrip|outputLevel:outputLevel_0|level[48] ;
-; 28:1               ; 2 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |channelStrip|displayMux:displayMux_0|Mux1        ;
-; 40:1               ; 2 bits    ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; No         ; |channelStrip|displayMux:displayMux_0|Mux0        ;
+; 3:1                ; 62 bits   ; 124 LEs       ; 124 LEs              ; 0 LEs                  ; No         ; |channelStrip|outputLevel:outputLevel_0|level[30] ;
+; 28:1               ; 2 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |channelStrip|displayMux:displayMux_0|Mux2        ;
+; 40:1               ; 2 bits    ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; No         ; |channelStrip|displayMux:displayMux_0|Mux3        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 
 
@@ -412,7 +399,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------+
 ; Parameter Name ; Value ; Type                                          ;
 +----------------+-------+-----------------------------------------------+
-; samples        ; 12000 ; Signed Integer                                ;
+; samples        ; 48000 ; Signed Integer                                ;
 +----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -854,22 +841,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-------------------------------------------------+
 ; Port Connectivity Checks: "highpass:highpass_0" ;
-+--------------+-------+----------+---------------+
-; Port         ; Type  ; Severity ; Details       ;
-+--------------+-------+----------+---------------+
-; filter[1..0] ; Input ; Info     ; Stuck at VCC  ;
-; filter[2]    ; Input ; Info     ; Stuck at GND  ;
-+--------------+-------+----------+---------------+
++--------+-------+----------+---------------------+
+; Port   ; Type  ; Severity ; Details             ;
++--------+-------+----------+---------------------+
+; filter ; Input ; Info     ; Stuck at GND        ;
++--------+-------+----------+---------------------+
 
 
-+------------------------------------------------+
-; Port Connectivity Checks: "lowpass:lowpass_0"  ;
-+--------------+-------+----------+--------------+
-; Port         ; Type  ; Severity ; Details      ;
-+--------------+-------+----------+--------------+
-; filter[2..1] ; Input ; Info     ; Stuck at GND ;
-; filter[0]    ; Input ; Info     ; Stuck at VCC ;
-+--------------+-------+----------+--------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lowpass:lowpass_0"                                                                        ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; filter     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; lowpassOut ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------+
@@ -887,41 +873,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 470                         ;
-;     CLR               ; 46                          ;
-;     CLR SCLR          ; 33                          ;
+; arriav_ff             ; 306                         ;
+;     CLR               ; 27                          ;
+;     CLR SCLR          ; 18                          ;
 ;     CLR SLD           ; 1                           ;
-;     ENA CLR SCLR      ; 324                         ;
+;     ENA CLR           ; 16                          ;
+;     ENA CLR SCLR      ; 178                         ;
 ;     ENA CLR SLD       ; 64                          ;
 ;     plain             ; 2                           ;
-; arriav_lcell_comb     ; 10864                       ;
-;     arith             ; 4253                        ;
+; arriav_lcell_comb     ; 10429                       ;
+;     arith             ; 4158                        ;
 ;         0 data inputs ; 124                         ;
 ;         1 data inputs ; 154                         ;
-;         2 data inputs ; 368                         ;
+;         2 data inputs ; 273                         ;
 ;         3 data inputs ; 564                         ;
 ;         4 data inputs ; 2590                        ;
 ;         5 data inputs ; 453                         ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 5983                        ;
+;     normal            ; 5952                        ;
 ;         1 data inputs ; 68                          ;
-;         2 data inputs ; 1814                        ;
-;         3 data inputs ; 718                         ;
-;         4 data inputs ; 988                         ;
-;         5 data inputs ; 516                         ;
-;         6 data inputs ; 1879                        ;
-;     shared            ; 627                         ;
+;         2 data inputs ; 1812                        ;
+;         3 data inputs ; 717                         ;
+;         4 data inputs ; 984                         ;
+;         5 data inputs ; 507                         ;
+;         6 data inputs ; 1864                        ;
+;     shared            ; 318                         ;
 ;         0 data inputs ; 3                           ;
-;         2 data inputs ; 103                         ;
-;         3 data inputs ; 518                         ;
+;         2 data inputs ; 53                          ;
+;         3 data inputs ; 259                         ;
 ;         4 data inputs ; 3                           ;
-; arriav_mac            ; 74                          ;
+; arriav_mac            ; 39                          ;
 ; boundary_port         ; 22                          ;
 ; generic_pll           ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 288.90                      ;
-; Average LUT depth     ; 165.82                      ;
+; Average LUT depth     ; 185.44                      ;
 +-----------------------+-----------------------------+
 
 
@@ -930,7 +917,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:37     ;
+; Top            ; 00:00:36     ;
 +----------------+--------------+
 
 
@@ -940,7 +927,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Apr 10 00:27:15 2020
+    Info: Processing started: Fri Apr 10 15:04:10 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off channelStrip -c channelStrip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -1529,17 +1516,17 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "kpr[1]" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 3
     Warning (15610): No output dependent on input pin "kpr[2]" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 3
     Warning (15610): No output dependent on input pin "kpr[3]" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 3
-Info (21057): Implemented 11215 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 10637 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 11118 logic cells
+    Info (21061): Implemented 10575 logic cells
     Info (21065): Implemented 1 PLLs
-    Info (21062): Implemented 74 DSP elements
+    Info (21062): Implemented 39 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 454 warnings
-    Info: Peak virtual memory: 4982 megabytes
-    Info: Processing ended: Fri Apr 10 00:28:04 2020
-    Info: Elapsed time: 00:00:49
-    Info: Total CPU time (on all processors): 00:01:02
+    Info: Peak virtual memory: 4969 megabytes
+    Info: Processing ended: Fri Apr 10 15:04:58 2020
+    Info: Elapsed time: 00:00:48
+    Info: Total CPU time (on all processors): 00:01:01
 
 
 +------------------------------------------+
