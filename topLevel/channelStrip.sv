@@ -21,8 +21,19 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
     logic [15:0] buttons;
 
 
+    /*  Frequency:         Highpass:          Lowpass:
+    0 - None               0 - All            0 - All
+    1 - 100 Hz             1 - 100 Hz         1 - 1 kHz
+    2 - 250 Hz             2 - 250 Hz         2 - 2.5 kHz
+    3 - 500 Hz             3 - 500 Hz         3 - 5 kHz
+    4 - 1 kHz              4 - 1 kHz          4 - 10 kHz
+    5 - 2.5 kHz
+    6 - 5 kHz
+    7 - 10 kHz*/
+
+
     assign freqSelect = 4;
-    assign lowpassSelect = 0;
+    assign lowpassSelect = 1;
     assign highpassSelect = 3;
 
     //assign stage1 = 32767;
@@ -40,11 +51,11 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
     lowpass lowpass_0 (         .clk_144, .reset_n,
                                 .filter(lowpassSelect),
                                 .lowpassIn(stage1),
-                                .lowpassOut(stage20));
+                                .lowpassOut(stage2));
 
     highpass highpass_0 (       .clk_144, .reset_n,
                                 .filter(highpassSelect),
-                                .highpassIn(stage1),
+                                .highpassIn(stage2),
                                 .highpassOut(stage3));
 
     outputLevel outputLevel_0 ( .clk_48, .reset_n,

@@ -49,7 +49,7 @@ module highpass #( parameter L = 3, N = 63, shift = 30 ) (
     // buffer
     logic signed [N:0] y1;
     logic signed [N:0] y2;
-    logic signed [N:0] x0;
+    logic signed [N:0] x0, x0_buffer;
     logic signed [N:0] x1;
     logic signed [N:0] x2;
 
@@ -62,13 +62,13 @@ module highpass #( parameter L = 3, N = 63, shift = 30 ) (
 
     always_comb begin
         // 16 to 64 bit transfer with sign preservation
-        x0 = { {(N-15){highpassIn[15]}}, highpassIn };
+        x0_buffer = { {(N-15){highpassIn[15]}}, highpassIn };
 
         // assign yn to output, clip for 16-bit output
         if (yn > 32767)
-            highpassOut = 32767;
+            highpassOut = 'b0111111111111111;
         else if (yn < -32767)
-            highpassOut = -32767;
+            highpassOut = 'b1000000000000000;
         else
             highpassOut = yn;
         
@@ -119,6 +119,15 @@ module highpass #( parameter L = 3, N = 63, shift = 30 ) (
         endcase
         
     end
+
+
+    // ensure state zero executes first on new sample
+    always_ff @ (negedge state[1], negedge reset_n) begin
+        if (~reset_n)
+            x0 <= 0;
+        else
+            x0 <= x0_buffer;
+    end
     
  
     always_ff @ (posedge clk_144, negedge reset_n) begin
@@ -139,7 +148,7 @@ module highpass #( parameter L = 3, N = 63, shift = 30 ) (
 
             case (state)
                 0 : begin
-                    // differnce equation
+                    // difference equation
                     yn <= ((y1_coeff*y1)>>>shift) + ((y2_coeff*y2)>>>shift) + ((x0_coeff*x0)>>>shift) + ((x1_coeff*x1)>>>shift) + ((x2_coeff*x2)>>>shift);
                     
                     state <= 1;

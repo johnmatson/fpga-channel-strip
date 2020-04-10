@@ -49,7 +49,7 @@ module lowpass #( parameter L = 3, N = 63, shift = 30 ) (
     // buffer
     logic signed [N:0] y1;
     logic signed [N:0] y2;
-    logic signed [N:0] x0;
+    logic signed [N:0] x0, x0_buffer;
     logic signed [N:0] x1;
     logic signed [N:0] x2;
 
@@ -62,13 +62,13 @@ module lowpass #( parameter L = 3, N = 63, shift = 30 ) (
 
     always_comb begin
         // 16 to 64 bit transfer with sign preservation
-        x0 = { {(N-15){lowpassIn[15]}}, lowpassIn };
+        x0_buffer = { {(N-15){lowpassIn[15]}}, lowpassIn };
 
         // assign yn to output, clip for 16-bit output
         if (yn > 32767)
-            lowpassOut = 32767;
+            lowpassOut = 'b0111111111111111;
         else if (yn < -32767)
-            lowpassOut = -32767;
+            lowpassOut = 'b1000000000000000;
         else
             lowpassOut = yn;
         
@@ -120,6 +120,15 @@ module lowpass #( parameter L = 3, N = 63, shift = 30 ) (
         
     end
     
+
+    // ensure state zero executes first on new sample
+    always_ff @ (negedge state[1], negedge reset_n) begin
+        if (~reset_n)
+            x0 <= 0;
+        else
+            x0 <= x0_buffer;
+    end
+
  
     always_ff @ (posedge clk_144, negedge reset_n) begin
 

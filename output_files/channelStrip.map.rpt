@@ -1,5 +1,5 @@
 Analysis & Synthesis report for channelStrip
-Thu Apr 09 20:27:04 2020
+Fri Apr 10 00:28:04 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -59,17 +59,17 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Apr 09 20:27:04 2020       ;
+; Analysis & Synthesis Status     ; Successful - Fri Apr 10 00:28:04 2020       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; channelStrip                                ;
 ; Top-level Entity Name           ; channelStrip                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 290                                         ;
+; Total registers                 ; 470                                         ;
 ; Total pins                      ; 22                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 39                                          ;
+; Total DSP Blocks                ; 74                                          ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -228,27 +228,27 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimate of Logic utilization (ALMs needed) ; 6149          ;
+; Estimate of Logic utilization (ALMs needed) ; 6382          ;
 ;                                             ;               ;
-; Combinational ALUT usage for logic          ; 10422         ;
+; Combinational ALUT usage for logic          ; 10857         ;
 ;     -- 7 input functions                    ; 1             ;
-;     -- 6 input functions                    ; 1863          ;
-;     -- 5 input functions                    ; 961           ;
-;     -- 4 input functions                    ; 3578          ;
-;     -- <=3 input functions                  ; 4019          ;
+;     -- 6 input functions                    ; 1879          ;
+;     -- 5 input functions                    ; 969           ;
+;     -- 4 input functions                    ; 3581          ;
+;     -- <=3 input functions                  ; 4427          ;
 ;                                             ;               ;
-; Dedicated logic registers                   ; 290           ;
+; Dedicated logic registers                   ; 470           ;
 ;                                             ;               ;
 ; I/O pins                                    ; 22            ;
 ;                                             ;               ;
-; Total DSP Blocks                            ; 39            ;
+; Total DSP Blocks                            ; 74            ;
 ;                                             ;               ;
 ; Total PLLs                                  ; 1             ;
 ;     -- PLLs                                 ; 1             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; reset_n~input ;
-; Maximum fan-out                             ; 288           ;
-; Total fan-out                               ; 45641         ;
+; Maximum fan-out                             ; 468           ;
+; Total fan-out                               ; 48464         ;
 ; Average fan-out                             ; 4.23          ;
 +---------------------------------------------+---------------+
 
@@ -258,14 +258,15 @@ refer to the applicable agreement for further details.
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Entity Name     ; Library Name ;
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |channelStrip                            ; 10422 (2)           ; 290 (2)                   ; 0                 ; 39         ; 22   ; 0            ; |channelStrip                                                                                                                        ; channelStrip    ; work         ;
+; |channelStrip                            ; 10857 (2)           ; 470 (2)                   ; 0                 ; 74         ; 22   ; 0            ; |channelStrip                                                                                                                        ; channelStrip    ; work         ;
 ;    |clkDivider:clkDivider_0|             ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|clkDivider:clkDivider_0                                                                                                ; clkDivider      ; work         ;
 ;    |colseq:colseq_0|                     ; 6 (6)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|colseq:colseq_0                                                                                                        ; colseq          ; work         ;
 ;    |decode2:decode2_0|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|decode2:decode2_0                                                                                                      ; decode2         ; work         ;
 ;    |decode7:decode7_0|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|decode7:decode7_0                                                                                                      ; decode7         ; work         ;
 ;    |displayMux:displayMux_0|             ; 60 (60)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|displayMux:displayMux_0                                                                                                ; displayMux      ; work         ;
-;    |highpass:highpass_0|                 ; 438 (438)           ; 148 (148)                 ; 0                 ; 35         ; 0    ; 0            ; |channelStrip|highpass:highpass_0                                                                                                    ; highpass        ; work         ;
-;    |outputLevel:outputLevel_0|           ; 9861 (4506)         ; 112 (112)                 ; 0                 ; 3          ; 0    ; 0            ; |channelStrip|outputLevel:outputLevel_0                                                                                              ; outputLevel     ; work         ;
+;    |highpass:highpass_0|                 ; 439 (439)           ; 164 (164)                 ; 0                 ; 35         ; 0    ; 0            ; |channelStrip|highpass:highpass_0                                                                                                    ; highpass        ; work         ;
+;    |lowpass:lowpass_0|                   ; 437 (437)           ; 164 (164)                 ; 0                 ; 35         ; 0    ; 0            ; |channelStrip|lowpass:lowpass_0                                                                                                      ; lowpass         ; work         ;
+;    |outputLevel:outputLevel_0|           ; 9858 (4503)         ; 112 (112)                 ; 0                 ; 3          ; 0    ; 0            ; |channelStrip|outputLevel:outputLevel_0                                                                                              ; outputLevel     ; work         ;
 ;       |lpm_divide:Div0|                  ; 5355 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|outputLevel:outputLevel_0|lpm_divide:Div0                                                                              ; lpm_divide      ; work         ;
 ;          |lpm_divide_5ro:auto_generated| ; 5355 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|outputLevel:outputLevel_0|lpm_divide:Div0|lpm_divide_5ro:auto_generated                                                ; lpm_divide_5ro  ; work         ;
 ;             |abs_divider_edg:divider|    ; 5355 (65)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|outputLevel:outputLevel_0|lpm_divide:Div0|lpm_divide_5ro:auto_generated|abs_divider_edg:divider                        ; abs_divider_edg ; work         ;
@@ -285,14 +286,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------+-------------+
 ; Statistic                         ; Number Used ;
 +-----------------------------------+-------------+
-; Two Independent 18x18             ; 11          ;
+; Two Independent 18x18             ; 21          ;
 ; Independent 18x18 plus 36         ; 1           ;
-; Sum of two 18x18                  ; 5           ;
-; Independent 27x27                 ; 22          ;
-; Total number of DSP blocks        ; 39          ;
+; Sum of two 18x18                  ; 10          ;
+; Independent 27x27                 ; 42          ;
+; Total number of DSP blocks        ; 74          ;
 ;                                   ;             ;
-; Fixed Point Unsigned Multiplier   ; 37          ;
-; Fixed Point Mixed Sign Multiplier ; 7           ;
+; Fixed Point Unsigned Multiplier   ; 72          ;
+; Fixed Point Mixed Sign Multiplier ; 12          ;
 +-----------------------------------+-------------+
 
 
@@ -308,8 +309,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; highpass:highpass_0|x1[16..63]           ; Merged with highpass:highpass_0|x1[15]           ;
 ; highpass:highpass_0|y1[38..63]           ; Merged with highpass:highpass_0|y1[37]           ;
 ; highpass:highpass_0|y2[38..63]           ; Merged with highpass:highpass_0|y2[37]           ;
+; highpass:highpass_0|x0[16..63]           ; Merged with highpass:highpass_0|x0[15]           ;
 ; highpass:highpass_0|x2[16..63]           ; Merged with highpass:highpass_0|x2[15]           ;
-; Total Number of Removed Registers = 280  ;                                                  ;
+; lowpass:lowpass_0|yn[38..63]             ; Merged with lowpass:lowpass_0|yn[37]             ;
+; lowpass:lowpass_0|x1[16..63]             ; Merged with lowpass:lowpass_0|x1[15]             ;
+; lowpass:lowpass_0|y1[38..63]             ; Merged with lowpass:lowpass_0|y1[37]             ;
+; lowpass:lowpass_0|y2[38..63]             ; Merged with lowpass:lowpass_0|y2[37]             ;
+; lowpass:lowpass_0|x0[16..63]             ; Merged with lowpass:lowpass_0|x0[15]             ;
+; lowpass:lowpass_0|x2[16..63]             ; Merged with lowpass:lowpass_0|x2[15]             ;
+; Total Number of Removed Registers = 550  ;                                                  ;
 +------------------------------------------+--------------------------------------------------+
 
 
@@ -318,12 +326,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 290   ;
-; Number of registers using Synchronous Clear  ; 196   ;
+; Total registers                              ; 470   ;
+; Number of registers using Synchronous Clear  ; 357   ;
 ; Number of registers using Synchronous Load   ; 65    ;
-; Number of registers using Asynchronous Clear ; 288   ;
+; Number of registers using Asynchronous Clear ; 468   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 242   ;
+; Number of registers using Clock Enable       ; 388   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -333,17 +341,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|y1[14]          ;
-; 4:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|y2[15]          ;
-; 4:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|yn[10]          ;
+; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|y1[36]          ;
+; 4:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|y2[9]           ;
+; 4:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|yn[13]          ;
 ; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|x2[13]          ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|x1[12]          ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |channelStrip|highpass:highpass_0|highpassOut[9]  ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|x1[6]           ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|x0[12]          ;
+; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |channelStrip|lowpass:lowpass_0|y1[14]            ;
+; 4:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |channelStrip|lowpass:lowpass_0|y2[28]            ;
+; 4:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |channelStrip|lowpass:lowpass_0|yn[11]            ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |channelStrip|lowpass:lowpass_0|x2[14]            ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |channelStrip|lowpass:lowpass_0|x1[7]             ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |channelStrip|highpass:highpass_0|highpassOut[1]  ;
 ; 3:1                ; 60 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |channelStrip|outputLevel:outputLevel_0|level     ;
 ; 3:1                ; 61 bits   ; 122 LEs       ; 122 LEs              ; 0 LEs                  ; No         ; |channelStrip|outputLevel:outputLevel_0|level     ;
-; 3:1                ; 62 bits   ; 124 LEs       ; 124 LEs              ; 0 LEs                  ; No         ; |channelStrip|outputLevel:outputLevel_0|level[30] ;
-; 28:1               ; 2 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |channelStrip|displayMux:displayMux_0|Mux2        ;
-; 40:1               ; 2 bits    ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; No         ; |channelStrip|displayMux:displayMux_0|Mux3        ;
+; 3:1                ; 62 bits   ; 124 LEs       ; 124 LEs              ; 0 LEs                  ; No         ; |channelStrip|outputLevel:outputLevel_0|level[48] ;
+; 28:1               ; 2 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |channelStrip|displayMux:displayMux_0|Mux1        ;
+; 40:1               ; 2 bits    ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; No         ; |channelStrip|displayMux:displayMux_0|Mux0        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 
 
@@ -848,14 +862,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+-------+----------+---------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "lowpass:lowpass_0"                                                                        ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; filter     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; lowpassOut ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------+
+; Port Connectivity Checks: "lowpass:lowpass_0"  ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; filter[2..1] ; Input ; Info     ; Stuck at GND ;
+; filter[0]    ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
 
 
 +-------------------------------------------------------+
@@ -873,41 +887,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 290                         ;
-;     CLR               ; 27                          ;
-;     CLR SCLR          ; 18                          ;
+; arriav_ff             ; 470                         ;
+;     CLR               ; 46                          ;
+;     CLR SCLR          ; 33                          ;
 ;     CLR SLD           ; 1                           ;
-;     ENA CLR SCLR      ; 178                         ;
+;     ENA CLR SCLR      ; 324                         ;
 ;     ENA CLR SLD       ; 64                          ;
 ;     plain             ; 2                           ;
-; arriav_lcell_comb     ; 10429                       ;
-;     arith             ; 4158                        ;
+; arriav_lcell_comb     ; 10864                       ;
+;     arith             ; 4253                        ;
 ;         0 data inputs ; 124                         ;
 ;         1 data inputs ; 154                         ;
-;         2 data inputs ; 273                         ;
+;         2 data inputs ; 368                         ;
 ;         3 data inputs ; 564                         ;
 ;         4 data inputs ; 2590                        ;
 ;         5 data inputs ; 453                         ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 5952                        ;
+;     normal            ; 5983                        ;
 ;         1 data inputs ; 68                          ;
-;         2 data inputs ; 1812                        ;
-;         3 data inputs ; 716                         ;
-;         4 data inputs ; 985                         ;
-;         5 data inputs ; 508                         ;
-;         6 data inputs ; 1863                        ;
-;     shared            ; 318                         ;
+;         2 data inputs ; 1814                        ;
+;         3 data inputs ; 718                         ;
+;         4 data inputs ; 988                         ;
+;         5 data inputs ; 516                         ;
+;         6 data inputs ; 1879                        ;
+;     shared            ; 627                         ;
 ;         0 data inputs ; 3                           ;
-;         2 data inputs ; 53                          ;
-;         3 data inputs ; 259                         ;
+;         2 data inputs ; 103                         ;
+;         3 data inputs ; 518                         ;
 ;         4 data inputs ; 3                           ;
-; arriav_mac            ; 39                          ;
+; arriav_mac            ; 74                          ;
 ; boundary_port         ; 22                          ;
 ; generic_pll           ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 288.90                      ;
-; Average LUT depth     ; 185.62                      ;
+; Average LUT depth     ; 165.82                      ;
 +-----------------------+-----------------------------+
 
 
@@ -916,7 +930,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:36     ;
+; Top            ; 00:00:37     ;
 +----------------+--------------+
 
 
@@ -926,7 +940,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Apr 09 20:26:17 2020
+    Info: Processing started: Fri Apr 10 00:27:15 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off channelStrip -c channelStrip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -956,9 +970,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file clocks/
     Info (12023): Found entity 1: clkDivider File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/clocks/clkDivider/clkDivider.sv Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file toplevel/channelstrip.sv
     Info (12023): Found entity 1: channelStrip File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 1
-    Info (12023): Found entity 2: pll File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 98
+    Info (12023): Found entity 2: pll File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 109
 Info (12127): Elaborating entity "channelStrip" for the top level hierarchy
-Info (12128): Elaborating entity "sineWaveGen" for hierarchy "sineWaveGen:sineWaveGen_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 38
+Info (12128): Elaborating entity "sineWaveGen" for hierarchy "sineWaveGen:sineWaveGen_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 49
 Warning (10230): Verilog HDL assignment warning at sineWaveGen.sv(24): truncated value with size 32 to match size of target (16) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv Line: 24
 Warning (10230): Verilog HDL assignment warning at sineWaveGen.sv(43): truncated value with size 64 to match size of target (16) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv Line: 43
 Warning (10230): Verilog HDL assignment warning at sineWaveGen.sv(47): truncated value with size 64 to match size of target (16) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv Line: 47
@@ -1388,31 +1402,29 @@ Warning (10230): Verilog HDL assignment warning at sineWaveGen.sv(3444): truncat
 Warning (10230): Verilog HDL assignment warning at sineWaveGen.sv(3473): truncated value with size 64 to match size of target (16) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv Line: 3473
 Warning (10230): Verilog HDL assignment warning at sineWaveGen.sv(3477): truncated value with size 64 to match size of target (16) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv Line: 3477
 Warning (10230): Verilog HDL assignment warning at sineWaveGen.sv(3481): truncated value with size 64 to match size of target (16) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv Line: 3481
-Info (12128): Elaborating entity "lowpass" for hierarchy "lowpass:lowpass_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 43
-Warning (10230): Verilog HDL assignment warning at lowpass.sv(71): truncated value with size 32 to match size of target (16) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/filters/verilog-implementation/lowpass/lowpass.sv Line: 71
+Info (12128): Elaborating entity "lowpass" for hierarchy "lowpass:lowpass_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 54
 Warning (10230): Verilog HDL assignment warning at lowpass.sv(73): truncated value with size 64 to match size of target (16) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/filters/verilog-implementation/lowpass/lowpass.sv Line: 73
-Info (12128): Elaborating entity "highpass" for hierarchy "highpass:highpass_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 48
-Warning (10230): Verilog HDL assignment warning at highpass.sv(71): truncated value with size 32 to match size of target (16) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/filters/verilog-implementation/highpass/highpass.sv Line: 71
+Info (12128): Elaborating entity "highpass" for hierarchy "highpass:highpass_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 59
 Warning (10230): Verilog HDL assignment warning at highpass.sv(73): truncated value with size 64 to match size of target (16) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/filters/verilog-implementation/highpass/highpass.sv Line: 73
-Info (12128): Elaborating entity "outputLevel" for hierarchy "outputLevel:outputLevel_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 52
+Info (12128): Elaborating entity "outputLevel" for hierarchy "outputLevel:outputLevel_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 63
 Warning (10230): Verilog HDL assignment warning at outputLevel.sv(33): truncated value with size 32 to match size of target (4) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 33
 Warning (10230): Verilog HDL assignment warning at outputLevel.sv(44): truncated value with size 32 to match size of target (4) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 44
 Warning (10230): Verilog HDL assignment warning at outputLevel.sv(55): truncated value with size 32 to match size of target (4) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 55
 Warning (10230): Verilog HDL assignment warning at outputLevel.sv(66): truncated value with size 32 to match size of target (4) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 66
 Warning (10230): Verilog HDL assignment warning at outputLevel.sv(92): truncated value with size 32 to match size of target (16) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 92
-Info (12128): Elaborating entity "displayMux" for hierarchy "displayMux:displayMux_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 58
-Info (12128): Elaborating entity "decode2" for hierarchy "decode2:decode2_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 61
-Info (12128): Elaborating entity "decode7" for hierarchy "decode7:decode7_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 65
+Info (12128): Elaborating entity "displayMux" for hierarchy "displayMux:displayMux_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 69
+Info (12128): Elaborating entity "decode2" for hierarchy "decode2:decode2_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 72
+Info (12128): Elaborating entity "decode7" for hierarchy "decode7:decode7_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 76
 Warning (10230): Verilog HDL assignment warning at decode7.sv(29): truncated value with size 32 to match size of target (8) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decode7/decode7.sv Line: 29
-Info (12128): Elaborating entity "colseq" for hierarchy "colseq:colseq_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 70
-Info (12128): Elaborating entity "kpdecode" for hierarchy "kpdecode:kpdecode_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 74
+Info (12128): Elaborating entity "colseq" for hierarchy "colseq:colseq_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 81
+Info (12128): Elaborating entity "kpdecode" for hierarchy "kpdecode:kpdecode_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 85
 Warning (10270): Verilog HDL Case Statement warning at kpdecode.sv(20): incomplete case statement has no default case item File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv Line: 20
 Warning (10270): Verilog HDL Case Statement warning at kpdecode.sv(30): incomplete case statement has no default case item File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv Line: 30
 Warning (10270): Verilog HDL Case Statement warning at kpdecode.sv(40): incomplete case statement has no default case item File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv Line: 40
 Warning (10270): Verilog HDL Case Statement warning at kpdecode.sv(50): incomplete case statement has no default case item File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv Line: 50
 Warning (10270): Verilog HDL Case Statement warning at kpdecode.sv(16): incomplete case statement has no default case item File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv Line: 16
-Info (12128): Elaborating entity "decodeButton" for hierarchy "decodeButton:decodeButton_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 77
-Info (12128): Elaborating entity "encodeButton" for hierarchy "encodeButton:encodeButton_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 82
+Info (12128): Elaborating entity "decodeButton" for hierarchy "decodeButton:decodeButton_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 88
+Info (12128): Elaborating entity "encodeButton" for hierarchy "encodeButton:encodeButton_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 93
 Warning (10240): Verilog HDL Always Construct warning at encodeButton.sv(6): inferring latch(es) for variable "freqSelect", which holds its previous value in one or more paths through the always construct File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
 Warning (10240): Verilog HDL Always Construct warning at encodeButton.sv(6): inferring latch(es) for variable "lowpassSelect", which holds its previous value in one or more paths through the always construct File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
 Warning (10240): Verilog HDL Always Construct warning at encodeButton.sv(6): inferring latch(es) for variable "highpassSelect", which holds its previous value in one or more paths through the always construct File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
@@ -1425,10 +1437,10 @@ Info (10041): Inferred latch for "lowpassSelect[2]" at encodeButton.sv(6) File: 
 Info (10041): Inferred latch for "freqSelect[0]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
 Info (10041): Inferred latch for "freqSelect[1]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
 Info (10041): Inferred latch for "freqSelect[2]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
-Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 85
-Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll_0|altpll:altpll_component" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 122
-Info (12130): Elaborated megafunction instantiation "pll:pll_0|altpll:altpll_component" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 122
-Info (12133): Instantiated megafunction "pll:pll_0|altpll:altpll_component" with the following parameter: File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 122
+Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 96
+Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll_0|altpll:altpll_component" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 133
+Info (12130): Elaborated megafunction instantiation "pll:pll_0|altpll:altpll_component" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 133
+Info (12133): Instantiated megafunction "pll:pll_0|altpll:altpll_component" with the following parameter: File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 133
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "347"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1486,7 +1498,7 @@ Info (12133): Instantiated megafunction "pll:pll_0|altpll:altpll_component" with
 Info (12021): Found 1 design units, including 1 entities, in source file db/lab1clk_altpll.v
     Info (12023): Found entity 1: lab1clk_altpll File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/db/lab1clk_altpll.v Line: 29
 Info (12128): Elaborating entity "lab1clk_altpll" for hierarchy "pll:pll_0|altpll:altpll_component|lab1clk_altpll:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "clkDivider" for hierarchy "clkDivider:clkDivider_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 87
+Info (12128): Elaborating entity "clkDivider" for hierarchy "clkDivider:clkDivider_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 98
 Warning (10230): Verilog HDL assignment warning at clkDivider.sv(16): truncated value with size 32 to match size of target (2) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/clocks/clkDivider/clkDivider.sv Line: 16
 Warning (10230): Verilog HDL assignment warning at clkDivider.sv(28): truncated value with size 32 to match size of target (2) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/clocks/clkDivider/clkDivider.sv Line: 28
 Info (278001): Inferred 1 megafunctions from design logic
@@ -1517,17 +1529,17 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "kpr[1]" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 3
     Warning (15610): No output dependent on input pin "kpr[2]" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 3
     Warning (15610): No output dependent on input pin "kpr[3]" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 3
-Info (21057): Implemented 10621 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 11215 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 10559 logic cells
+    Info (21061): Implemented 11118 logic cells
     Info (21065): Implemented 1 PLLs
-    Info (21062): Implemented 39 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 456 warnings
-    Info: Peak virtual memory: 4969 megabytes
-    Info: Processing ended: Thu Apr 09 20:27:04 2020
-    Info: Elapsed time: 00:00:47
-    Info: Total CPU time (on all processors): 00:01:01
+    Info (21062): Implemented 74 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 454 warnings
+    Info: Peak virtual memory: 4982 megabytes
+    Info: Processing ended: Fri Apr 10 00:28:04 2020
+    Info: Elapsed time: 00:00:49
+    Info: Total CPU time (on all processors): 00:01:02
 
 
 +------------------------------------------+

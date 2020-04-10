@@ -29,6 +29,6 @@ module clkDivider #( parameter divide = 3 ) (
         end
     end
 
-    assign clkOut = ((posCount == 2) | (negCount == 2));
+    assign clkOut = ~((posCount == 2) | (negCount == 2));
 
 endmodule
