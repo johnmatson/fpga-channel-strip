@@ -34,10 +34,10 @@ module highpass #( parameter L = 3, N = 63, shift = 30 ) (
     
     // 500 Hz coefficients
     logic signed [N:0] y1_coeff3 = 1.90625*(2**shift);
-    logic signed [N:0] y2_coeff3 = -0.90625*(2**shift);
-    logic signed [N:0] x0_coeff3 = 1*0.953125*(2**shift);
-    logic signed [N:0] x1_coeff3 = -2*0.953125*(2**shift);
-    logic signed [N:0] x2_coeff3 = 1*0.953125*(2**shift);
+    logic signed [N:0] y2_coeff3 = -0.91015625*(2**shift);
+    logic signed [N:0] x0_coeff3 = 1*0.955078125*(2**shift);
+    logic signed [N:0] x1_coeff3 = -2*0.955078125*(2**shift);
+    logic signed [N:0] x2_coeff3 = 1*0.955078125*(2**shift);
     
     // 1 kHz coefficients
     logic signed [N:0] y1_coeff4 = 1.8125*(2**shift);

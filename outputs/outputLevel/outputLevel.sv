@@ -96,7 +96,7 @@ module outputLevel #( parameter samples = 12000 ) (
                 //dB <= 200 * (($log10($sqrt(outSum / samples))) - ($log10($sqrt(inSum / samples))));      
                 //dB <= (($clog2(outMax) - $clog2(inMax)) * 200000 / (3322)); //this is the (as)good stuff
                 
-                dB <= 1000*2.5*outMax/inMax;
+                dB <= 1000*outMax/inMax;
                 count <= 0;
                 inMax <= 0;
                 outMax <= 0;

@@ -7,9 +7,9 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
 
     logic clk_144, clk_48;
 
-    logic [2:0] freqSelect;
-    logic signed [15:0] stage1, stage2, stage3;
-    logic [2:0] lowpassSelect, highpassSelect;
+    logic [2:0] freqSelect, freqSelect1;
+    logic signed [15:0] stage1, stage2, stage3, stage10,stage20,stage30;
+    logic [2:0] lowpassSelect, highpassSelect, lowpassSelect1, highpassSelect1;
 
     logic [1:0] digit;
     logic [3:0] num3, num2, num1, num0;
@@ -19,6 +19,14 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
     logic [3:0] buttonNum;
     //logic kphit;
     logic [15:0] buttons;
+
+
+    assign freqSelect = 4;
+    assign lowpassSelect = 0;
+    assign highpassSelect = 3;
+
+    //assign stage1 = 32767;
+    //assign stage2 = stage1 >>> 1;
 
 
     always_ff @(posedge clk_48) 
@@ -32,11 +40,11 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
     lowpass lowpass_0 (         .clk_144, .reset_n,
                                 .filter(lowpassSelect),
                                 .lowpassIn(stage1),
-                                .lowpassOut(stage2));
+                                .lowpassOut(stage20));
 
     highpass highpass_0 (       .clk_144, .reset_n,
                                 .filter(highpassSelect),
-                                .highpassIn(stage2),
+                                .highpassIn(stage1),
                                 .highpassOut(stage3));
 
     outputLevel outputLevel_0 ( .clk_48, .reset_n,
@@ -70,8 +78,8 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
 
     encodeButton encodeButton_0(.buttons,
                                 .reset_n,
-                                .freqSelect,
-                                .lowpassSelect, .highpassSelect);
+                                .freqSelect(freqSelect1),
+                                .lowpassSelect(lowpassSelect1), .highpassSelect(highpassSelect1));
 
 
     pll pll_0 ( .inclk0(CLOCK_50), .c0(clk_144) );

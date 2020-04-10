@@ -12,7 +12,7 @@ module lowpass_tb;
     initial begin
         clk_144 = 0;
         reset_n = 0;
-        filter = 4;
+        filter = 1;
         lowpassIn = '0;
 
         repeat(2) @(posedge clk_144);

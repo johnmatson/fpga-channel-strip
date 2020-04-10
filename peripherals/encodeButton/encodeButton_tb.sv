@@ -9,19 +9,12 @@ module encodeButton_tb;
 
     initial begin
         reset_n = 0;
-        buttons = 0;
+        buttons = '1;
 
         #10ns reset_n = 1;
 
-        #5ns buttons = 1;
-
         for (int i = 0; i<16; i++)
-            #5ns buttons = buttons << 1;
-
-        #5ns buttons = 0;
-
-        for (int i = 0; i<16; i++)
-            #5ns buttons = buttons << 1;
+            #5ns buttons = '1 & (~(2**i));
         
         $stop;
     end

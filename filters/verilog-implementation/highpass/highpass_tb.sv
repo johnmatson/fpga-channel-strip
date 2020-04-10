@@ -12,7 +12,7 @@ module highpass_tb;
     initial begin
         clk_144 = 0;
         reset_n = 0;
-        filter = 2;
+        filter = 3;
         highpassIn = '0;
 
         repeat(2) @(posedge clk_144);
