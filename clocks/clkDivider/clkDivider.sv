@@ -1,16 +1,16 @@
-module clkDivider #( parameter divide = 3 ) (
+module clkDivider #( parameter divide = 5 ) (
                     input logic reset_n,
                     input logic clkIn,
                     output logic clkOut );
 
-    logic [1:0] posCount, negCount;
+    logic [15:0] posCount, negCount;
 
     always_ff @ ( posedge clkIn, negedge reset_n ) begin
         if (~reset_n) begin
             posCount <= 0;
         end
         else begin
-            if (posCount == 2)
+            if (posCount == divide-1)
                 posCount <= 0;
             else
                 posCount <= posCount + 1;
@@ -22,13 +22,13 @@ module clkDivider #( parameter divide = 3 ) (
             negCount <= 0;
         end
         else begin
-            if (negCount == 2)
+            if (negCount == divide-1)
                 negCount <= 0;
             else
                 negCount <= negCount + 1;
         end
     end
 
-    assign clkOut = ~((posCount == 2) | (negCount == 2));
+    assign clkOut = ~((posCount > (divide>>1)) | (negCount > (divide>>1)));
 
 endmodule

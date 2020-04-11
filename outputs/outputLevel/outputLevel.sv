@@ -1,4 +1,4 @@
-module outputLevel #( parameter samples = 48000 ) (
+module outputLevel #( parameter samples = 12000 ) (
                     input logic clk_48, reset_n,
                     input logic signed [15:0] inWave, outWave,
                     output logic [3:0] num3, num2, num1, num0 );

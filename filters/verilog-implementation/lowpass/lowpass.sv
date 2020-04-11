@@ -1,5 +1,5 @@
 module lowpass #( parameter L = 3, N = 63, shift = 30 ) (
-                input logic clk_144, reset_n,
+                input logic clk_48, reset_n,
                 input logic [2:0] filter,
                 input logic signed [15:0] lowpassIn,
                 output logic signed [15:0] lowpassOut);
@@ -55,9 +55,6 @@ module lowpass #( parameter L = 3, N = 63, shift = 30 ) (
 
     // temp output
     logic signed [N:0] yn;
-
-    // state counter
-    logic [1:0] state;
 
 
     always_comb begin
@@ -120,8 +117,16 @@ module lowpass #( parameter L = 3, N = 63, shift = 30 ) (
         
     end
 
- 
-    always_ff @ (posedge clk_144, negedge reset_n) begin
+
+    always_ff @ (negedge clk_48, negedge reset_n) begin
+        if (~reset_n)
+            yn <= 0;
+        else
+            yn <= ((y1_coeff*y1)>>>shift) + ((y2_coeff*y2)>>>shift) + ((x0_coeff*x0)>>>shift) + ((x1_coeff*x1)>>>shift) + ((x2_coeff*x2)>>>shift);
+    end
+
+
+    always_ff @ (posedge clk_48, negedge reset_n) begin
 
         // reset buffer & outputs
         if (~reset_n) begin
@@ -130,50 +135,16 @@ module lowpass #( parameter L = 3, N = 63, shift = 30 ) (
             x0 <= 0;
             x1 <= 0;
             x2 <= 0;
-
-            yn <= '0;
-
-            state <= '0;
         end
-
         else begin
-
-            case (state)
-                0 : begin
-                    // differnce equation
-                    yn <= ((y1_coeff*y1)>>>shift) + ((y2_coeff*y2)>>>shift) + ((x0_coeff*x0)>>>shift) + ((x1_coeff*x1)>>>shift) + ((x2_coeff*x2)>>>shift);
-                    
-                    state <= 1;
-                end
-                1 : begin
-                    // rotate buffer 2
-                    x2 <= x1;
-                    y2 <= y1;
-                    
-                    state <= 2;
-                end
-                2 : begin
-                    // rotate buffer 1
-                    x1 <= x0;
-                    y1 <= yn;
-
-                    x0 <= x0_buffer;
-
-                    state <= 0;
-                end
-                default : begin
-                    // reset
-                    y1 <= 0;
-                    y2 <= 0;
-                    x1 <= 0;
-                    x2 <= 0;
-                    yn <= '0;
-                    state <= '0;
-                end
-            endcase
-
+            // rotate buffer
+            x2 <= x1;
+            x1 <= x0;
+            x0 <= x0_buffer;
+            y2 <= y1;
+            y1 <= yn;
         end
-        
+
     end
 
 endmodule

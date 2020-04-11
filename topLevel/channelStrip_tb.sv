@@ -1,6 +1,6 @@
 module channelStrip_tb;
 
-    logic clk_48, clk_144, reset_n;
+    logic CLOCK_50, clk_48, reset_n;
     logic [2:0] freqSelect, lowpassSelect, highpassSelect;
     logic signed [15:0] stage1, stage2, stage3;
 
@@ -23,12 +23,12 @@ module channelStrip_tb;
                                 .freq(freqSelect),
                                 .outWave(stage1));
 
-    lowpass lowpass_0 (         .clk_144, .reset_n,
+    lowpass lowpass_0 (         .clk_48, .reset_n,
                                 .filter(lowpassSelect),
                                 .lowpassIn(stage1),
                                 .lowpassOut(stage2));
 
-    highpass highpass_0 (       .clk_144, .reset_n,
+    highpass highpass_0 (       .clk_48, .reset_n,
                                 .filter(highpassSelect),
                                 .highpassIn(stage2),
                                 .highpassOut(stage3));
@@ -51,17 +51,19 @@ module channelStrip_tb;
                                 .leds);
 
 
-    clkDivider clkDivider_0 ( .reset_n, .clkIn(clk_144), .clkOut(clk_48) );
+    clkDivider #(1041) clkDivider_0 ( .reset_n, .clkIn(CLOCK_50), .clkOut(clk_48) );
+
 
     initial begin
         reset_n = 0;
-        clk_144 = 0;
+        CLOCK_50 = 0;
+        //clk_48 = 0;
 
         freqSelect = 4;
         lowpassSelect = 1;
         highpassSelect = 3;
 
-        repeat (6) @ (posedge clk_144);
+        repeat (60) @ (posedge CLOCK_50);
         reset_n = 1;
     end
 
@@ -70,7 +72,8 @@ module channelStrip_tb;
     end
 
     always
-    #6.944444us clk_144 = ~clk_144;
+    #20ns CLOCK_50 = ~CLOCK_50;
+    //#20.833333us clk_48 = ~clk_48;
 
 endmodule
 
