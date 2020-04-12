@@ -297,6 +297,10 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[35]
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SYSTEMVERILOG_FILE processing/lowpass/lowpass.sv
+set_global_assignment -name SYSTEMVERILOG_FILE processing/highpass/highpass.sv
 set_global_assignment -name SYSTEMVERILOG_FILE peripherals/kpdecode/kpdecode.sv
 set_global_assignment -name SYSTEMVERILOG_FILE peripherals/encodeButton/encodeButton.sv
 set_global_assignment -name SYSTEMVERILOG_FILE peripherals/displayMux/displayMux.sv
@@ -306,10 +310,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE peripherals/decode2/decode2.sv
 set_global_assignment -name SYSTEMVERILOG_FILE peripherals/colseq/colseq.sv
 set_global_assignment -name SYSTEMVERILOG_FILE outputs/outputLevel/outputLevel.sv
 set_global_assignment -name SYSTEMVERILOG_FILE inputs/sineWaveGen/sineWaveGen.sv
-set_global_assignment -name SYSTEMVERILOG_FILE "filters/verilog-implementation/lowpass/lowpass.sv"
-set_global_assignment -name SYSTEMVERILOG_FILE "filters/verilog-implementation/highpass/highpass.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE clocks/clkDivider/clkDivider.sv
 set_global_assignment -name SYSTEMVERILOG_FILE topLevel/channelStrip.sv
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

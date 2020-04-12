@@ -4,7 +4,7 @@ module outputGain #( parameter N = 16 )(
                     output logic signed [15:0] outputGainOut);
 
     always_comb begin
-        
+        outputGainOut = outputGainIN * gain;
     end
 
 endmodule

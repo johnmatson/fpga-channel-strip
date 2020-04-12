@@ -8,7 +8,7 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
     logic clk_48;
 
     logic [2:0] freqSelect, freqSelect1;
-    logic signed [15:0] stage1, stage2, stage3, stage10,stage20,stage30;
+    logic signed [15:0] stage1, stage2, stage3, stage4, stage5, stage6, stage10,stage20,stage30;
     logic [2:0] lowpassSelect, highpassSelect, lowpassSelect1, highpassSelect1;
 
     logic [1:0] digit;
@@ -32,9 +32,9 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
     7 - 10 kHz*/
 
 
-    assign freqSelect = 4;
-    assign lowpassSelect = 1;
-    assign highpassSelect = 3;
+    //assign freqSelect = 4;
+    //assign lowpassSelect = 1;
+    //assign highpassSelect = 3;
 
     //assign stage1 = 32767;
     //assign stage2 = stage1 >>> 1;
@@ -48,39 +48,51 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
                                 .freq(freqSelect),
                                 .outWave(stage1));
 
-    lowpass lowpass_0 (         .clk_48, .reset_n,
+    lowpass lowpass_0         ( .clk_48, .reset_n,
                                 .filter(lowpassSelect),
                                 .lowpassIn(stage1),
                                 .lowpassOut(stage2));
 
-    highpass highpass_0 (       .clk_48, .reset_n,
+    highpass highpass_0       ( .clk_48, .reset_n,
                                 .filter(highpassSelect),
                                 .highpassIn(stage2),
                                 .highpassOut(stage3));
+
+    phase phase_0             ( .phase(),
+                                .phaseIn(stage3),
+                                .phaseOut());
+
+    outputGain outputGain_0   ( .gain(),
+                                .outputGainIn(),
+                                .outputGainOut());
+
+    mute mute_0               ( .mute(),
+                                .muteIn(),
+                                .muteOut());
 
     outputLevel outputLevel_0 ( .clk_48, .reset_n,
                                 .inWave(stage1), .outWave(stage3),
                                 .num3, .num2, .num1, .num0 );
 
 
-    displayMux displayMux_0 (   .digit,
+    displayMux displayMux_0   ( .digit,
                                 .num3, .num2, .num1, .num0,
                                 .decimal,
                                 .num);
 
-    decode2 decode2_0 (         .digit,
+    decode2 decode2_0         ( .digit,
                                 .ct);
 
-    decode7 decode7_0 (         .num,
+    decode7 decode7_0         ( .num,
                                 .decimal,
                                 .leds);
 
 
-    colseq colseq_0 (           .clk(clk_48), .reset_n,
+    colseq colseq_0           ( .clk(clk_48), .reset_n,
                                 .kpr,
                                 .kpc);
                                 
-    kpdecode kpdecode_0 (       .kpr, .kpc,
+    kpdecode kpdecode_0       ( .kpr, .kpc,
                                 .buttonNum/*,
                                 .kphit*/);
     
@@ -89,8 +101,8 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
 
     encodeButton encodeButton_0(.buttons,
                                 .reset_n,
-                                .freqSelect(freqSelect1),
-                                .lowpassSelect(lowpassSelect1), .highpassSelect(highpassSelect1));
+                                .freqSelect(freqSelect),
+                                .lowpassSelect(lowpassSelect), .highpassSelect(highpassSelect));
 
 
     pll pll_0 ( .inclk0(CLOCK_50), .c0(clk_48) );
