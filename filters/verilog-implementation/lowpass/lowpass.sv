@@ -19,11 +19,11 @@ module lowpass #( parameter L = 3, N = 63, shift = 30 ) (
     logic signed [N:0] x2_coeff0 = 0*(2**shift);
 
     // 1 kHz coefficients
-    logic signed [N:0] y1_coeff1 = 1.8125*(2**shift);
-    logic signed [N:0] y2_coeff1 = -0.828125*(2**shift);
-    logic signed [N:0] x0_coeff1 = 1*0.00390625*(2**shift);
-    logic signed [N:0] x1_coeff1 = 2*0.00390625*(2**shift);
-    logic signed [N:0] x2_coeff1 = 1*0.00390625*(2**shift);
+    logic signed [N:0] y1_coeff1 = 1946157056;//1.8125*(2**shift);
+    logic signed [N:0] y2_coeff1 = -889192448;//-0.828125*(2**shift);
+    logic signed [N:0] x0_coeff1 = 4194304;//1*0.00390625*(2**shift);
+    logic signed [N:0] x1_coeff1 = 8388608;//2*0.00390625*(2**shift);
+    logic signed [N:0] x2_coeff1 = 4194304;//1*0.00390625*(2**shift);
     
     // 2.5 kHz coefficients
     logic signed [N:0] y1_coeff2 = 1.546875*(2**shift);
