@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA4U23) Path("C:/Users/igorg/Desktop/fpga-channel-strip/output_files/") File("channelStrip.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA4U23) Path("C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/output_files/") File("channelStrip.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

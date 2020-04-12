@@ -1,8 +1,8 @@
-module lowpass #( parameter L = 3, N = 63, shift = 30 ) (
+module highpass #( parameter L = 3, N = 63, shift = 30 ) (
                 input logic clk_48, reset_n,
                 input logic [2:0] filter,
-                input logic signed [15:0] lowpassIn,
-                output logic signed [15:0] lowpassOut);
+                input logic signed [15:0] highpassIn,
+                output logic signed [15:0] highpassOut);
 
     // coefficients
     logic signed [N:0] y1_coeff;
@@ -18,33 +18,33 @@ module lowpass #( parameter L = 3, N = 63, shift = 30 ) (
     logic signed [N:0] x1_coeff0 = 0*(2**shift);
     logic signed [N:0] x2_coeff0 = 0*(2**shift);
 
+    // 100 Hz coefficients
+    logic signed [N:0] y1_coeff1 = 2127560704; // 1.9814453125*(2**shift);
+    logic signed [N:0] y2_coeff1 = -1054081024; // -0.981689453125*(2**shift);
+    logic signed [N:0] x0_coeff1 = 1063911424; // 1*0.9908447265625*(2**shift);
+    logic signed [N:0] x1_coeff1 = -2127822848; // -2*0.990844726562*(2**shift);
+    logic signed [N:0] x2_coeff1 = 1063911424; // 1*0.990844726562*(2**shift);
+    
+    // 250 Hz coefficients
+    logic signed [N:0] y1_coeff2 = 2097676288; // 1.95361328125*(2**shift);
+    logic signed [N:0] y2_coeff2 = -1025245184; // -0.954833984375*(2**shift);
+    logic signed [N:0] x0_coeff2 = 1049231360; // 1*0.9771728515625*(2**shift);
+    logic signed [N:0] x1_coeff2 = -2098462720; // -2*0.9771728515625*(2**shift);
+    logic signed [N:0] x2_coeff2 = 1049231360; // 1*0.9771728515625*(2**shift);
+    
+    // 500 Hz coefficients
+    logic signed [N:0] y1_coeff3 = 2046820352; // 1.90625*(2**shift);
+    logic signed [N:0] y2_coeff3 = -977272832; // -0.91015625*(2**shift);
+    logic signed [N:0] x0_coeff3 = 1025507328; // 1*0.955078125*(2**shift);
+    logic signed [N:0] x1_coeff3 = -2051014656; // -2*0.955078125*(2**shift);
+    logic signed [N:0] x2_coeff3 = 1025507328; // 1*0.955078125*(2**shift);
+    
     // 1 kHz coefficients
-    logic signed [N:0] y1_coeff1 = 1946157056;//1.8125*(2**shift);
-    logic signed [N:0] y2_coeff1 = -889192448;//-0.828125*(2**shift);
-    logic signed [N:0] x0_coeff1 = 4194304;//1*0.00390625*(2**shift);
-    logic signed [N:0] x1_coeff1 = 8388608;//2*0.00390625*(2**shift);
-    logic signed [N:0] x2_coeff1 = 4194304;//1*0.00390625*(2**shift);
-    
-    // 2.5 kHz coefficients
-    logic signed [N:0] y1_coeff2 = 1.546875*(2**shift);
-    logic signed [N:0] y2_coeff2 = -0.625*(2**shift);
-    logic signed [N:0] x0_coeff2 = 1*0.021728515625*(2**shift);
-    logic signed [N:0] x1_coeff2 = 2*0.021728515625*(2**shift);
-    logic signed [N:0] x2_coeff2 = 1*0.021728515625*(2**shift);
-    
-    // 5 kHz coefficients
-    logic signed [N:0] y1_coeff3 = 1.109375*(2**shift);
-    logic signed [N:0] y2_coeff3 = -0.390625*(2**shift);
-    logic signed [N:0] x0_coeff3 = 1*0.072265625*(2**shift);
-    logic signed [N:0] x1_coeff3 = 2*0.072265625*(2**shift);
-    logic signed [N:0] x2_coeff3 = 1*0.072265625*(2**shift);
-
-    // 10 kHz coefficients
-    logic signed [N:0] y1_coeff4 = 0.3125*(2**shift);
-    logic signed [N:0] y2_coeff4 = -0.1875*(2**shift);
-    logic signed [N:0] x0_coeff4 = 1*0.220703125*(2**shift);
-    logic signed [N:0] x1_coeff4 = 2*0.220703125*(2**shift);
-    logic signed [N:0] x2_coeff4 = 1*0.220703125*(2**shift);
+    logic signed [N:0] y1_coeff4 = 1946157056; // 1.8125*(2**shift);
+    logic signed [N:0] y2_coeff4 = -889192448; // -0.828125*(2**shift);
+    logic signed [N:0] x0_coeff4 = 981467136; // 1*0.9140625*(2**shift);
+    logic signed [N:0] x1_coeff4 = -1962934272; // -2*0.9140625*(2**shift);
+    logic signed [N:0] x2_coeff4 = 981467136; // 1*0.9140625*(2**shift);
 
     // buffer
     logic signed [N:0] y1;
@@ -59,15 +59,15 @@ module lowpass #( parameter L = 3, N = 63, shift = 30 ) (
 
     always_comb begin
         // 16 to 64 bit transfer with sign preservation
-        x0_buffer = { {(N-15){lowpassIn[15]}}, lowpassIn };
+        x0_buffer = { {(N-15){highpassIn[15]}}, highpassIn };
 
         // assign yn to output, clip for 16-bit output
         if (yn > 32767)
-            lowpassOut = 'b0111111111111111;
+            highpassOut = 'b0111111111111111;
         else if (yn < -32767)
-            lowpassOut = 'b1000000000000000;
+            highpassOut = 'b1000000000000000;
         else
-            lowpassOut = yn;
+            highpassOut = yn;
         
         // determine filter coefficients
         case (filter)
