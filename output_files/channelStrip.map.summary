@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Fri Apr 10 21:13:29 2020
+Analysis & Synthesis Status : Successful - Sat Apr 11 16:42:07 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : channelStrip
 Top-level Entity Name : channelStrip
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 300
+Total registers : 462
 Total pins : 22
 Total virtual pins : 0
 Total block memory bits : 0
-Total DSP Blocks : 39
+Total DSP Blocks : 74
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0

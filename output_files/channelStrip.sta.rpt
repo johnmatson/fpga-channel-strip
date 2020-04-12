@@ -1,5 +1,5 @@
 Timing Analyzer report for channelStrip
-Fri Apr 10 21:16:12 2020
+Sat Apr 11 16:45:20 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -9,52 +9,53 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   1. Legal Notice
   2. Timing Analyzer Summary
   3. Parallel Compilation
-  4. Clocks
-  5. Slow 1100mV 85C Model Fmax Summary
-  6. Timing Closure Recommendations
-  7. Slow 1100mV 85C Model Setup Summary
-  8. Slow 1100mV 85C Model Hold Summary
-  9. Slow 1100mV 85C Model Recovery Summary
- 10. Slow 1100mV 85C Model Removal Summary
- 11. Slow 1100mV 85C Model Minimum Pulse Width Summary
- 12. Slow 1100mV 85C Model Metastability Summary
- 13. Slow 1100mV 0C Model Fmax Summary
- 14. Slow 1100mV 0C Model Setup Summary
- 15. Slow 1100mV 0C Model Hold Summary
- 16. Slow 1100mV 0C Model Recovery Summary
- 17. Slow 1100mV 0C Model Removal Summary
- 18. Slow 1100mV 0C Model Minimum Pulse Width Summary
- 19. Slow 1100mV 0C Model Metastability Summary
- 20. Fast 1100mV 85C Model Setup Summary
- 21. Fast 1100mV 85C Model Hold Summary
- 22. Fast 1100mV 85C Model Recovery Summary
- 23. Fast 1100mV 85C Model Removal Summary
- 24. Fast 1100mV 85C Model Minimum Pulse Width Summary
- 25. Fast 1100mV 85C Model Metastability Summary
- 26. Fast 1100mV 0C Model Setup Summary
- 27. Fast 1100mV 0C Model Hold Summary
- 28. Fast 1100mV 0C Model Recovery Summary
- 29. Fast 1100mV 0C Model Removal Summary
- 30. Fast 1100mV 0C Model Minimum Pulse Width Summary
- 31. Fast 1100mV 0C Model Metastability Summary
- 32. Multicorner Timing Analysis Summary
- 33. Board Trace Model Assignments
- 34. Input Transition Times
- 35. Signal Integrity Metrics (Slow 1100mv 0c Model)
- 36. Signal Integrity Metrics (Slow 1100mv 85c Model)
- 37. Signal Integrity Metrics (Fast 1100mv 0c Model)
- 38. Signal Integrity Metrics (Fast 1100mv 85c Model)
- 39. Setup Transfers
- 40. Hold Transfers
- 41. Report TCCS
- 42. Report RSKM
- 43. Unconstrained Paths Summary
- 44. Clock Status Summary
- 45. Unconstrained Input Ports
- 46. Unconstrained Output Ports
- 47. Unconstrained Input Ports
- 48. Unconstrained Output Ports
- 49. Timing Analyzer Messages
+  4. SDC File List
+  5. Clocks
+  6. Slow 1100mV 85C Model Fmax Summary
+  7. Timing Closure Recommendations
+  8. Slow 1100mV 85C Model Setup Summary
+  9. Slow 1100mV 85C Model Hold Summary
+ 10. Slow 1100mV 85C Model Recovery Summary
+ 11. Slow 1100mV 85C Model Removal Summary
+ 12. Slow 1100mV 85C Model Minimum Pulse Width Summary
+ 13. Slow 1100mV 85C Model Metastability Summary
+ 14. Slow 1100mV 0C Model Fmax Summary
+ 15. Slow 1100mV 0C Model Setup Summary
+ 16. Slow 1100mV 0C Model Hold Summary
+ 17. Slow 1100mV 0C Model Recovery Summary
+ 18. Slow 1100mV 0C Model Removal Summary
+ 19. Slow 1100mV 0C Model Minimum Pulse Width Summary
+ 20. Slow 1100mV 0C Model Metastability Summary
+ 21. Fast 1100mV 85C Model Setup Summary
+ 22. Fast 1100mV 85C Model Hold Summary
+ 23. Fast 1100mV 85C Model Recovery Summary
+ 24. Fast 1100mV 85C Model Removal Summary
+ 25. Fast 1100mV 85C Model Minimum Pulse Width Summary
+ 26. Fast 1100mV 85C Model Metastability Summary
+ 27. Fast 1100mV 0C Model Setup Summary
+ 28. Fast 1100mV 0C Model Hold Summary
+ 29. Fast 1100mV 0C Model Recovery Summary
+ 30. Fast 1100mV 0C Model Removal Summary
+ 31. Fast 1100mV 0C Model Minimum Pulse Width Summary
+ 32. Fast 1100mV 0C Model Metastability Summary
+ 33. Multicorner Timing Analysis Summary
+ 34. Board Trace Model Assignments
+ 35. Input Transition Times
+ 36. Signal Integrity Metrics (Slow 1100mv 0c Model)
+ 37. Signal Integrity Metrics (Slow 1100mv 85c Model)
+ 38. Signal Integrity Metrics (Fast 1100mv 0c Model)
+ 39. Signal Integrity Metrics (Fast 1100mv 85c Model)
+ 40. Setup Transfers
+ 41. Hold Transfers
+ 42. Report TCCS
+ 43. Report RSKM
+ 44. Unconstrained Paths Summary
+ 45. Clock Status Summary
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. Unconstrained Input Ports
+ 49. Unconstrained Output Ports
+ 50. Timing Analyzer Messages
 
 
 
@@ -99,30 +100,39 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 3.66        ;
+; Average used               ; 4.22        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  40.0%      ;
-;     Processor 3            ;  39.9%      ;
-;     Processor 4            ;  39.9%      ;
-;     Processor 5            ;  36.5%      ;
-;     Processor 6            ;  36.5%      ;
-;     Processor 7            ;  36.5%      ;
-;     Processor 8            ;  36.5%      ;
+;     Processor 2            ;  47.8%      ;
+;     Processor 3            ;  47.7%      ;
+;     Processor 4            ;  47.7%      ;
+;     Processor 5            ;  44.7%      ;
+;     Processor 6            ;  44.7%      ;
+;     Processor 7            ;  44.7%      ;
+;     Processor 8            ;  44.7%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
-+------------------------------------------------------------------------------+-----------+---------+-----------+-------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+----------------------------------------------------------------------------+---------------------------------------------------------------------------------+----------------------------------------------------------------------------------+
-; Clock Name                                                                   ; Type      ; Period  ; Frequency ; Rise  ; Fall    ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master                                                                     ; Source                                                                          ; Targets                                                                          ;
-+------------------------------------------------------------------------------+-----------+---------+-----------+-------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+----------------------------------------------------------------------------+---------------------------------------------------------------------------------+----------------------------------------------------------------------------------+
-; CLOCK_50                                                                     ; Base      ; 20.000  ; 50.0 MHz  ; 0.000 ; 10.000  ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                            ;                                                                                 ; { CLOCK_50 }                                                                     ;
-; pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; Generated ; 3.333   ; 300.0 MHz ; 0.000 ; 1.666   ; 50.00      ; 2         ; 12          ;       ;        ;           ;            ; false    ; CLOCK_50                                                                   ; pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|refclkin      ; { pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] }   ;
-; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; Generated ; 853.333 ; 1.17 MHz  ; 0.000 ; 426.666 ; 50.00      ; 256       ; 1           ;       ;        ;           ;            ; false    ; pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] ; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|vco0ph[0] ; { pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk } ;
-+------------------------------------------------------------------------------+-----------+---------+-----------+-------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+----------------------------------------------------------------------------+---------------------------------------------------------------------------------+----------------------------------------------------------------------------------+
++------------------------------------------------------+
+; SDC File List                                        ;
++------------------+--------+--------------------------+
+; SDC File Path    ; Status ; Read at                  ;
++------------------+--------+--------------------------+
+; channelStrip.sdc ; OK     ; Sat Apr 11 16:45:08 2020 ;
++------------------+--------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++------------------------------------------------------------------------------+-----------+---------+------------+-------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+----------------------------------------------------------------------------+---------------------------------------------------------------------------------+----------------------------------------------------------------------------------+
+; Clock Name                                                                   ; Type      ; Period  ; Frequency  ; Rise  ; Fall    ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master                                                                     ; Source                                                                          ; Targets                                                                          ;
++------------------------------------------------------------------------------+-----------+---------+------------+-------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+----------------------------------------------------------------------------+---------------------------------------------------------------------------------+----------------------------------------------------------------------------------+
+; CLOCK_50                                                                     ; Base      ; 20.000  ; 50.0 MHz   ; 0.000 ; 10.000  ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                            ;                                                                                 ; { CLOCK_50 }                                                                     ;
+; pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; Generated ; 3.333   ; 300.03 MHz ; 0.000 ; 1.666   ; 50.00      ; 2         ; 12          ;       ;        ;           ;            ; false    ; CLOCK_50                                                                   ; pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|refclkin      ; { pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] }   ;
+; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; Generated ; 853.333 ; 1.17 MHz   ; 0.000 ; 426.666 ; 50.00      ; 256       ; 1           ;       ;        ;           ;            ; false    ; pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] ; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|vco0ph[0] ; { pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk } ;
++------------------------------------------------------------------------------+-----------+---------+------------+-------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+----------------------------------------------------------------------------+---------------------------------------------------------------------------------+----------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -130,7 +140,7 @@ refer to the applicable agreement for further details.
 +----------+-----------------+------------------------------------------------------------------------------+------+
 ; Fmax     ; Restricted Fmax ; Clock Name                                                                   ; Note ;
 +----------+-----------------+------------------------------------------------------------------------------+------+
-; 4.54 MHz ; 4.54 MHz        ; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 4.61 MHz ; 4.61 MHz        ; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
 +----------+-----------------+------------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -146,7 +156,7 @@ HTML report is unavailable in plain text report export.
 +------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                        ; Slack   ; End Point TNS ;
 +------------------------------------------------------------------------------+---------+---------------+
-; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 411.025 ; 0.000         ;
+; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 410.694 ; 0.000         ;
 +------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -155,7 +165,7 @@ HTML report is unavailable in plain text report export.
 +------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                        ; Slack ; End Point TNS ;
 +------------------------------------------------------------------------------+-------+---------------+
-; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.209 ; 0.000         ;
+; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.221 ; 0.000         ;
 +------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -178,7 +188,7 @@ No paths to report.
 +------------------------------------------------------------------------------+---------+---------------+
 ; pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666   ; 0.000         ;
 ; CLOCK_50                                                                     ; 9.900   ; 0.000         ;
-; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 425.959 ; 0.000         ;
+; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 425.790 ; 0.000         ;
 +------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -193,7 +203,7 @@ No synchronizer chains to report.
 +----------+-----------------+------------------------------------------------------------------------------+------+
 ; Fmax     ; Restricted Fmax ; Clock Name                                                                   ; Note ;
 +----------+-----------------+------------------------------------------------------------------------------+------+
-; 4.45 MHz ; 4.45 MHz        ; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 4.53 MHz ; 4.53 MHz        ; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
 +----------+-----------------+------------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -203,7 +213,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                        ; Slack   ; End Point TNS ;
 +------------------------------------------------------------------------------+---------+---------------+
-; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 410.747 ; 0.000         ;
+; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 410.409 ; 0.000         ;
 +------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -212,7 +222,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                        ; Slack ; End Point TNS ;
 +------------------------------------------------------------------------------+-------+---------------+
-; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.061 ; 0.000         ;
+; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.056 ; 0.000         ;
 +------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -235,7 +245,7 @@ No paths to report.
 +------------------------------------------------------------------------------+---------+---------------+
 ; pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666   ; 0.000         ;
 ; CLOCK_50                                                                     ; 9.926   ; 0.000         ;
-; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 425.830 ; 0.000         ;
+; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 425.791 ; 0.000         ;
 +------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -250,7 +260,7 @@ No synchronizer chains to report.
 +------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                        ; Slack   ; End Point TNS ;
 +------------------------------------------------------------------------------+---------+---------------+
-; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 417.379 ; 0.000         ;
+; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 417.211 ; 0.000         ;
 +------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -259,7 +269,7 @@ No synchronizer chains to report.
 +------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                        ; Slack ; End Point TNS ;
 +------------------------------------------------------------------------------+-------+---------------+
-; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.159 ; 0.000         ;
+; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.158 ; 0.000         ;
 +------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -282,7 +292,7 @@ No paths to report.
 +------------------------------------------------------------------------------+---------+---------------+
 ; pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666   ; 0.000         ;
 ; CLOCK_50                                                                     ; 9.643   ; 0.000         ;
-; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 426.216 ; 0.000         ;
+; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 426.177 ; 0.000         ;
 +------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -297,7 +307,7 @@ No synchronizer chains to report.
 +------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                        ; Slack   ; End Point TNS ;
 +------------------------------------------------------------------------------+---------+---------------+
-; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 418.113 ; 0.000         ;
+; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 417.975 ; 0.000         ;
 +------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -306,7 +316,7 @@ No synchronizer chains to report.
 +------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                        ; Slack ; End Point TNS ;
 +------------------------------------------------------------------------------+-------+---------------+
-; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.077 ; 0.000         ;
+; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.089 ; 0.000         ;
 +------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -329,7 +339,7 @@ No paths to report.
 +------------------------------------------------------------------------------+---------+---------------+
 ; pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666   ; 0.000         ;
 ; CLOCK_50                                                                     ; 9.632   ; 0.000         ;
-; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 426.209 ; 0.000         ;
+; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 426.184 ; 0.000         ;
 +------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -344,10 +354,10 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------------------+---------+-------+----------+---------+---------------------+
 ; Clock                                                                         ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +-------------------------------------------------------------------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack                                                              ; 410.747 ; 0.061 ; N/A      ; N/A     ; 1.666               ;
+; Worst-case Slack                                                              ; 410.409 ; 0.056 ; N/A      ; N/A     ; 1.666               ;
 ;  CLOCK_50                                                                     ; N/A     ; N/A   ; N/A      ; N/A     ; 9.632               ;
 ;  pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; N/A     ; N/A   ; N/A      ; N/A     ; 1.666               ;
-;  pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 410.747 ; 0.061 ; N/A      ; N/A     ; 425.830             ;
+;  pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 410.409 ; 0.056 ; N/A      ; N/A     ; 425.790             ;
 ; Design-wide TNS                                                               ; 0.0     ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
 ;  CLOCK_50                                                                     ; N/A     ; N/A   ; N/A      ; N/A     ; 0.000               ;
 ;  pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; N/A     ; N/A   ; N/A      ; N/A     ; 0.000               ;
@@ -494,7 +504,7 @@ No synchronizer chains to report.
 +------------------------------------------------------------------------------+------------------------------------------------------------------------------+--------------+----------+----------+----------+
 ; From Clock                                                                   ; To Clock                                                                     ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------------------------------------------------------+------------------------------------------------------------------------------+--------------+----------+----------+----------+
-; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; > 2147483647 ; 37034    ; 45265786 ; 0        ;
+; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; > 2147483647 ; 43966    ; 67748554 ; 0        ;
 +------------------------------------------------------------------------------+------------------------------------------------------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -504,7 +514,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------------------------------------------------------------------------+------------------------------------------------------------------------------+--------------+----------+----------+----------+
 ; From Clock                                                                   ; To Clock                                                                     ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------------------------------------------------------+------------------------------------------------------------------------------+--------------+----------+----------+----------+
-; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; > 2147483647 ; 37034    ; 45265786 ; 0        ;
+; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; > 2147483647 ; 43966    ; 67748554 ; 0        ;
 +------------------------------------------------------------------------------+------------------------------------------------------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -529,9 +539,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 1     ; 1    ;
-; Unconstrained Input Port Paths  ; 1154  ; 1154 ;
+; Unconstrained Input Port Paths  ; 2069  ; 2069 ;
 ; Unconstrained Output Ports      ; 16    ; 16   ;
-; Unconstrained Output Port Paths ; 494   ; 494  ;
+; Unconstrained Output Port Paths ; 487   ; 487  ;
 +---------------------------------+-------+------+
 
 
@@ -618,37 +628,29 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Apr 10 21:16:00 2020
+    Info: Processing started: Sat Apr 11 16:45:05 2020
 Info: Command: quartus_sta channelStrip -c channelStrip
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'channelStrip.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
-Info (332142): No user constrained generated clocks found in the design. Calling "derive_pll_clocks -create_base_clocks"
-Info (332110): Deriving PLL clocks
-    Info (332110): create_clock -period 20.000 -waveform {0.000 10.000} -name CLOCK_50 CLOCK_50
-    Info (332110): create_generated_clock -source {pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|refclkin} -divide_by 2 -multiply_by 12 -duty_cycle 50.00 -name {pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]} {pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]}
-    Info (332110): create_generated_clock -source {pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|vco0ph[0]} -divide_by 256 -duty_cycle 50.00 -name {pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk} {pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk}
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Info (332104): Reading SDC File: 'channelStrip.sdc'
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL  from: refclkin  to: fbclk
     Info (332098): Cell: pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
     Info (332098): Cell: pll_0|altpll_component|auto_generated|generic_pll1~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
-Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332152): The following assignments are ignored by the derive_clock_uncertainty command
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
-Info (332146): Worst-case setup slack is 411.025
+Info (332146): Worst-case setup slack is 410.694
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   411.025               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.209
+    Info (332119):   410.694               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.221
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.209               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.221               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is 1.666
@@ -656,7 +658,7 @@ Info (332146): Worst-case minimum pulse width slack is 1.666
     Info (332119): ========= =================== =====================
     Info (332119):     1.666               0.000 pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     9.900               0.000 CLOCK_50 
-    Info (332119):   425.959               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):   425.790               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -664,15 +666,15 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL  from: refclkin  to: fbclk
     Info (332098): Cell: pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
     Info (332098): Cell: pll_0|altpll_component|auto_generated|generic_pll1~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 410.747
+Info (332152): The following assignments are ignored by the derive_clock_uncertainty command
+Info (332146): Worst-case setup slack is 410.409
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   410.747               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.061
+    Info (332119):   410.409               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.056
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.061               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.056               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is 1.666
@@ -680,7 +682,7 @@ Info (332146): Worst-case minimum pulse width slack is 1.666
     Info (332119): ========= =================== =====================
     Info (332119):     1.666               0.000 pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     9.926               0.000 CLOCK_50 
-    Info (332119):   425.830               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):   425.791               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -688,15 +690,15 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL  from: refclkin  to: fbclk
     Info (332098): Cell: pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
     Info (332098): Cell: pll_0|altpll_component|auto_generated|generic_pll1~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 417.379
+Info (332152): The following assignments are ignored by the derive_clock_uncertainty command
+Info (332146): Worst-case setup slack is 417.211
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   417.379               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.159
+    Info (332119):   417.211               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.158
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.159               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.158               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is 1.666
@@ -704,21 +706,21 @@ Info (332146): Worst-case minimum pulse width slack is 1.666
     Info (332119): ========= =================== =====================
     Info (332119):     1.666               0.000 pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     9.643               0.000 CLOCK_50 
-    Info (332119):   426.216               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):   426.177               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL  from: refclkin  to: fbclk
     Info (332098): Cell: pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
     Info (332098): Cell: pll_0|altpll_component|auto_generated|generic_pll1~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 418.113
+Info (332152): The following assignments are ignored by the derive_clock_uncertainty command
+Info (332146): Worst-case setup slack is 417.975
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   418.113               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.077
+    Info (332119):   417.975               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.089
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.077               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.089               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is 1.666
@@ -726,13 +728,13 @@ Info (332146): Worst-case minimum pulse width slack is 1.666
     Info (332119): ========= =================== =====================
     Info (332119):     1.666               0.000 pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     9.632               0.000 CLOCK_50 
-    Info (332119):   426.209               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):   426.184               0.000 pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 5302 megabytes
-    Info: Processing ended: Fri Apr 10 21:16:12 2020
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:37
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 5318 megabytes
+    Info: Processing ended: Sat Apr 11 16:45:20 2020
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:56
 
 
