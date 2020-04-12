@@ -1,0 +1,15 @@
+{C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/phase/phase.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/phase/phase.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module phase
+
+Top level modules:
+	phase
+
+} {} {}} {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/phase/phase_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/phase/phase_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module phase_tb
+
+Top level modules:
+	phase_tb
+
+} {} {}}

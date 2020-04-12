@@ -1,0 +1,15 @@
+{C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/outputGain/outputGain.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/outputGain/outputGain.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module outputGain
+
+Top level modules:
+	outputGain
+
+} {} {}} {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/outputGain/outputGain_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/outputGain/outputGain_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module outputGain_tb
+
+Top level modules:
+	outputGain_tb
+
+} {} {}}

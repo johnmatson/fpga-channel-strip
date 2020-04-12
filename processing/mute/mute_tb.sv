@@ -1,182 +1,184 @@
-module phase_tb;
+module mute_tb;
 
-    logic phase;
-    logic signed [15:0] phaseIn;
-    logic signed [15:0] phaseOut;
+    logic mute;
+    logic signed [15:0] muteIn;
+    logic signed [15:0] muteOut;
 
-    phase dut_0(.*);
+    mute dut_0(.*);
 
     logic clk_48;
 
     initial begin
         clk_48 = 0;
-        phaseIn = '0;
-        phase = 0;
+        muteIn = '0;
+        mute = 0;
 
         repeat(2) @(posedge clk_48);
-            phaseIn = 16'b0111111111111111;
+            muteIn = 16'b0111111111111111;
 
         forever begin
 
             // 1kHz sine wave
-            phaseIn = 0.000000;
+            muteIn = 0.000000;
             repeat(1) @(posedge clk_48);
-            phaseIn = 4276.951740;
+            muteIn = 4276.951740;
             repeat(1) @(posedge clk_48);
-            phaseIn = 8480.723651;
+            muteIn = 8480.723651;
             repeat(1) @(posedge clk_48);
-            phaseIn = 12539.388028;
+            muteIn = 12539.388028;
             repeat(1) @(posedge clk_48);
-            phaseIn = 16383.500000;
+            muteIn = 16383.500000;
             repeat(1) @(posedge clk_48);
-            phaseIn = 19947.285744;
+            muteIn = 19947.285744;
             repeat(1) @(posedge clk_48);
-            phaseIn = 23169.767899;
+            muteIn = 23169.767899;
             repeat(1) @(posedge clk_48);
-            phaseIn = 25995.808901;
+            muteIn = 25995.808901;
             repeat(1) @(posedge clk_48);
-            phaseIn = 28377.054406;
+            muteIn = 28377.054406;
             repeat(1) @(posedge clk_48);
-            phaseIn = 30272.760642;
+            muteIn = 30272.760642;
             repeat(1) @(posedge clk_48);
-            phaseIn = 31650.491550;
+            muteIn = 31650.491550;
             repeat(1) @(posedge clk_48);
-            phaseIn = 32486.673773;
+            muteIn = 32486.673773;
             repeat(1) @(posedge clk_48);
-            phaseIn = 32767.000000;
+            muteIn = 32767.000000;
             repeat(1) @(posedge clk_48);
-            phaseIn = 32486.673773;
+            muteIn = 32486.673773;
             repeat(1) @(posedge clk_48);
-            phaseIn = 31650.491550;
+            muteIn = 31650.491550;
             repeat(1) @(posedge clk_48);
-            phaseIn = 30272.760642;
+            muteIn = 30272.760642;
             repeat(1) @(posedge clk_48);
-            phaseIn = 28377.054406;
+            muteIn = 28377.054406;
             repeat(1) @(posedge clk_48);
-            phaseIn = 25995.808901;
+            muteIn = 25995.808901;
             repeat(1) @(posedge clk_48);
-            phaseIn = 23169.767899;
+            muteIn = 23169.767899;
             repeat(1) @(posedge clk_48);
-            phaseIn = 19947.285744;
+            muteIn = 19947.285744;
             repeat(1) @(posedge clk_48);
-            phaseIn = 16383.500000;
+            muteIn = 16383.500000;
             repeat(1) @(posedge clk_48);
-            phaseIn = 12539.388028;
+            muteIn = 12539.388028;
             repeat(1) @(posedge clk_48);
-            phaseIn = 8480.723651;
+            muteIn = 8480.723651;
             repeat(1) @(posedge clk_48);
-            phaseIn = 4276.951740;
+            muteIn = 4276.951740;
             repeat(1) @(posedge clk_48);
-            phaseIn = 0.000000;
+            muteIn = 0.000000;
             repeat(1) @(posedge clk_48);
-            phaseIn = -4276.951740;
+            muteIn = -4276.951740;
             repeat(1) @(posedge clk_48);
-            phaseIn = -8480.723651;
+            muteIn = -8480.723651;
             repeat(1) @(posedge clk_48);
-            phaseIn = -12539.388028;
+            muteIn = -12539.388028;
             repeat(1) @(posedge clk_48);
-            phaseIn = -16383.500000;
+            muteIn = -16383.500000;
             repeat(1) @(posedge clk_48);
-            phaseIn = -19947.285744;
+            muteIn = -19947.285744;
             repeat(1) @(posedge clk_48);
-            phaseIn = -23169.767899;
+            muteIn = -23169.767899;
             repeat(1) @(posedge clk_48);
-            phaseIn = -25995.808901;
+            muteIn = -25995.808901;
             repeat(1) @(posedge clk_48);
-            phaseIn = -28377.054406;
+            muteIn = -28377.054406;
             repeat(1) @(posedge clk_48);
-            phaseIn = -30272.760642;
+            muteIn = -30272.760642;
             repeat(1) @(posedge clk_48);
-            phaseIn = -31650.491550;
+            muteIn = -31650.491550;
             repeat(1) @(posedge clk_48);
-            phaseIn = -32486.673773;
+            muteIn = -32486.673773;
             repeat(1) @(posedge clk_48);
-            phaseIn = -32767.000000;
+            muteIn = -32767.000000;
             repeat(1) @(posedge clk_48);
-            phaseIn = -32486.673773;
+            muteIn = -32486.673773;
             repeat(1) @(posedge clk_48);
-            phaseIn = -31650.491550;
+            muteIn = -31650.491550;
             repeat(1) @(posedge clk_48);
-            phaseIn = -30272.760642;
+            muteIn = -30272.760642;
             repeat(1) @(posedge clk_48);
-            phaseIn = -28377.054406;
+            muteIn = -28377.054406;
             repeat(1) @(posedge clk_48);
-            phaseIn = -25995.808901;
+            muteIn = -25995.808901;
             repeat(1) @(posedge clk_48);
-            phaseIn = -23169.767899;
+            muteIn = -23169.767899;
             repeat(1) @(posedge clk_48);
-            phaseIn = -19947.285744;
+            muteIn = -19947.285744;
             repeat(1) @(posedge clk_48);
-            phaseIn = -16383.500000;
+            muteIn = -16383.500000;
             repeat(1) @(posedge clk_48);
-            phaseIn = -12539.388028;
+            muteIn = -12539.388028;
             repeat(1) @(posedge clk_48);
-            phaseIn = -8480.723651;
+            muteIn = -8480.723651;
             repeat(1) @(posedge clk_48);
-            phaseIn = -4276.951740;
+            muteIn = -4276.951740;
             repeat(1) @(posedge clk_48);
 
 
             /*/ 3kHz sine wave
-            phaseIn = 0;
+            muteIn = 0;
             repeat(1) @(posedge clk_48);
-            phaseIn = 12540;
+            muteIn = 12540;
             repeat(1) @(posedge clk_48);
-            phaseIn = 23170;
+            muteIn = 23170;
             repeat(1) @(posedge clk_48);
-            phaseIn = 30273;
+            muteIn = 30273;
             repeat(1) @(posedge clk_48);
-            phaseIn = 32767;
+            muteIn = 32767;
             repeat(1) @(posedge clk_48);
-            phaseIn = 30273;
+            muteIn = 30273;
             repeat(1) @(posedge clk_48);
-            phaseIn = 23170;
+            muteIn = 23170;
             repeat(1) @(posedge clk_48);
-            phaseIn = 12540;
+            muteIn = 12540;
             repeat(1) @(posedge clk_48);
-            phaseIn = 0;
+            muteIn = 0;
             repeat(1) @(posedge clk_48);
-            phaseIn = -12540;
+            muteIn = -12540;
             repeat(1) @(posedge clk_48);
-            phaseIn = -23170;
+            muteIn = -23170;
             repeat(1) @(posedge clk_48);
-            phaseIn = -30273;
+            muteIn = -30273;
             repeat(1) @(posedge clk_48);
-            phaseIn = -32767;
+            muteIn = -32767;
             repeat(1) @(posedge clk_48);
-            phaseIn = -30273;
+            muteIn = -30273;
             repeat(1) @(posedge clk_48);
-            phaseIn = -23170;
+            muteIn = -23170;
             repeat(1) @(posedge clk_48);
-            phaseIn = -12540;
+            muteIn = -12540;
             repeat(1) @(posedge clk_48);
 
 
             // 16kHz sine wave
-            /*phaseIn =     0;
+            /*muteIn =     0;
             repeat(1) @(posedge clk_48);
-            phaseIn =  7094;
+            muteIn =  7094;
             repeat(1) @(posedge clk_48);
-            phaseIn = -7094;
+            muteIn = -7094;
             repeat(1) @(posedge clk_48);
-            phaseIn =    -0;
+            muteIn =    -0;
             repeat(1) @(posedge clk_48);
-            phaseIn =  7094;
+            muteIn =  7094;
             repeat(1) @(posedge clk_48);
-            phaseIn = -7094;
+            muteIn = -7094;
             repeat(1) @(posedge clk_48);
-            phaseIn =    -0;
+            muteIn =    -0;
             repeat(1) @(posedge clk_48);
-            phaseIn =  7094;
+            muteIn =  7094;
             repeat(1) @(posedge clk_48);
-            phaseIn = -7094;
+            muteIn = -7094;
             repeat(1) @(posedge clk_48);*/
         end
         
     end
 
     initial begin
-        #1.5ms phase = 1;
+        #1.5ms mute = 1;
+        #1.5ms mute = 0;
+        #1.5ms mute = 1;
     end
 
     initial begin
