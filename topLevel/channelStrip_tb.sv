@@ -2,7 +2,9 @@ module channelStrip_tb;
 
     logic CLOCK_50, clk_48, reset_n;
     logic [2:0] freqSelect, lowpassSelect, highpassSelect;
-    logic signed [15:0] stage1, stage2, stage3;
+    logic phase, mute;
+    logic [15:0] gain;
+    logic signed [15:0] stage1, stage2, stage3, stage4, stage5, stage6;
 
     logic [3:0] num3, num2, num1, num0;
     logic [1:0] digit;
@@ -33,8 +35,20 @@ module channelStrip_tb;
                                 .highpassIn(stage2),
                                 .highpassOut(stage3));
 
+    phase phase_0             ( .phase,
+                                .phaseIn(stage3),
+                                .phaseOut(stage4));
+
+    outputGain outputGain_0   ( .gain,
+                                .outputGainIn(stage4),
+                                .outputGainOut(stage5));
+
+    mute mute_0               ( .mute,
+                                .muteIn(stage5),
+                                .muteOut(stage6));
+
     outputLevel outputLevel_0 ( .clk_48, .reset_n,
-                                .inWave(stage1), .outWave(stage3),
+                                .inWave(stage1), .outWave(stage6),
                                 .num3, .num2, .num1, .num0 );
 
 
@@ -61,7 +75,11 @@ module channelStrip_tb;
 
         freqSelect = 4;
         lowpassSelect = 1;
-        highpassSelect = 3;
+        highpassSelect = 3;        
+
+        phase = 0;
+        mute = 0;
+        gain = 'b0001000000000000;
 
         repeat (60) @ (posedge CLOCK_50);
         reset_n = 1;

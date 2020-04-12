@@ -1,5 +1,5 @@
 Assembler report for channelStrip
-Sun Apr 12 11:57:12 2020
+Sun Apr 12 14:23:02 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/igorg/Desktop/fpga-channel-strip/output_files/channelStrip.sof
+  5. Assembler Device Options: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/output_files/channelStrip.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Apr 12 11:57:12 2020 ;
+; Assembler Status      ; Successful - Sun Apr 12 14:23:02 2020 ;
 ; Revision Name         ; channelStrip                          ;
 ; Top-level Entity Name ; channelStrip                          ;
 ; Family                ; Cyclone V                             ;
@@ -52,23 +52,23 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+-------------------------------------------------------------------------+
-; Assembler Generated Files                                               ;
-+-------------------------------------------------------------------------+
-; File Name                                                               ;
-+-------------------------------------------------------------------------+
-; C:/Users/igorg/Desktop/fpga-channel-strip/output_files/channelStrip.sof ;
-+-------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                   ;
++-------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                   ;
++-------------------------------------------------------------------------------------------------------------+
+; C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/output_files/channelStrip.sof ;
++-------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/igorg/Desktop/fpga-channel-strip/output_files/channelStrip.sof ;
-+----------------+----------------------------------------------------------------------------------+
-; Option         ; Setting                                                                          ;
-+----------------+----------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x01172F13                                                                       ;
-; Checksum       ; 0x01172F13                                                                       ;
-+----------------+----------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/output_files/channelStrip.sof ;
++----------------+----------------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                              ;
++----------------+----------------------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x0117A33D                                                                                                           ;
+; Checksum       ; 0x0117A33D                                                                                                           ;
++----------------+----------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -77,14 +77,14 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Apr 12 11:57:01 2020
+    Info: Processing started: Sun Apr 12 14:22:56 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off channelStrip -c channelStrip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4927 megabytes
-    Info: Processing ended: Sun Apr 12 11:57:12 2020
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Peak virtual memory: 4924 megabytes
+    Info: Processing ended: Sun Apr 12 14:23:02 2020
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
 
 
