@@ -12,6 +12,7 @@ module channelStrip_tb;
     logic [3:0] num;
     logic [7:0] leds;
     logic [3:0] ct;
+    logic [3:0] buttons, kpc, kpr;
 
     always_ff @(posedge clk_48, reset_n) begin
         if (~reset_n)
@@ -64,6 +65,17 @@ module channelStrip_tb;
                                 .decimal,
                                 .leds);
 
+    colseq colseq_0           ( .clk(clk_48), .reset_n,
+                                .kpr,
+                                .kpc);
+                                
+    kpdecode kpdecode_0       ( .kpr, .kpc,
+                                .buttons);
+
+    encodeButton encodeButton_0(.buttons,
+                                .reset_n, .clk_48,
+                                .freqSelect,
+                                .lowpassSelect, .highpassSelect);
 
     clkDivider #(1041) clkDivider_0 ( .reset_n, .clkIn(CLOCK_50), .clkOut(clk_48) );
 
@@ -73,9 +85,10 @@ module channelStrip_tb;
         CLOCK_50 = 0;
         //clk_48 = 0;
 
-        freqSelect = 4;
+        /*freqSelect = 4;
         lowpassSelect = 1;
-        highpassSelect = 3;        
+        highpassSelect = 3;*/     
+        kpr = 'b1111;
 
         phase = 0;
         mute = 0;
@@ -83,6 +96,13 @@ module channelStrip_tb;
 
         repeat (60) @ (posedge CLOCK_50);
         reset_n = 1;
+
+        for (int i = 16; i >=0; i--)
+        begin
+            kpr = i;
+            repeat(4225) @(posedge CLOCK_50);
+        end
+        
     end
 
     initial begin

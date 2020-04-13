@@ -10,442 +10,442 @@ cModel Technology
 dC:/intelFPGA_lite/18.1
 vchannelStrip
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1586551889
+Z1 !s110 1586759967
 !i10b 1
-!s100 ?@@zOJ`Hd]QEl]0B]YE@c0
-IbAN^?Gf0dPXLHR76k@@;n3
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-!s105 channelStrip_sv_unit
+!s100 Chb0PVPgz[:enTJ7bKj^c1
+IV8R97QD3Ebl72ngG1mBiC3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 !s105 channelStrip_sv_unit
 S1
-Z2 dC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip
-w1586503613
-8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv
-FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv
+Z4 dC:/Users/igorg/Desktop/fpga-channel-strip
+Z5 w1586758754
+Z6 8C:/Users/igorg/Desktop/fpga-channel-strip/topLevel/channelStrip.sv
+Z7 FC:/Users/igorg/Desktop/fpga-channel-strip/topLevel/channelStrip.sv
 L0 1
-Z3 OV;L;10.5b;63
+Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1586551889.000000
-!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv|
+Z9 !s108 1586759967.000000
+Z10 !s107 C:/Users/igorg/Desktop/fpga-channel-strip/topLevel/channelStrip.sv|
+Z11 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/igorg/Desktop/fpga-channel-strip/topLevel/channelStrip.sv|
 !i113 1
-Z4 o-work work -sv
-Z5 tCvgOpt 0
+Z12 o-work work -sv
+Z13 tCvgOpt 0
 nchannel@strip
 vchannelStrip_tb
 R0
-Z6 !s110 1586726519
-!i10b 1
-!s100 7ziTg6NAIEX^:He82j?C00
-IRH8bcgF8lBKO9:LM?[n5E3
 R1
-Z7 !s105 channelStrip_tb_sv_unit
-S1
+!i10b 1
+!s100 WHjX[DiA^?H`ckKGcC7[`1
+Iz6TAbNz8]7JK]5L:oBoSH0
 R2
-w1586726430
-Z8 8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip_tb.sv
-Z9 FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip_tb.sv
+!s105 channelStrip_tb_sv_unit
+S1
+R4
+w1586759922
+8C:/Users/igorg/Desktop/fpga-channel-strip/topLevel/channelStrip_tb.sv
+FC:/Users/igorg/Desktop/fpga-channel-strip/topLevel/channelStrip_tb.sv
 L0 1
-R3
+R8
 r1
 !s85 0
 31
-Z10 !s108 1586726519.000000
-Z11 !s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip_tb.sv|
-Z12 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip_tb.sv|
+R9
+!s107 C:/Users/igorg/Desktop/fpga-channel-strip/topLevel/channelStrip_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/igorg/Desktop/fpga-channel-strip/topLevel/channelStrip_tb.sv|
 !i113 1
-R4
-R5
+R12
+R13
 nchannel@strip_tb
 vclkDivider
 R0
-Z13 !s110 1586726518
+Z14 !s110 1586759965
 !i10b 1
 !s100 1]a:H0Q1<SEolEQFE>HYQ1
-I>Q4m2:6MT>;fP9FR:g2=k1
-R1
+Ia[1l3=D:8cERnYfz^h[S13
+R2
 !s105 clkDivider_sv_unit
 S1
-R2
-w1586660331
-8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/clocks/clkDivider/clkDivider.sv
-FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/clocks/clkDivider/clkDivider.sv
+R4
+w1586673171
+8C:/Users/igorg/Desktop/fpga-channel-strip/clocks/clkDivider/clkDivider.sv
+FC:/Users/igorg/Desktop/fpga-channel-strip/clocks/clkDivider/clkDivider.sv
 L0 1
-R3
+R8
 r1
 !s85 0
 31
-Z14 !s108 1586726518.000000
-!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/clocks/clkDivider/clkDivider.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/clocks/clkDivider/clkDivider.sv|
+Z15 !s108 1586759965.000000
+!s107 C:/Users/igorg/Desktop/fpga-channel-strip/clocks/clkDivider/clkDivider.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/igorg/Desktop/fpga-channel-strip/clocks/clkDivider/clkDivider.sv|
 !i113 1
-R4
-R5
+R12
+R13
 nclk@divider
 vcolseq
 R0
-!s110 1586409579
+R1
 !i10b 1
 !s100 1_>Kakf7Ec9zVN<=]UAP[1
-IWmQWg;[L[MimU1_YQHfn`0
-R1
+IczJ3md[_KZ<l]KCGVN6`L2
+R2
 !s105 colseq_sv_unit
 S1
-R2
-w1579895377
-8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/colseq/colseq.sv
-FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/colseq/colseq.sv
+R4
+Z16 w1586370403
+8C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/colseq/colseq.sv
+FC:/Users/igorg/Desktop/fpga-channel-strip/peripherals/colseq/colseq.sv
 L0 6
-R3
+R8
 r1
 !s85 0
 31
-!s108 1586409579.000000
-!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/colseq/colseq.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/colseq/colseq.sv|
+R9
+!s107 C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/colseq/colseq.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/colseq/colseq.sv|
 !i113 1
-R4
-R5
+R12
+R13
 vdecode2
 R0
-R6
+R14
 !i10b 1
 !s100 ?Lz4z`ba=SALa@:Bf;_=83
-ICFELGCR`?I9DJdN:Cam9A1
-R1
+IbKBIHfHXG8RY_f_KlQ9^A3
+R2
 !s105 decode2_sv_unit
 S1
-R2
-w1586324156
-8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decode2/decode2.sv
-FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decode2/decode2.sv
+R4
+R16
+8C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/decode2/decode2.sv
+FC:/Users/igorg/Desktop/fpga-channel-strip/peripherals/decode2/decode2.sv
 L0 8
-R3
+R8
 r1
 !s85 0
 31
-R10
-!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decode2/decode2.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decode2/decode2.sv|
+R15
+!s107 C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/decode2/decode2.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/decode2/decode2.sv|
 !i113 1
-R4
-R5
+R12
+R13
 vdecode7
 R0
-R6
+R14
 !i10b 1
 !s100 zS@:2V;AkD=Va2<DSba>W1
-I]VTF1[E6C?AkHEPJ0E;?X1
-R1
+IH0WVDR]VhoKii<z1HC5Wo0
+R2
 !s105 decode7_sv_unit
 S1
-R2
-w1586374903
-8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decode7/decode7.sv
-FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decode7/decode7.sv
+R4
+w1586407404
+8C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/decode7/decode7.sv
+FC:/Users/igorg/Desktop/fpga-channel-strip/peripherals/decode7/decode7.sv
 L0 8
-R3
+R8
 r1
 !s85 0
 31
-R10
-!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decode7/decode7.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decode7/decode7.sv|
+R15
+!s107 C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/decode7/decode7.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/decode7/decode7.sv|
 !i113 1
-R4
-R5
+R12
+R13
 vdecodeButton
 R0
-Z15 !s110 1586409580
+!s110 1586409580
 !i10b 1
 !s100 O2A]o7T][08CF=ziHHeRE2
 Id9^dAC9SzWZB0eR<NRlzG2
-R1
+R2
 !s105 decodeButton_sv_unit
 S1
-R2
+dC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip
 w1586395412
 8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decodeButton/decodeButton.sv
 FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decodeButton/decodeButton.sv
 L0 1
-R3
+R8
 r1
 !s85 0
 31
-Z16 !s108 1586409580.000000
+!s108 1586409580.000000
 !s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decodeButton/decodeButton.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decodeButton/decodeButton.sv|
 !i113 1
-R4
-R5
+R12
+R13
 ndecode@button
 vdisplayMux
 R0
-R6
+Z17 !s110 1586759966
 !i10b 1
 !s100 ERzVL;5jk8;ef;G19o4[U1
-I353P>db6ONCZkX]P_9^B92
-R1
+IWTYNoXmbz:cBQX9RjK;nW1
+R2
 !s105 displayMux_sv_unit
 S1
-R2
-w1586407278
-8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/displayMux/displayMux.sv
-FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/displayMux/displayMux.sv
+R4
+w1586407418
+8C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/displayMux/displayMux.sv
+FC:/Users/igorg/Desktop/fpga-channel-strip/peripherals/displayMux/displayMux.sv
 L0 1
-R3
+R8
 r1
 !s85 0
 31
-R10
-!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/displayMux/displayMux.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/displayMux/displayMux.sv|
+Z18 !s108 1586759966.000000
+!s107 C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/displayMux/displayMux.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/displayMux/displayMux.sv|
 !i113 1
-R4
-R5
+R12
+R13
 ndisplay@mux
 vencodeButton
 R0
-R15
+R17
 !i10b 1
-!s100 [cI6<Hlm;nNS`hg2Q5aB]3
-Ik42520a[dFf=j8C5NA3FJ3
-R1
+!s100 :34]R^Bd`kPW`6??A5DNC0
+ICkT_S<6:o>L^e^X[`b]R52
+R2
 !s105 encodeButton_sv_unit
 S1
-R2
-w1586398904
-8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv
-FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv
+R4
+w1586758559
+8C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv
+FC:/Users/igorg/Desktop/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv
 L0 1
-R3
+R8
 r1
 !s85 0
 31
-R16
-!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv|
+R18
+!s107 C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv|
 !i113 1
-R4
-R5
+R12
+R13
 nencode@button
 vhighpass
 R0
-Z17 !s110 1586726520
+R17
 !i10b 1
 !s100 L<N>W7>eY=M4T>AOEF4_d1
-I9^HJ]J14@Oab5_9W2hU[52
-R1
+IcdXYm0AfmJoLEQicF_HZX3
+R2
 !s105 highpass_sv_unit
 S1
-R2
-w1586683133
-8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/highpass/highpass.sv
-FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/highpass/highpass.sv
+R4
+Z19 w1586715222
+8C:/Users/igorg/Desktop/fpga-channel-strip/processing/highpass/highpass.sv
+FC:/Users/igorg/Desktop/fpga-channel-strip/processing/highpass/highpass.sv
 L0 1
-R3
+R8
 r1
 !s85 0
 31
-Z18 !s108 1586726520.000000
-!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/highpass/highpass.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/highpass/highpass.sv|
+R18
+!s107 C:/Users/igorg/Desktop/fpga-channel-strip/processing/highpass/highpass.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/igorg/Desktop/fpga-channel-strip/processing/highpass/highpass.sv|
 !i113 1
-R4
-R5
+R12
+R13
 vkpdecode
 R0
-R15
-!i10b 1
-!s100 abSJ>ZNQhmLWkSZ;MZ`YW0
-Izh9V4=<On<;_9_hO>Laz<2
 R1
+!i10b 1
+!s100 W]O?]K2A[f4YbeC]g:>?J0
+IS1M2FmZR66Q8YQ6;`?[aM2
+R2
 !s105 kpdecode_sv_unit
 S1
-R2
-w1586384571
-8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv
-FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv
+R4
+w1586755990
+8C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv
+FC:/Users/igorg/Desktop/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv
 L0 6
-R3
+R8
 r1
 !s85 0
 31
-R16
-!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv|
+R9
+!s107 C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv|
 !i113 1
-R4
-R5
+R12
+R13
 vlowpass
 R0
-R6
+R17
 !i10b 1
 !s100 HAK4;UcdVdNV5oTLc>A:c3
-I[?5mnEfIiAFBDBdYoMfMA1
-R1
+IR19l^zEAe>_agSZ?R4=Xm1
+R2
 !s105 lowpass_sv_unit
 S1
-R2
-w1586683115
-8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/lowpass/lowpass.sv
-FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/lowpass/lowpass.sv
+R4
+R19
+8C:/Users/igorg/Desktop/fpga-channel-strip/processing/lowpass/lowpass.sv
+FC:/Users/igorg/Desktop/fpga-channel-strip/processing/lowpass/lowpass.sv
 L0 1
-R3
+R8
 r1
 !s85 0
 31
-R10
-!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/lowpass/lowpass.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/lowpass/lowpass.sv|
+R18
+!s107 C:/Users/igorg/Desktop/fpga-channel-strip/processing/lowpass/lowpass.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/igorg/Desktop/fpga-channel-strip/processing/lowpass/lowpass.sv|
 !i113 1
-R4
-R5
+R12
+R13
 vmute
 R0
 R17
 !i10b 1
 !s100 3fDB9`mL91GJT_Wk4<Yjm3
-ISTeNi@>Je:lGl5Q6UW2^P1
-R1
+I4CnUGQAdkUSSV61`bXBH31
+R2
 !s105 mute_sv_unit
 S1
-R2
-w1586684861
-8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/mute/mute.sv
-FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/mute/mute.sv
+R4
+Z20 w1586715223
+8C:/Users/igorg/Desktop/fpga-channel-strip/processing/mute/mute.sv
+FC:/Users/igorg/Desktop/fpga-channel-strip/processing/mute/mute.sv
 L0 1
-R3
+R8
 r1
 !s85 0
 31
 R18
-!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/mute/mute.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/mute/mute.sv|
+!s107 C:/Users/igorg/Desktop/fpga-channel-strip/processing/mute/mute.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/igorg/Desktop/fpga-channel-strip/processing/mute/mute.sv|
 !i113 1
-R4
-R5
+R12
+R13
 voutputGain
 R0
 R17
 !i10b 1
 !s100 @FL6Z2TLEE47Z2c`@d:[b2
-Il>?i9FklDk:kZ3a;bSm_d1
-R1
+IQRHXa;K9YPYG>5dT0H=fg1
+R2
 !s105 outputGain_sv_unit
 S1
-R2
-w1586725008
-8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/outputGain/outputGain.sv
-FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/outputGain/outputGain.sv
+R4
+w1586726941
+8C:/Users/igorg/Desktop/fpga-channel-strip/processing/outputGain/outputGain.sv
+FC:/Users/igorg/Desktop/fpga-channel-strip/processing/outputGain/outputGain.sv
 L0 1
-R3
+R8
 r1
 !s85 0
 31
 R18
-!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/outputGain/outputGain.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/outputGain/outputGain.sv|
+!s107 C:/Users/igorg/Desktop/fpga-channel-strip/processing/outputGain/outputGain.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/igorg/Desktop/fpga-channel-strip/processing/outputGain/outputGain.sv|
 !i113 1
-R4
-R5
+R12
+R13
 noutput@gain
 voutputLevel
 R0
-R6
+R14
 !i10b 1
 !s100 1RRilP2Dha1NRToLe7Yj91
-IQ>lgBe@8Ioz@l]Y>4=C_k1
-R1
+Ia1GE>8V3PMWl[e3cZBgk>3
+R2
 !s105 outputLevel_sv_unit
 S1
-R2
-w1586660332
-8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv
-FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv
+R4
+w1586489881
+8C:/Users/igorg/Desktop/fpga-channel-strip/outputs/outputLevel/outputLevel.sv
+FC:/Users/igorg/Desktop/fpga-channel-strip/outputs/outputLevel/outputLevel.sv
 L0 1
-R3
+R8
 r1
 !s85 0
 31
-R14
-!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv|
+R15
+!s107 C:/Users/igorg/Desktop/fpga-channel-strip/outputs/outputLevel/outputLevel.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/igorg/Desktop/fpga-channel-strip/outputs/outputLevel/outputLevel.sv|
 !i113 1
-R4
-R5
+R12
+R13
 noutput@level
 vphase
 R0
-R17
+R1
 !i10b 1
 !s100 Fg`g><FSD[?E;7VTmQh8F2
-I;5dD1H5X4h885TPzAz[We1
-R1
+IXZc6^OLSg8O=LbX^d1SS>3
+R2
 !s105 phase_sv_unit
 S1
-R2
-w1586720206
-8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/phase/phase.sv
-FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/phase/phase.sv
+R4
+R20
+8C:/Users/igorg/Desktop/fpga-channel-strip/processing/phase/phase.sv
+FC:/Users/igorg/Desktop/fpga-channel-strip/processing/phase/phase.sv
 L0 1
-R3
+R8
 r1
 !s85 0
 31
 R18
-!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/phase/phase.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/phase/phase.sv|
+!s107 C:/Users/igorg/Desktop/fpga-channel-strip/processing/phase/phase.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/igorg/Desktop/fpga-channel-strip/processing/phase/phase.sv|
 !i113 1
-R4
-R5
+R12
+R13
 vpll
 R0
-!s110 1586552060
-!i10b 1
-!s100 QG@2lkc<gM=T1WiB^nSR?1
-IOblZnU0Z?0YnB:@74VNmk0
 R1
-R7
-S1
+!i10b 1
+!s100 XVBh1XW`YF9=k3F2cjXn91
+IF?6HHWf?b>2knQE4ASRD]1
 R2
-w1586551543
-R8
-R9
-L0 87
 R3
+S1
+R4
+R5
+R6
+R7
+L0 146
+R8
 r1
 !s85 0
 31
-!s108 1586552060.000000
+R9
+R10
 R11
-R12
 !i113 1
-R4
-R5
+R12
+R13
 vsineWaveGen
 R0
-R13
+R14
 !i10b 1
 !s100 :_@zGT2;?YMLl@QH:EgKF3
-I^oI^E2;[4kJ_^b:@UVkM:1
-R1
+I[YfdSMVni8SXBZz0VX?0]3
+R2
 !s105 sineWaveGen_sv_unit
 S1
-R2
-w1586502460
-8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv
-FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv
+R4
+w1586392296
+8C:/Users/igorg/Desktop/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv
+FC:/Users/igorg/Desktop/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv
 L0 1
-R3
+R8
 r1
 !s85 0
 31
-R14
-!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv|
+R15
+!s107 C:/Users/igorg/Desktop/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/igorg/Desktop/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv|
 !i113 1
-R4
-R5
+R12
+R13
 nsine@wave@gen

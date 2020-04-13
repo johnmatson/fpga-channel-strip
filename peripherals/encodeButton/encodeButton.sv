@@ -8,7 +8,7 @@ module encodeButton (   input logic [3:0] buttons,
         if(~reset_n) begin
             freqSelect <= 4;
             lowpassSelect <= 1;
-            highpassSelect <= 3;
+            highpassSelect <= 2;
         end
 
         else begin

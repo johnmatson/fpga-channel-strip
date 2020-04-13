@@ -18,7 +18,7 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
     logic decimal;
     logic [3:0] num;
 
-    logic [3:0] buttons;
+    logic [3:0] buttons;//, buttons0;
     //logic [3:0] kpr;
 
 
@@ -67,6 +67,7 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
       end
     end*/
 
+    //assign buttons = 11;
 
     always_ff @(posedge clk_48) 
         digit <= digit + 1'b1 ;
@@ -121,12 +122,12 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
                                 .kpc(kpc));
                                 
     kpdecode kpdecode_0       ( .kpr, .kpc,
-                                .buttons(buttons));
+                                .buttons);
 
     encodeButton encodeButton_0(.buttons,
                                 .reset_n, .clk_48,
-                                .freqSelect(freqSelect),
-                                .lowpassSelect(lowpassSelect), .highpassSelect(highpassSelect));
+                                .freqSelect,
+                                .lowpassSelect, .highpassSelect);
 
 
     pll pll_0 ( .inclk0(CLOCK_50), .c0(clk_48) );

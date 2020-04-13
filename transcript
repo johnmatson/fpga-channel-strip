@@ -1,0 +1,351 @@
+# Reading C:/Quartus/modelsim_ase/tcl/vsim/pref.tcl
+# OpenFile C:/Users/igorg/Desktop/fpga-channel-strip/channelStrip.mpf
+# Loading project channelStrip
+# 0 compiles, 12 failed with no errors.
+# reading C:/Quartus/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project channelStrip_igor
+# Compile of clkDivider.sv was successful.
+# Compile of sineWaveGen.sv was successful.
+# Compile of outputLevel.sv was successful.
+# Compile of decode2.sv was successful.
+# Compile of decode7.sv was successful.
+# Compile of displayMux.sv was successful.
+# Compile of encodeButton.sv was successful.
+# Compile of highpass.sv was successful.
+# Compile of lowpass.sv was successful.
+# Compile of mute.sv was successful.
+# Compile of outputGain.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of channelStrip.sv was successful.
+# Compile of channelStrip_tb.sv failed with 1 errors.
+# 14 compiles, 1 failed with 1 error.
+# Compile of clkDivider.sv was successful.
+# Compile of sineWaveGen.sv was successful.
+# Compile of outputLevel.sv was successful.
+# Compile of decode2.sv was successful.
+# Compile of decode7.sv was successful.
+# Compile of displayMux.sv was successful.
+# Compile of encodeButton.sv was successful.
+# Compile of highpass.sv was successful.
+# Compile of lowpass.sv was successful.
+# Compile of mute.sv was successful.
+# Compile of outputGain.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of channelStrip.sv was successful.
+# Compile of channelStrip_tb.sv was successful.
+# 14 compiles, 0 failed with no errors.
+vsim -gui work.channelStrip_tb
+# vsim -gui work.channelStrip_tb 
+# Start time: 22:53:59 on Apr 12,2020
+# Loading sv_std.std
+# Loading work.channelStrip_tb
+# Loading work.sineWaveGen
+# Loading work.lowpass
+# Loading work.highpass
+# Loading work.phase
+# Loading work.outputGain
+# Loading work.mute
+# Loading work.outputLevel
+# Loading work.displayMux
+# Loading work.decode2
+# Loading work.decode7
+# Loading work.encodeButton
+# Loading work.clkDivider
+add wave -r /*
+run -all
+# ** Note: $stop    : C:/Users/igorg/Desktop/fpga-channel-strip/topLevel/channelStrip_tb.sv(107)
+#    Time: 1200 ms  Iteration: 0  Instance: /channelStrip_tb
+# Break in Module channelStrip_tb at C:/Users/igorg/Desktop/fpga-channel-strip/topLevel/channelStrip_tb.sv line 107
+# Compile of clkDivider.sv was successful.
+# Compile of sineWaveGen.sv was successful.
+# Compile of outputLevel.sv was successful.
+# Compile of decode2.sv was successful.
+# Compile of decode7.sv was successful.
+# Compile of displayMux.sv was successful.
+# Compile of encodeButton.sv was successful.
+# Compile of highpass.sv was successful.
+# Compile of lowpass.sv was successful.
+# Compile of mute.sv was successful.
+# Compile of outputGain.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of channelStrip.sv was successful.
+# Compile of channelStrip_tb.sv was successful.
+# 14 compiles, 0 failed with no errors.
+restart
+# Loading work.channelStrip_tb
+# Loading work.sineWaveGen
+# Loading work.lowpass
+# Loading work.highpass
+# Loading work.phase
+# Loading work.outputGain
+# Loading work.mute
+# Loading work.outputLevel
+# Loading work.displayMux
+# Loading work.decode2
+# Loading work.decode7
+# Loading work.encodeButton
+# Loading work.clkDivider
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/igorg/Desktop/fpga-channel-strip/topLevel/channelStrip_tb.sv(107)
+#    Time: 1200 ms  Iteration: 0  Instance: /channelStrip_tb
+# Break in Module channelStrip_tb at C:/Users/igorg/Desktop/fpga-channel-strip/topLevel/channelStrip_tb.sv line 107
+# Compile of clkDivider.sv was successful.
+# Compile of sineWaveGen.sv was successful.
+# Compile of outputLevel.sv was successful.
+# Compile of decode2.sv was successful.
+# Compile of decode7.sv was successful.
+# Compile of displayMux.sv was successful.
+# Compile of encodeButton.sv was successful.
+# Compile of highpass.sv was successful.
+# Compile of lowpass.sv was successful.
+# Compile of mute.sv was successful.
+# Compile of outputGain.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of channelStrip.sv was successful.
+# Compile of channelStrip_tb.sv was successful.
+# 14 compiles, 0 failed with no errors.
+restart
+# Loading work.channelStrip_tb
+# Loading work.sineWaveGen
+# Loading work.lowpass
+# Loading work.highpass
+# Loading work.phase
+# Loading work.outputGain
+# Loading work.mute
+# Loading work.outputLevel
+# Loading work.displayMux
+# Loading work.decode2
+# Loading work.decode7
+# Loading work.encodeButton
+# Loading work.clkDivider
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/igorg/Desktop/fpga-channel-strip/topLevel/channelStrip_tb.sv(108)
+#    Time: 1200 ms  Iteration: 0  Instance: /channelStrip_tb
+# Break in Module channelStrip_tb at C:/Users/igorg/Desktop/fpga-channel-strip/topLevel/channelStrip_tb.sv line 108
+# Compile of clkDivider.sv was successful.
+# Compile of sineWaveGen.sv was successful.
+# Compile of outputLevel.sv was successful.
+# Compile of decode2.sv was successful.
+# Compile of decode7.sv was successful.
+# Compile of displayMux.sv was successful.
+# Compile of encodeButton.sv was successful.
+# Compile of highpass.sv was successful.
+# Compile of lowpass.sv was successful.
+# Compile of mute.sv was successful.
+# Compile of outputGain.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of channelStrip.sv was successful.
+# Compile of channelStrip_tb.sv was successful.
+# 14 compiles, 0 failed with no errors.
+restart
+# Loading work.channelStrip_tb
+# Loading work.sineWaveGen
+# Loading work.lowpass
+# Loading work.highpass
+# Loading work.phase
+# Loading work.outputGain
+# Loading work.mute
+# Loading work.outputLevel
+# Loading work.displayMux
+# Loading work.decode2
+# Loading work.decode7
+# Loading work.encodeButton
+# Loading work.clkDivider
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of clkDivider.sv was successful.
+# Compile of sineWaveGen.sv was successful.
+# Compile of outputLevel.sv was successful.
+# Compile of decode2.sv was successful.
+# Compile of decode7.sv was successful.
+# Compile of displayMux.sv was successful.
+# Compile of encodeButton.sv was successful.
+# Compile of highpass.sv was successful.
+# Compile of lowpass.sv was successful.
+# Compile of mute.sv was successful.
+# Compile of outputGain.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of channelStrip.sv was successful.
+# Compile of channelStrip_tb.sv was successful.
+# 14 compiles, 0 failed with no errors.
+restart
+# Loading work.channelStrip_tb
+# Loading work.sineWaveGen
+# Loading work.lowpass
+# Loading work.highpass
+# Loading work.phase
+# Loading work.outputGain
+# Loading work.mute
+# Loading work.outputLevel
+# Loading work.displayMux
+# Loading work.decode2
+# Loading work.decode7
+# Loading work.encodeButton
+# Loading work.clkDivider
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# A time value could not be extracted from the current line
+# ** Note: $stop    : C:/Users/igorg/Desktop/fpga-channel-strip/topLevel/channelStrip_tb.sv(108)
+#    Time: 1200 ms  Iteration: 0  Instance: /channelStrip_tb
+# Break in Module channelStrip_tb at C:/Users/igorg/Desktop/fpga-channel-strip/topLevel/channelStrip_tb.sv line 108
+quit -sim
+# End time: 23:32:37 on Apr 12,2020, Elapsed time: 0:38:38
+# Errors: 0, Warnings: 0
+# Compile of clkDivider.sv was successful.
+# Compile of sineWaveGen.sv was successful.
+# Compile of outputLevel.sv was successful.
+# Compile of decode2.sv was successful.
+# Compile of decode7.sv was successful.
+# Compile of displayMux.sv was successful.
+# Compile of encodeButton.sv was successful.
+# Compile of highpass.sv was successful.
+# Compile of lowpass.sv was successful.
+# Compile of mute.sv was successful.
+# Compile of outputGain.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of channelStrip.sv was successful.
+# Compile of channelStrip_tb.sv failed with 3 errors.
+# Compile of colseq.sv was successful.
+# Compile of kpdecode.sv was successful.
+# 16 compiles, 1 failed with 3 errors.
+# Compile of clkDivider.sv was successful.
+# Compile of sineWaveGen.sv was successful.
+# Compile of outputLevel.sv was successful.
+# Compile of decode2.sv was successful.
+# Compile of decode7.sv was successful.
+# Compile of displayMux.sv was successful.
+# Compile of encodeButton.sv was successful.
+# Compile of highpass.sv was successful.
+# Compile of lowpass.sv was successful.
+# Compile of mute.sv was successful.
+# Compile of outputGain.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of channelStrip.sv was successful.
+# Compile of channelStrip_tb.sv failed with 2 errors.
+# Compile of colseq.sv was successful.
+# Compile of kpdecode.sv was successful.
+# 16 compiles, 1 failed with 2 errors.
+# Compile of clkDivider.sv was successful.
+# Compile of sineWaveGen.sv was successful.
+# Compile of outputLevel.sv was successful.
+# Compile of decode2.sv was successful.
+# Compile of decode7.sv was successful.
+# Compile of displayMux.sv was successful.
+# Compile of encodeButton.sv was successful.
+# Compile of highpass.sv was successful.
+# Compile of lowpass.sv was successful.
+# Compile of mute.sv was successful.
+# Compile of outputGain.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of channelStrip.sv was successful.
+# Compile of channelStrip_tb.sv failed with 1 errors.
+# Compile of colseq.sv was successful.
+# Compile of kpdecode.sv was successful.
+# 16 compiles, 1 failed with 1 error.
+# Compile of clkDivider.sv was successful.
+# Compile of sineWaveGen.sv was successful.
+# Compile of outputLevel.sv was successful.
+# Compile of decode2.sv was successful.
+# Compile of decode7.sv was successful.
+# Compile of displayMux.sv was successful.
+# Compile of encodeButton.sv was successful.
+# Compile of highpass.sv was successful.
+# Compile of lowpass.sv was successful.
+# Compile of mute.sv was successful.
+# Compile of outputGain.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of channelStrip.sv was successful.
+# Compile of channelStrip_tb.sv failed with 1 errors.
+# Compile of colseq.sv was successful.
+# Compile of kpdecode.sv was successful.
+# 16 compiles, 1 failed with 1 error.
+# Compile of clkDivider.sv was successful.
+# Compile of sineWaveGen.sv was successful.
+# Compile of outputLevel.sv was successful.
+# Compile of decode2.sv was successful.
+# Compile of decode7.sv was successful.
+# Compile of displayMux.sv was successful.
+# Compile of encodeButton.sv was successful.
+# Compile of highpass.sv was successful.
+# Compile of lowpass.sv was successful.
+# Compile of mute.sv was successful.
+# Compile of outputGain.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of channelStrip.sv was successful.
+# Compile of channelStrip_tb.sv failed with 1 errors.
+# Compile of colseq.sv was successful.
+# Compile of kpdecode.sv was successful.
+# 16 compiles, 1 failed with 1 error.
+# Compile of clkDivider.sv was successful.
+# Compile of sineWaveGen.sv was successful.
+# Compile of outputLevel.sv was successful.
+# Compile of decode2.sv was successful.
+# Compile of decode7.sv was successful.
+# Compile of displayMux.sv was successful.
+# Compile of encodeButton.sv was successful.
+# Compile of highpass.sv was successful.
+# Compile of lowpass.sv was successful.
+# Compile of mute.sv was successful.
+# Compile of outputGain.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of channelStrip.sv was successful.
+# Compile of channelStrip_tb.sv was successful.
+# Compile of colseq.sv was successful.
+# Compile of kpdecode.sv was successful.
+# 16 compiles, 0 failed with no errors.
+vsim -gui work.channelStrip_tb
+# vsim -gui work.channelStrip_tb 
+# Start time: 23:39:11 on Apr 12,2020
+# Loading sv_std.std
+# Loading work.channelStrip_tb
+# Loading work.sineWaveGen
+# Loading work.lowpass
+# Loading work.highpass
+# Loading work.phase
+# Loading work.outputGain
+# Loading work.mute
+# Loading work.outputLevel
+# Loading work.displayMux
+# Loading work.decode2
+# Loading work.decode7
+# Loading work.colseq
+# Loading work.kpdecode
+# Loading work.encodeButton
+# Loading work.clkDivider
+# Compile of clkDivider.sv was successful.
+# Compile of sineWaveGen.sv was successful.
+# Compile of outputLevel.sv was successful.
+# Compile of decode2.sv was successful.
+# Compile of decode7.sv was successful.
+# Compile of displayMux.sv was successful.
+# Compile of encodeButton.sv was successful.
+# Compile of highpass.sv was successful.
+# Compile of lowpass.sv was successful.
+# Compile of mute.sv was successful.
+# Compile of outputGain.sv was successful.
+# Compile of phase.sv was successful.
+# Compile of channelStrip.sv was successful.
+# Compile of channelStrip_tb.sv was successful.
+# Compile of colseq.sv was successful.
+# Compile of kpdecode.sv was successful.
+# 16 compiles, 0 failed with no errors.
+add wave -r /*
+run -all
+# ** Note: $stop    : C:/Users/igorg/Desktop/fpga-channel-strip/topLevel/channelStrip_tb.sv(109)
+#    Time: 1200 ms  Iteration: 0  Instance: /channelStrip_tb
+# Break in Module channelStrip_tb at C:/Users/igorg/Desktop/fpga-channel-strip/topLevel/channelStrip_tb.sv line 109
