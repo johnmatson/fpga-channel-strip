@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sun Apr 12 23:24:20 2020
+Fitter Status : Successful - Mon Apr 13 02:15:52 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : channelStrip
 Top-level Entity Name : channelStrip
 Family : Cyclone V
 Device : 5CSEMA4U23C6
 Timing Models : Final
-Logic utilization (in ALMs) : 6,069 / 15,880 ( 38 % )
-Total registers : 388
+Logic utilization (in ALMs) : 6,585 / 15,880 ( 41 % )
+Total registers : 394
 Total pins : 22 / 314 ( 7 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 2,764,800 ( 0 % )

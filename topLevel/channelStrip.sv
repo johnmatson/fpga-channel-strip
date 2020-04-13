@@ -38,7 +38,7 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
     //assign highpassSelect = 3;
 
     assign phase = 0;
-    assign mute = 0;
+    //assign mute = 0;
     assign gain = 'b0001000000000000;
 /*
     logic [4:0] count;
@@ -119,13 +119,14 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
 
     colseq colseq_0           ( .clk(clk_48), .reset_n,
                                 .kpr,
-                                .kpc(kpc));
+                                .kpc);
                                 
     kpdecode kpdecode_0       ( .kpr, .kpc,
                                 .buttons);
 
     encodeButton encodeButton_0(.buttons,
-                                .reset_n, .clk_48,
+                                .clk_48, .reset_n,
+                                .mute,
                                 .freqSelect,
                                 .lowpassSelect, .highpassSelect);
 

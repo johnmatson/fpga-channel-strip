@@ -54,26 +54,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	outputGain
 
-} {} {}} C:/Users/igorg/Desktop/fpga-channel-strip/outputs/outputLevel/outputLevel.sv {1 {vlog -work work -sv -stats=none C:/Users/igorg/Desktop/fpga-channel-strip/outputs/outputLevel/outputLevel.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module outputLevel
-
-Top level modules:
-	outputLevel
-
 } {} {}} C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/displayMux/displayMux.sv {1 {vlog -work work -sv -stats=none C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/displayMux/displayMux.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module displayMux
 
 Top level modules:
 	displayMux
-
-} {} {}} C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv {1 {vlog -work work -sv -stats=none C:/Users/igorg/Desktop/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module encodeButton
-
-Top level modules:
-	encodeButton
 
 } {} {}} C:/Users/igorg/Desktop/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv {1 {vlog -work work -sv -stats=none C:/Users/igorg/Desktop/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
