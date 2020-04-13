@@ -19,11 +19,11 @@ module highpass #( parameter L = 3, N = 63, shift = 30 ) (
     logic signed [N:0] x2_coeff0 = 0*(2**shift);
 
     // 100 Hz coefficients
-    logic signed [N:0] y1_coeff1 = 2127560704; // 1.9814453125*(2**shift);
-    logic signed [N:0] y2_coeff1 = -1054081024; // -0.981689453125*(2**shift);
-    logic signed [N:0] x0_coeff1 = 1063911424; // 1*0.9908447265625*(2**shift);
-    logic signed [N:0] x1_coeff1 = -2127822848; // -2*0.990844726562*(2**shift);
-    logic signed [N:0] x2_coeff1 = 1063911424; // 1*0.990844726562*(2**shift);
+    logic signed [N:0] y1_coeff1 = 2127609856; // 1.9814910888671875*(2**shift);
+    logic signed [N:0] y2_coeff1 = -1054048256; // -0.981658935546875*(2**shift);
+    logic signed [N:0] x0_coeff1 = 1063845888; // 1*0.99078369140625*(2**shift);
+    logic signed [N:0] x1_coeff1 = -2127691776; // -2*0.99078369140625*(2**shift);
+    logic signed [N:0] x2_coeff1 = 1063845888; // 1*0.99078369140625*(2**shift);
     
     // 250 Hz coefficients
     logic signed [N:0] y1_coeff2 = 2097676288; // 1.95361328125*(2**shift);
@@ -33,18 +33,18 @@ module highpass #( parameter L = 3, N = 63, shift = 30 ) (
     logic signed [N:0] x2_coeff2 = 1049231360; // 1*0.9771728515625*(2**shift);
     
     // 500 Hz coefficients
-    logic signed [N:0] y1_coeff3 = 2046820352; // 1.90625*(2**shift);
-    logic signed [N:0] y2_coeff3 = -977272832; // -0.91015625*(2**shift);
-    logic signed [N:0] x0_coeff3 = 1025507328; // 1*0.955078125*(2**shift);
-    logic signed [N:0] x1_coeff3 = -2051014656; // -2*0.955078125*(2**shift);
-    logic signed [N:0] x2_coeff3 = 1025507328; // 1*0.955078125*(2**shift);
+    logic signed [N:0] y1_coeff3 = 2048131072; // 1.907470703125*(2**shift);
+    logic signed [N:0] y2_coeff3 = -978845696; // -0.91162109375*(2**shift);
+    logic signed [N:0] x0_coeff3 = 1025245184; // 1*0.954833984375*(2**shift);
+    logic signed [N:0] x1_coeff3 = -2050490368; // -2*0.954833984375*(2**shift);
+    logic signed [N:0] x2_coeff3 = 1025245184; // 1*0.954833984375*(2**shift);
     
     // 1 kHz coefficients
-    logic signed [N:0] y1_coeff4 = 1946157056; // 1.8125*(2**shift);
-    logic signed [N:0] y2_coeff4 = -889192448; // -0.828125*(2**shift);
-    logic signed [N:0] x0_coeff4 = 981467136; // 1*0.9140625*(2**shift);
-    logic signed [N:0] x1_coeff4 = -1962934272; // -2*0.9140625*(2**shift);
-    logic signed [N:0] x2_coeff4 = 981467136; // 1*0.9140625*(2**shift);
+    logic signed [N:0] y1_coeff4 = 1949302784; // 1.8154296875*(2**shift);
+    logic signed [N:0] y2_coeff4 = -892338176; // -0.8310546875*(2**shift);
+    logic signed [N:0] x0_coeff4 = 978845696; // 1*0.91162109375*(2**shift);
+    logic signed [N:0] x1_coeff4 = -1957691392; // -2*0.91162109375*(2**shift);
+    logic signed [N:0] x2_coeff4 = 978845696; // 1*0.91162109375*(2**shift);
 
     // buffer
     logic signed [N:0] y1;

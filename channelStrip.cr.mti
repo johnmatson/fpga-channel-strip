@@ -12,12 +12,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	decode2
 
-} {} {}} {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip_tb.sv}
+} {} {}} {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module channelStrip_tb
+-- Compiling module kpdecode
 
 Top level modules:
-	channelStrip_tb
+	kpdecode
 
 } {} {}} {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/outputGain/outputGain.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/outputGain/outputGain.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -32,13 +32,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	colseq
-
-} {} {}} {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module kpdecode
-
-Top level modules:
-	kpdecode
 
 } {} {}} {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/highpass/highpass.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/highpass/highpass.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -61,13 +54,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	decode7
 
-} {} {}} {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module outputLevel
-
-Top level modules:
-	outputLevel
-
 } {} {}} {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/displayMux/displayMux.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/displayMux/displayMux.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module displayMux
@@ -75,12 +61,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	displayMux
 
-} {} {}} {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decodeButton/decodeButton.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decodeButton/decodeButton.sv}
+} {} {}} {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/lowpass/lowpass.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/lowpass/lowpass.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module decodeButton
+-- Compiling module lowpass
 
 Top level modules:
-	decodeButton
+	lowpass
 
 } {} {}} {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/phase/phase.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/phase/phase.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -88,13 +74,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	phase
-
-} {} {}} {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/lowpass/lowpass.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/processing/lowpass/lowpass.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module lowpass
-
-Top level modules:
-	lowpass
 
 } {} {}} {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/clocks/clkDivider/clkDivider.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/clocks/clkDivider/clkDivider.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016

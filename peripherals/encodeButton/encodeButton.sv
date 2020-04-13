@@ -95,19 +95,19 @@ module encodeButton (   input logic [3:0] buttons,
                 13 : begin
                     freqSelect <= freqSelect;
                     lowpassSelect <= lowpassSelect;
-                    highpassSelect <= 1;
+                    highpassSelect <= 2;
                     mute <= mute;
                 end
                 14 : begin
                     freqSelect <= freqSelect;
                     lowpassSelect <= lowpassSelect;
-                    highpassSelect <= 2;
+                    highpassSelect <= 3;
                     mute <= mute;
                 end
                 15 : begin
                     freqSelect <= freqSelect;
                     lowpassSelect <= lowpassSelect;
-                    highpassSelect <= 3;
+                    highpassSelect <= 4;
                     mute <= mute;
                 end
                 default : begin

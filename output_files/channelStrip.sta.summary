@@ -3,11 +3,11 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 404.761
+Slack : 401.164
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.212
+Slack : 0.241
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -23,11 +23,11 @@ Slack : 425.802
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 404.947
+Slack : 401.322
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.063
+Slack : 0.102
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -39,15 +39,15 @@ Slack : 9.926
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 425.793
+Slack : 425.791
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 412.396
+Slack : 410.208
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.159
+Slack : 0.164
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -59,15 +59,15 @@ Slack : 9.643
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 426.183
+Slack : 426.179
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 413.890
+Slack : 411.860
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.089
+Slack : 0.093
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'pll_0|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -79,7 +79,7 @@ Slack : 9.632
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'pll_0|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 426.188
+Slack : 426.187
 TNS   : 0.000
 
 ------------------------------------------------------------
