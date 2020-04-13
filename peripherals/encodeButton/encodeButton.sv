@@ -1,18 +1,14 @@
 module encodeButton (   input logic [3:0] buttons,
-                        input logic reset_n,
+                        input logic reset_n, clk_48,
                         output logic [2:0] freqSelect,
                         output logic [2:0] lowpassSelect, highpassSelect );
 
-    always_ff @ (   posedge buttons[0],
-                    posedge buttons[1],
-                    posedge buttons[2],
-                    posedge buttons[3],
-                    negedge reset_n) begin
+    always_ff @ (posedge clk_48, negedge reset_n) begin
 
         if(~reset_n) begin
-            freqSelect <= 5;
-            lowpassSelect <= 0;
-            highpassSelect <= 0;
+            freqSelect <= 4;
+            lowpassSelect <= 1;
+            highpassSelect <= 3;
         end
 
         else begin
@@ -98,9 +94,9 @@ module encodeButton (   input logic [3:0] buttons,
                     highpassSelect <= 3;
                 end
                 default : begin
-                    freqSelect <= 5;
-                    lowpassSelect <= 0;
-                    highpassSelect <= 0;
+                    freqSelect <= freqSelect;
+                    lowpassSelect <= lowpassSelect;
+                    highpassSelect <= highpassSelect;
                 end
             endcase
         end

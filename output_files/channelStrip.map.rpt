@@ -1,5 +1,5 @@
 Analysis & Synthesis report for channelStrip
-Sun Apr 12 20:09:24 2020
+Sun Apr 12 22:19:53 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,9 +14,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis DSP Block Usage Summary
-  9. User-Specified and Inferred Latches
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
  13. Source assignments for Top-level Entity: |channelStrip
  14. Parameter Settings for User Entity Instance: sineWaveGen:sineWaveGen_0
@@ -26,15 +26,13 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  18. Parameter Settings for User Entity Instance: pll:pll_0|altpll:altpll_component
  19. Parameter Settings for Inferred Entity Instance: outputLevel:outputLevel_0|lpm_divide:Div0
  20. altpll Parameter Settings by Entity Instance
- 21. Port Connectivity Checks: "kpdecode:kpdecode_0"
- 22. Port Connectivity Checks: "colseq:colseq_0"
- 23. Port Connectivity Checks: "mute:mute_0"
- 24. Port Connectivity Checks: "outputGain:outputGain_0"
- 25. Port Connectivity Checks: "phase:phase_0"
- 26. Post-Synthesis Netlist Statistics for Top Partition
- 27. Elapsed Time Per Partition
- 28. Analysis & Synthesis Messages
- 29. Analysis & Synthesis Suppressed Messages
+ 21. Port Connectivity Checks: "mute:mute_0"
+ 22. Port Connectivity Checks: "outputGain:outputGain_0"
+ 23. Port Connectivity Checks: "phase:phase_0"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+ 27. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -60,13 +58,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Apr 12 20:09:24 2020       ;
+; Analysis & Synthesis Status     ; Successful - Sun Apr 12 22:19:53 2020       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; channelStrip                                ;
 ; Top-level Entity Name           ; channelStrip                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 468                                         ;
+; Total registers                 ; 472                                         ;
 ; Total pins                      ; 22                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -225,34 +223,34 @@ refer to the applicable agreement for further details.
 +------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-; Estimate of Logic utilization (ALMs needed) ; 6867          ;
-;                                             ;               ;
-; Combinational ALUT usage for logic          ; 11556         ;
-;     -- 7 input functions                    ; 54            ;
-;     -- 6 input functions                    ; 2097          ;
-;     -- 5 input functions                    ; 982           ;
-;     -- 4 input functions                    ; 3810          ;
-;     -- <=3 input functions                  ; 4613          ;
-;                                             ;               ;
-; Dedicated logic registers                   ; 468           ;
-;                                             ;               ;
-; I/O pins                                    ; 22            ;
-;                                             ;               ;
-; Total DSP Blocks                            ; 71            ;
-;                                             ;               ;
-; Total PLLs                                  ; 1             ;
-;     -- PLLs                                 ; 1             ;
-;                                             ;               ;
-; Maximum fan-out node                        ; reset_n~input ;
-; Maximum fan-out                             ; 473           ;
-; Total fan-out                               ; 51107         ;
-; Average fan-out                             ; 4.21          ;
-+---------------------------------------------+---------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                            ;
++---------------------------------------------+------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                    ;
++---------------------------------------------+------------------------------------------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 6862                                                                                     ;
+;                                             ;                                                                                          ;
+; Combinational ALUT usage for logic          ; 11544                                                                                    ;
+;     -- 7 input functions                    ; 51                                                                                       ;
+;     -- 6 input functions                    ; 2102                                                                                     ;
+;     -- 5 input functions                    ; 977                                                                                      ;
+;     -- 4 input functions                    ; 3802                                                                                     ;
+;     -- <=3 input functions                  ; 4612                                                                                     ;
+;                                             ;                                                                                          ;
+; Dedicated logic registers                   ; 472                                                                                      ;
+;                                             ;                                                                                          ;
+; I/O pins                                    ; 22                                                                                       ;
+;                                             ;                                                                                          ;
+; Total DSP Blocks                            ; 71                                                                                       ;
+;                                             ;                                                                                          ;
+; Total PLLs                                  ; 1                                                                                        ;
+;     -- PLLs                                 ; 1                                                                                        ;
+;                                             ;                                                                                          ;
+; Maximum fan-out node                        ; pll:pll_0|altpll:altpll_component|lab1clk_altpll:auto_generated|wire_generic_pll1_outclk ;
+; Maximum fan-out                             ; 473                                                                                      ;
+; Total fan-out                               ; 51072                                                                                    ;
+; Average fan-out                             ; 4.21                                                                                     ;
++---------------------------------------------+------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -260,17 +258,17 @@ refer to the applicable agreement for further details.
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Entity Name     ; Library Name ;
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |channelStrip                            ; 11556 (6)           ; 468 (6)                   ; 0                 ; 71         ; 22   ; 0            ; |channelStrip                                                                                                                        ; channelStrip    ; work         ;
-;    |colseq:colseq_0|                     ; 5 (5)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|colseq:colseq_0                                                                                                        ; colseq          ; work         ;
+; |channelStrip                            ; 11544 (2)           ; 472 (2)                   ; 0                 ; 71         ; 22   ; 0            ; |channelStrip                                                                                                                        ; channelStrip    ; work         ;
+;    |colseq:colseq_0|                     ; 6 (6)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|colseq:colseq_0                                                                                                        ; colseq          ; work         ;
 ;    |decode2:decode2_0|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|decode2:decode2_0                                                                                                      ; decode2         ; work         ;
 ;    |decode7:decode7_0|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|decode7:decode7_0                                                                                                      ; decode7         ; work         ;
 ;    |displayMux:displayMux_0|             ; 60 (60)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|displayMux:displayMux_0                                                                                                ; displayMux      ; work         ;
-;    |encodeButton:encodeButton_0|         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|encodeButton:encodeButton_0                                                                                            ; encodeButton    ; work         ;
+;    |encodeButton:encodeButton_0|         ; 5 (5)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|encodeButton:encodeButton_0                                                                                            ; encodeButton    ; work         ;
 ;    |highpass:highpass_0|                 ; 422 (422)           ; 162 (162)                 ; 0                 ; 33         ; 0    ; 0            ; |channelStrip|highpass:highpass_0                                                                                                    ; highpass        ; work         ;
-;    |kpdecode:kpdecode_0|                 ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|kpdecode:kpdecode_0                                                                                                    ; kpdecode        ; work         ;
+;    |kpdecode:kpdecode_0|                 ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|kpdecode:kpdecode_0                                                                                                    ; kpdecode        ; work         ;
 ;    |lowpass:lowpass_0|                   ; 429 (429)           ; 162 (162)                 ; 0                 ; 34         ; 0    ; 0            ; |channelStrip|lowpass:lowpass_0                                                                                                      ; lowpass         ; work         ;
 ;    |outputGain:outputGain_0|             ; 21 (21)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |channelStrip|outputGain:outputGain_0                                                                                                ; outputGain      ; work         ;
-;    |outputLevel:outputLevel_0|           ; 9863 (4508)         ; 112 (112)                 ; 0                 ; 2          ; 0    ; 0            ; |channelStrip|outputLevel:outputLevel_0                                                                                              ; outputLevel     ; work         ;
+;    |outputLevel:outputLevel_0|           ; 9859 (4504)         ; 112 (112)                 ; 0                 ; 2          ; 0    ; 0            ; |channelStrip|outputLevel:outputLevel_0                                                                                              ; outputLevel     ; work         ;
 ;       |lpm_divide:Div0|                  ; 5355 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|outputLevel:outputLevel_0|lpm_divide:Div0                                                                              ; lpm_divide      ; work         ;
 ;          |lpm_divide_5ro:auto_generated| ; 5355 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|outputLevel:outputLevel_0|lpm_divide:Div0|lpm_divide_5ro:auto_generated                                                ; lpm_divide_5ro  ; work         ;
 ;             |abs_divider_edg:divider|    ; 5355 (65)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|outputLevel:outputLevel_0|lpm_divide:Div0|lpm_divide_5ro:auto_generated|abs_divider_edg:divider                        ; abs_divider_edg ; work         ;
@@ -280,7 +278,7 @@ refer to the applicable agreement for further details.
 ;    |pll:pll_0|                           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|pll:pll_0                                                                                                              ; pll             ; work         ;
 ;       |altpll:altpll_component|          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|pll:pll_0|altpll:altpll_component                                                                                      ; altpll          ; work         ;
 ;          |lab1clk_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |channelStrip|pll:pll_0|altpll:altpll_component|lab1clk_altpll:auto_generated                                                        ; lab1clk_altpll  ; work         ;
-;    |sineWaveGen:sineWaveGen_0|           ; 729 (729)           ; 25 (25)                   ; 0                 ; 1          ; 0    ; 0            ; |channelStrip|sineWaveGen:sineWaveGen_0                                                                                              ; sineWaveGen     ; work         ;
+;    |sineWaveGen:sineWaveGen_0|           ; 728 (728)           ; 25 (25)                   ; 0                 ; 1          ; 0    ; 0            ; |channelStrip|sineWaveGen:sineWaveGen_0                                                                                              ; sineWaveGen     ; work         ;
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -300,28 +298,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                            ;
-+----------------------------------------------------+----------------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal              ; Free of Timing Hazards ;
-+----------------------------------------------------+----------------------------------+------------------------+
-; encodeButton:encodeButton_0|freqSelect[1]          ; kpdecode:kpdecode_0|Mux0         ; yes                    ;
-; encodeButton:encodeButton_0|freqSelect[0]          ; kpdecode:kpdecode_0|Mux0         ; yes                    ;
-; encodeButton:encodeButton_0|freqSelect[2]          ; kpdecode:kpdecode_0|Mux0         ; yes                    ;
-; encodeButton:encodeButton_0|highpassSelect[1]      ; encodeButton:encodeButton_0|Mux0 ; yes                    ;
-; encodeButton:encodeButton_0|highpassSelect[0]      ; encodeButton:encodeButton_0|Mux0 ; yes                    ;
-; encodeButton:encodeButton_0|lowpassSelect[0]       ; encodeButton:encodeButton_0|Mux9 ; yes                    ;
-; encodeButton:encodeButton_0|lowpassSelect[1]       ; encodeButton:encodeButton_0|Mux9 ; yes                    ;
-; Number of user-specified and inferred latches = 7  ;                                  ;                        ;
-+----------------------------------------------------+----------------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
 +-------------------------------------------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                                                                ;
 +----------------------------------------------------------------+--------------------------------------------------+
 ; Register name                                                  ; Reason for Removal                               ;
 +----------------------------------------------------------------+--------------------------------------------------+
+; encodeButton:encodeButton_0|lowpassSelect[2]                   ; Stuck at GND due to stuck port data_in           ;
+; encodeButton:encodeButton_0|highpassSelect[2]                  ; Stuck at GND due to stuck port data_in           ;
 ; sineWaveGen:sineWaveGen_0|sample[9..15]                        ; Stuck at GND due to stuck port data_in           ;
 ; outputLevel:outputLevel_0|inMax[15..33,36,38..49,52..57,60,61] ; Merged with outputLevel:outputLevel_0|inMax[63]  ;
 ; outputLevel:outputLevel_0|inMax[34,35,37,50,51,58,59]          ; Merged with outputLevel:outputLevel_0|inMax[62]  ;
@@ -341,8 +324,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; lowpass:lowpass_0|x2[15..62]                                   ; Merged with lowpass:lowpass_0|x2[63]             ;
 ; outputLevel:outputLevel_0|inMax[62]                            ; Merged with outputLevel:outputLevel_0|inMax[63]  ;
 ; outputLevel:outputLevel_0|outMax[21]                           ; Merged with outputLevel:outputLevel_0|outMax[63] ;
-; colseq:colseq_0|state[0]                                       ; Merged with count[0]                             ;
-; count[1]                                                       ; Merged with colseq:colseq_0|state[1]             ;
 ; Total Number of Removed Registers = 549                        ;                                                  ;
 +----------------------------------------------------------------+--------------------------------------------------+
 
@@ -352,34 +333,48 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 468   ;
+; Total registers                              ; 472   ;
 ; Number of registers using Synchronous Clear  ; 75    ;
 ; Number of registers using Synchronous Load   ; 64    ;
-; Number of registers using Asynchronous Clear ; 466   ;
+; Number of registers using Asynchronous Clear ; 470   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 97    ;
+; Number of registers using Clock Enable       ; 103   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|x0[1]                 ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; Yes        ; |channelStrip|sineWaveGen:sineWaveGen_0|sample[2]       ;
-; 8:1                ; 11 bits   ; 55 LEs        ; 44 LEs               ; 11 LEs                 ; Yes        ; |channelStrip|sineWaveGen:sineWaveGen_0|sample[0]       ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |channelStrip|sineWaveGen:sineWaveGen_0|wave[6]         ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |channelStrip|sineWaveGen:sineWaveGen_0|wave[3]         ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |channelStrip|outputGain:outputGain_0|outputGainOut[11] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |channelStrip|highpass:highpass_0|highpassOut[5]        ;
-; 3:1                ; 60 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |channelStrip|outputLevel:outputLevel_0|level           ;
-; 3:1                ; 61 bits   ; 122 LEs       ; 122 LEs              ; 0 LEs                  ; No         ; |channelStrip|outputLevel:outputLevel_0|level           ;
-; 3:1                ; 62 bits   ; 124 LEs       ; 124 LEs              ; 0 LEs                  ; No         ; |channelStrip|outputLevel:outputLevel_0|level[25]       ;
-; 28:1               ; 2 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |channelStrip|displayMux:displayMux_0|Mux2              ;
-; 40:1               ; 2 bits    ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; No         ; |channelStrip|displayMux:displayMux_0|Mux3              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
++---------------------------------------------------------+
+; Inverted Register Statistics                            ;
++-----------------------------------------------+---------+
+; Inverted Register                             ; Fan out ;
++-----------------------------------------------+---------+
+; encodeButton:encodeButton_0|freqSelect[2]     ; 23      ;
+; encodeButton:encodeButton_0|highpassSelect[0] ; 26      ;
+; encodeButton:encodeButton_0|highpassSelect[1] ; 17      ;
+; encodeButton:encodeButton_0|lowpassSelect[0]  ; 14      ;
+; Total number of inverted registers = 4        ;         ;
++-----------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |channelStrip|highpass:highpass_0|x0[14]               ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; Yes        ; |channelStrip|sineWaveGen:sineWaveGen_0|sample[3]      ;
+; 8:1                ; 11 bits   ; 55 LEs        ; 44 LEs               ; 11 LEs                 ; Yes        ; |channelStrip|sineWaveGen:sineWaveGen_0|sample[0]      ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |channelStrip|sineWaveGen:sineWaveGen_0|wave[6]        ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |channelStrip|sineWaveGen:sineWaveGen_0|wave[15]       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |channelStrip|outputGain:outputGain_0|outputGainOut[9] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |channelStrip|highpass:highpass_0|highpassOut[15]      ;
+; 3:1                ; 60 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |channelStrip|outputLevel:outputLevel_0|level          ;
+; 3:1                ; 61 bits   ; 122 LEs       ; 122 LEs              ; 0 LEs                  ; No         ; |channelStrip|outputLevel:outputLevel_0|level          ;
+; 3:1                ; 62 bits   ; 124 LEs       ; 124 LEs              ; 0 LEs                  ; No         ; |channelStrip|outputLevel:outputLevel_0|level[3]       ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 12 LEs               ; 10 LEs                 ; No         ; |channelStrip|kpdecode:kpdecode_0|buttons[2]           ;
+; 28:1               ; 2 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |channelStrip|displayMux:displayMux_0|Mux2             ;
+; 40:1               ; 2 bits    ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; No         ; |channelStrip|displayMux:displayMux_0|Mux3             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
 +--------------------------------------------------------+
@@ -387,10 +382,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------+-------+------+-----------------+
 ; Assignment            ; Value ; From ; To              ;
 +-----------------------+-------+------+-----------------+
-; WEAK_PULL_UP_RESISTOR ; ON    ; -    ; kpr0[3]         ;
-; WEAK_PULL_UP_RESISTOR ; ON    ; -    ; kpr0[2]         ;
-; WEAK_PULL_UP_RESISTOR ; ON    ; -    ; kpr0[1]         ;
-; WEAK_PULL_UP_RESISTOR ; ON    ; -    ; kpr0[0]         ;
+; WEAK_PULL_UP_RESISTOR ; ON    ; -    ; kpr[3]          ;
+; WEAK_PULL_UP_RESISTOR ; ON    ; -    ; kpr[2]          ;
+; WEAK_PULL_UP_RESISTOR ; ON    ; -    ; kpr[1]          ;
+; WEAK_PULL_UP_RESISTOR ; ON    ; -    ; kpr[0]          ;
 +-----------------------+-------+------+-----------------+
 
 
@@ -852,24 +847,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+-----------------------------------+
 
 
-+-------------------------------------------------+
-; Port Connectivity Checks: "kpdecode:kpdecode_0" ;
-+--------+-------+----------+---------------------+
-; Port   ; Type  ; Severity ; Details             ;
-+--------+-------+----------+---------------------+
-; kpr[1] ; Input ; Info     ; Stuck at VCC        ;
-+--------+-------+----------+---------------------+
-
-
-+---------------------------------------------+
-; Port Connectivity Checks: "colseq:colseq_0" ;
-+--------+-------+----------+-----------------+
-; Port   ; Type  ; Severity ; Details         ;
-+--------+-------+----------+-----------------+
-; kpr[1] ; Input ; Info     ; Stuck at VCC    ;
-+--------+-------+----------+-----------------+
-
-
 +-----------------------------------------+
 ; Port Connectivity Checks: "mute:mute_0" ;
 +------+-------+----------+---------------+
@@ -904,14 +881,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 468                         ;
-;     CLR               ; 326                         ;
+; arriav_ff             ; 472                         ;
+;     CLR               ; 324                         ;
 ;     CLR SCLR          ; 43                          ;
-;     ENA CLR           ; 1                           ;
+;     ENA CLR           ; 7                           ;
 ;     ENA CLR SCLR      ; 32                          ;
 ;     ENA CLR SLD       ; 64                          ;
 ;     plain             ; 2                           ;
-; arriav_lcell_comb     ; 11563                       ;
+; arriav_lcell_comb     ; 11551                       ;
 ;     arith             ; 4233                        ;
 ;         0 data inputs ; 124                         ;
 ;         1 data inputs ; 159                         ;
@@ -919,15 +896,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 564                         ;
 ;         4 data inputs ; 2590                        ;
 ;         5 data inputs ; 453                         ;
-;     extend            ; 54                          ;
-;         7 data inputs ; 54                          ;
-;     normal            ; 6649                        ;
-;         1 data inputs ; 68                          ;
-;         2 data inputs ; 1960                        ;
-;         3 data inputs ; 778                         ;
-;         4 data inputs ; 1217                        ;
-;         5 data inputs ; 529                         ;
-;         6 data inputs ; 2097                        ;
+;     extend            ; 51                          ;
+;         7 data inputs ; 51                          ;
+;     normal            ; 6640                        ;
+;         1 data inputs ; 70                          ;
+;         2 data inputs ; 1958                        ;
+;         3 data inputs ; 777                         ;
+;         4 data inputs ; 1209                        ;
+;         5 data inputs ; 524                         ;
+;         6 data inputs ; 2102                        ;
 ;     shared            ; 627                         ;
 ;         0 data inputs ; 3                           ;
 ;         2 data inputs ; 103                         ;
@@ -938,7 +915,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; generic_pll           ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 288.90                      ;
-; Average LUT depth     ; 160.33                      ;
+; Average LUT depth     ; 160.36                      ;
 +-----------------------+-----------------------------+
 
 
@@ -947,7 +924,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:46     ;
+; Top            ; 00:00:41     ;
 +----------------+--------------+
 
 
@@ -957,7 +934,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Apr 12 20:08:27 2020
+    Info: Processing started: Sun Apr 12 22:19:01 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off channelStrip -c channelStrip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -995,7 +972,6 @@ Info (12021): Found 2 design units, including 2 entities, in source file topleve
     Info (12023): Found entity 1: channelStrip File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 1
     Info (12023): Found entity 2: pll File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 145
 Info (12127): Elaborating entity "channelStrip" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at channelStrip.sv(49): truncated value with size 32 to match size of target (5) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 49
 Info (12128): Elaborating entity "sineWaveGen" for hierarchy "sineWaveGen:sineWaveGen_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 77
 Warning (10230): Verilog HDL assignment warning at sineWaveGen.sv(24): truncated value with size 32 to match size of target (16) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv Line: 24
 Warning (10230): Verilog HDL assignment warning at sineWaveGen.sv(43): truncated value with size 64 to match size of target (16) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/sineWaveGen/sineWaveGen.sv Line: 43
@@ -1447,24 +1423,7 @@ Info (12128): Elaborating entity "decode7" for hierarchy "decode7:decode7_0" Fil
 Warning (10230): Verilog HDL assignment warning at decode7.sv(29): truncated value with size 32 to match size of target (8) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/decode7/decode7.sv Line: 29
 Info (12128): Elaborating entity "colseq" for hierarchy "colseq:colseq_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 121
 Info (12128): Elaborating entity "kpdecode" for hierarchy "kpdecode:kpdecode_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 124
-Warning (10270): Verilog HDL Case Statement warning at kpdecode.sv(16): incomplete case statement has no default case item File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv Line: 16
-Warning (10270): Verilog HDL Case Statement warning at kpdecode.sv(25): incomplete case statement has no default case item File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv Line: 25
-Warning (10270): Verilog HDL Case Statement warning at kpdecode.sv(34): incomplete case statement has no default case item File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv Line: 34
-Warning (10270): Verilog HDL Case Statement warning at kpdecode.sv(43): incomplete case statement has no default case item File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv Line: 43
-Warning (10270): Verilog HDL Case Statement warning at kpdecode.sv(13): incomplete case statement has no default case item File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/kpdecode/kpdecode.sv Line: 13
 Info (12128): Elaborating entity "encodeButton" for hierarchy "encodeButton:encodeButton_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 129
-Warning (10240): Verilog HDL Always Construct warning at encodeButton.sv(6): inferring latch(es) for variable "freqSelect", which holds its previous value in one or more paths through the always construct File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
-Warning (10240): Verilog HDL Always Construct warning at encodeButton.sv(6): inferring latch(es) for variable "lowpassSelect", which holds its previous value in one or more paths through the always construct File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
-Warning (10240): Verilog HDL Always Construct warning at encodeButton.sv(6): inferring latch(es) for variable "highpassSelect", which holds its previous value in one or more paths through the always construct File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
-Info (10041): Inferred latch for "highpassSelect[0]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
-Info (10041): Inferred latch for "highpassSelect[1]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
-Info (10041): Inferred latch for "highpassSelect[2]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
-Info (10041): Inferred latch for "lowpassSelect[0]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
-Info (10041): Inferred latch for "lowpassSelect[1]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
-Info (10041): Inferred latch for "lowpassSelect[2]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
-Info (10041): Inferred latch for "freqSelect[0]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
-Info (10041): Inferred latch for "freqSelect[1]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
-Info (10041): Inferred latch for "freqSelect[2]" at encodeButton.sv(6) File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
 Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 132
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll_0|altpll:altpll_component" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 169
 Info (12130): Elaborated megafunction instantiation "pll:pll_0|altpll:altpll_component" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 169
@@ -1526,6 +1485,8 @@ Info (12133): Instantiated megafunction "pll:pll_0|altpll:altpll_component" with
 Info (12021): Found 1 design units, including 1 entities, in source file db/lab1clk_altpll.v
     Info (12023): Found entity 1: lab1clk_altpll File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/db/lab1clk_altpll.v Line: 29
 Info (12128): Elaborating entity "lab1clk_altpll" for hierarchy "pll:pll_0|altpll:altpll_component|lab1clk_altpll:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
+Info (13014): Ignored 4 buffer(s)
+    Info (13019): Ignored 4 SOFT buffer(s)
 Info (278001): Inferred 1 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "outputLevel:outputLevel_0|Div0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 99
 Info (12130): Elaborated megafunction instantiation "outputLevel:outputLevel_0|lpm_divide:Div0" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/outputLevel/outputLevel.sv Line: 99
@@ -1543,42 +1504,23 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alt_
     Info (12023): Found entity 1: alt_u_div_c3f File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/db/alt_u_div_c3f.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_9p9.tdf
     Info (12023): Found entity 1: lpm_abs_9p9 File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/db/lpm_abs_9p9.tdf Line: 22
-Warning (13012): Latch encodeButton:encodeButton_0|freqSelect[1] has unsafe behavior File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal count[4] File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 49
-Warning (13012): Latch encodeButton:encodeButton_0|freqSelect[0] has unsafe behavior File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal count[4] File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 49
-Warning (13012): Latch encodeButton:encodeButton_0|freqSelect[2] has unsafe behavior File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal count[0] File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 49
-Warning (13012): Latch encodeButton:encodeButton_0|highpassSelect[1] has unsafe behavior File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal count[4] File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 49
-Warning (13012): Latch encodeButton:encodeButton_0|highpassSelect[0] has unsafe behavior File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal count[4] File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 49
-Warning (13012): Latch encodeButton:encodeButton_0|lowpassSelect[0] has unsafe behavior File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal count[4] File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 49
-Warning (13012): Latch encodeButton:encodeButton_0|lowpassSelect[1] has unsafe behavior File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/encodeButton/encodeButton.sv Line: 6
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal count[4] File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 49
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/output_files/channelStrip.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance pll:pll_0|altpll:altpll_component|lab1clk_altpll:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/db/lab1clk_altpll.v Line: 60
     Info: Must be connected
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "kpr0[0]" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 3
-    Warning (15610): No output dependent on input pin "kpr0[1]" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 3
-    Warning (15610): No output dependent on input pin "kpr0[2]" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 3
-    Warning (15610): No output dependent on input pin "kpr0[3]" File: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/topLevel/channelStrip.sv Line: 3
-Info (21057): Implemented 11914 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 11905 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 11820 logic cells
+    Info (21061): Implemented 11811 logic cells
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 71 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 469 warnings
-    Info: Peak virtual memory: 5011 megabytes
-    Info: Processing ended: Sun Apr 12 20:09:25 2020
-    Info: Elapsed time: 00:00:58
-    Info: Total CPU time (on all processors): 00:01:10
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 441 warnings
+    Info: Peak virtual memory: 5006 megabytes
+    Info: Processing ended: Sun Apr 12 22:19:53 2020
+    Info: Elapsed time: 00:00:52
+    Info: Total CPU time (on all processors): 00:01:04
 
 
 +------------------------------------------+

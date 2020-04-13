@@ -19,7 +19,7 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
     logic [3:0] num;
 
     logic [3:0] buttons;
-    logic [3:0] kpr;
+    //logic [3:0] kpr;
 
 
     /*  Frequency:         Highpass:          Lowpass:
@@ -124,7 +124,7 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
                                 .buttons(buttons));
 
     encodeButton encodeButton_0(.buttons,
-                                .reset_n,
+                                .reset_n, .clk_48,
                                 .freqSelect(freqSelect),
                                 .lowpassSelect(lowpassSelect), .highpassSelect(highpassSelect));
 

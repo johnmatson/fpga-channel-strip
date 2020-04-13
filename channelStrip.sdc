@@ -90,7 +90,7 @@ set_clock_uncertainty -fall_from [get_clocks {pll_0|altpll_component|auto_genera
 #**************************************************************
 # Set False Path
 #**************************************************************
-set_false_path -from * -to [get_ports LED[*]]
+
 
 
 #**************************************************************
