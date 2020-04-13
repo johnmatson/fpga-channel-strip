@@ -18,9 +18,8 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
     logic decimal;
     logic [3:0] num;
 
-    logic [3:0] buttonNum;
-    //logic kphit;
-    logic [15:0] buttons;
+    logic [3:0] buttons;
+    logic [3:0] kpr;
 
 
     /*  Frequency:         Highpass:          Lowpass:
@@ -34,13 +33,39 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
     7 - 10 kHz*/
 
 
-    assign freqSelect = 4;
-    assign lowpassSelect = 1;
-    assign highpassSelect = 3;
+    //assign freqSelect = 4;
+    //assign lowpassSelect = 1;
+    //assign highpassSelect = 3;
 
     assign phase = 0;
     assign mute = 0;
     assign gain = 'b0001000000000000;
+/*
+    logic [4:0] count;
+    always_ff @ (posedge clk_48, negedge reset_n) begin
+      if (~reset_n)
+        count <= 0;
+      else
+        count <= count + 1;
+    end
+
+    always_comb begin
+      if (count<7) begin
+        //buttons = 15;
+        //kpc = 'b1110;
+        kpr = 'b1110;
+      end
+      else if (count>20) begin
+        //buttons = 9;
+        //kpc = 'b1101;
+        kpr = 'b1011;
+      end
+      else begin
+        //buttons = 4;
+        //kpc = 'b1011;
+        kpr = 'b0111;
+      end
+    end*/
 
 
     always_ff @(posedge clk_48) 
@@ -93,19 +118,15 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
 
     colseq colseq_0           ( .clk(clk_48), .reset_n,
                                 .kpr,
-                                .kpc);
+                                .kpc(kpc));
                                 
     kpdecode kpdecode_0       ( .kpr, .kpc,
-                                .buttonNum/*,
-                                .kphit*/);
-    
-    decodeButton decodeButton_0(.buttonNum,
-                                .buttons);
+                                .buttons(buttons));
 
     encodeButton encodeButton_0(.buttons,
                                 .reset_n,
-                                .freqSelect(freqSelect0),
-                                .lowpassSelect(lowpassSelect0), .highpassSelect(highpassSelect0));
+                                .freqSelect(freqSelect),
+                                .lowpassSelect(lowpassSelect), .highpassSelect(highpassSelect));
 
 
     pll pll_0 ( .inclk0(CLOCK_50), .c0(clk_48) );

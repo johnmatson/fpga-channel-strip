@@ -1,6 +1,6 @@
 module encodeButton_tb;
 
-    logic [15:0] buttons;
+    logic [3:0] buttons;
     logic reset_n;
     logic [2:0] freqSelect;
     logic [2:0] lowpassSelect, highpassSelect;
@@ -14,7 +14,7 @@ module encodeButton_tb;
         #10ns reset_n = 1;
 
         for (int i = 0; i<16; i++)
-            #5ns buttons = '1 & (~(2**i));
+            #5ns buttons = i;
         
         $stop;
     end
