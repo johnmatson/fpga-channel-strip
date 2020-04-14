@@ -76,15 +76,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "kpr[3]",
-					"strict" : false
-				},
-				{
 					"name" : "kpr[1]",
 					"strict" : false
 				},
 				{
 					"name" : "kpr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "kpr[3]",
 					"strict" : false
 				}
 			]
