@@ -1,0 +1,15 @@
+{C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/ADC/ADC.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/ADC/ADC.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ADC
+
+Top level modules:
+	ADC
+
+} {} {}} {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/ADC/ADC_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/ADC/ADC_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ADC_tb
+
+Top level modules:
+	ADC_tb
+
+} {} {}}

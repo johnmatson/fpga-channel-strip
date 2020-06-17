@@ -5,7 +5,8 @@ module ADC_tb;
     logic BCLK, WCLK, LRCK;
     logic signed [15:0] leftOut, rightOut;
     
-    logic [15:0] data;
+    logic [15:0] l_data;
+    logic [15:0] r_data;
     logic clk;
     bit [4:0] i;
 
@@ -22,6 +23,7 @@ module ADC_tb;
         reset_n = 0;
 
         repeat(2) @ (posedge clk);
+        reset_n = 1;
 
         forever begin
             repeat(1) @ (negedge BCLK);
@@ -32,7 +34,7 @@ module ADC_tb;
             end
             serialIn = 0;
             WCLK = 0;
-            repeat(14) @ (negedge BCLK);
+            repeat(15) @ (negedge BCLK);
             LRCK = 0;
 
             repeat(1) @ (negedge BCLK);
@@ -43,7 +45,7 @@ module ADC_tb;
             end
             serialIn = 0;
             WCLK = 0;
-            repeat(14) @ (negedge BCLK);
+            repeat(15) @ (negedge BCLK);
             LRCK = 1;
         end
     end
@@ -53,6 +55,10 @@ module ADC_tb;
 
     always @ (posedge clk)
         BCLK = ~BCLK;
+
+    initial begin
+        #10000us $stop;
+    end
 
 
 

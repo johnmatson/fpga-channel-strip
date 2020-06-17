@@ -1,0 +1,60 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1
+vADC
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1592353595
+!i10b 1
+!s100 mQk<W6F@YC=`g8PnQaJ^h3
+Ie4?a`OV8@kfjMA3DbiKWc3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 ADC_sv_unit
+S1
+Z3 dC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/ADC
+w1592352332
+8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/ADC/ADC.sv
+FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/ADC/ADC.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1592353595.000000
+!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/ADC/ADC.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/ADC/ADC.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+n@a@d@c
+vADC_tb
+R0
+R1
+!i10b 1
+!s100 VE=UQ^9cNF?8<8gEB:Wk60
+IJgMPeS<1_maQfXRij]`5=0
+R2
+!s105 ADC_tb_sv_unit
+S1
+R3
+w1592353589
+8C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/ADC/ADC_tb.sv
+FC:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/ADC/ADC_tb.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/ADC/ADC_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/inputs/ADC/ADC_tb.sv|
+!i113 1
+R6
+R7
+n@a@d@c_tb
