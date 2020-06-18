@@ -1,5 +1,5 @@
 module DAC (input logic clk_12, clk_48, reset_n,
-            input logic signed [15:0] leftIn, rightIn
+            input logic signed [15:0] leftIn, rightIn,
             output logic DL, DR, LL, LR);
 
     bit transmit;
@@ -30,6 +30,8 @@ module DAC (input logic clk_12, clk_48, reset_n,
             end
             if (count >= 15) begin
                 transmit <= 0;
+                DL <= 0;
+                DR <= 0;
             end
             if (6 < count < 10) begin
                 LL <= 1;

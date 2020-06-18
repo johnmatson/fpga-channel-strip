@@ -5,10 +5,10 @@ module DAC_tb;
     logic DL, DR, LL, LR;
 
     bit [7:0] count;
-    logic [15:0] l_buffer;
-    logic [15:0] r_buffer;
-    logic [15:0] l_data;
-    logic [15:0] r_data;
+    logic signed [15:0] l_buffer;
+    logic signed [15:0] r_buffer;
+    logic signed [15:0] l_data;
+    logic signed [15:0] r_data;
 
     DAC dut_0(.*);
 
@@ -18,11 +18,12 @@ module DAC_tb;
         reset_n = 0;
         leftIn = 16'b0000000000001001;
         rightIn = 16'b0000000000000110;
+        count = 0;
 
         repeat(2) @ (posedge clk_48);
         reset_n = 1;
 
-        repeat(20) @ (posedge clk_48);
+        repeat(8) @ (posedge clk_48);
         leftIn = 16'b00000000000000100;
         rightIn = 16'b0000000000001000;
     end
@@ -34,7 +35,7 @@ module DAC_tb;
         end
         else begin
             l_buffer <= {l_buffer[14:0], DL};
-            r_buffer <= {r_buffer[14:0], DL};
+            r_buffer <= {r_buffer[14:0], DR};
         end
     end
 
@@ -52,7 +53,7 @@ module DAC_tb;
             r_data <= r_buffer;
     end
 
-    always #8ns clk_12 = ~clk_48;
+    always #8ns clk_12 = ~clk_12;
 
     always @ (posedge clk_12) begin
         if (count == 255)
@@ -60,6 +61,6 @@ module DAC_tb;
         count += 1;
     end
 
-    initial #20000us $stop;
+    initial #2000us $stop;
 
 endmodule
