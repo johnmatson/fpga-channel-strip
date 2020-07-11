@@ -3,8 +3,7 @@ import time
 import sounddevice as sd
 import numpy as np
 
-REQ_SAMPLE = 0b00000001
-NEW_SAMPLE = 0b00000010
+REQ_SAMPLE = [0x01,0x00,0x00,0x00,0x00]
 
 spi = spidev.SpiDev()
 spi.open(0,1)
