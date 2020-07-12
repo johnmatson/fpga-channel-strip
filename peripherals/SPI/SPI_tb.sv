@@ -19,7 +19,6 @@ module SPI_tb;
     logic [15:0] left_rpi, right_rpi;
 
     initial begin
-        SCLK = 0;
         CS = 1;
         MOSI = 0;
         clk_48 = 0;
@@ -43,6 +42,7 @@ module SPI_tb;
         repeat (1) @ (negedge clk_625);
         SCLK_en = 1;
         MOSI = cmd[7];
+        count = 0;
         repeat (7) @ (negedge clk_625) begin
             count += 1;
             MOSI = cmd[7-count];
@@ -60,7 +60,7 @@ module SPI_tb;
         end
         repeat (1) @ (negedge clk_625);
         SCLK_en = 0;
-        repeat (2) (negedge clk_625);
+        repeat (2) @ (negedge clk_625);
         CS = 1;
     end
 

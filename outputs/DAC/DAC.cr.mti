@@ -5,4 +5,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	DAC
 
+} {} {}} {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/DAC/DAC_tb.sv} {2 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/DAC/DAC_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DAC_tb
+** Warning: C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/outputs/DAC/DAC_tb.sv(27): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+Top level modules:
+	DAC_tb
+
 } {} {}}

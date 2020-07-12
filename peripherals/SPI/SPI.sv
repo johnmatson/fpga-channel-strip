@@ -12,7 +12,7 @@ module SPI (
 
 
     // four-phase handshake signals
-    logic req, new_req, old_ack;
+    logic req, new_req, last_req;
     logic xack_pipe, old_ack;
     logic busy, valid_data;
     logic [15:0] left_xfer, right_xfer;
@@ -45,12 +45,12 @@ module SPI (
         else begin
             // transmit left sample
             if (count >= 8 && count < 24 && cmd == 1) begin
-                MISO <= left_safe[23-count];
+                MISO <= left[23-count];
                 count <= count + 1;
             end
             // transmit right sample
-            else if (count >= 24 && count < 32 && cmd == 1) begin
-                MISO <= right_safe[23-count];
+            else if (count >= 24 && count < 40 && cmd == 1) begin
+                MISO <= right[39-count];
                 count <= count + 1;
             end
         end

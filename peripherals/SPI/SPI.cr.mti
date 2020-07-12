@@ -1,0 +1,8 @@
+{C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/SPI/SPI_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/John Matson/Documents/Admin/Repositories/Projects/fpga-channel-strip/peripherals/SPI/SPI_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SPI_tb
+
+Top level modules:
+	SPI_tb
+
+} {} {}}
