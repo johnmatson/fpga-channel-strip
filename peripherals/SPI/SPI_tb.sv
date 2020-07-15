@@ -7,8 +7,8 @@ module SPI_tb;
     // local I/O
     logic clk_48, reset_n;
     logic signed [15:0] left, right;
-    logic signed [63:0] hp_y1_coeff, hp_y2_coeff, hp_x0_coeff, hp_x1_coeff, hp_x2_coeff;
-    logic signed [63:0] lp_y1_coeff, lp_y2_coeff, lp_x0_coeff, lp_x1_coeff, lp_x2_coeff;
+    // logic signed [63:0] hp_y1_coeff, hp_y2_coeff, hp_x0_coeff, hp_x1_coeff, hp_x2_coeff;
+    // logic signed [63:0] lp_y1_coeff, lp_y2_coeff, lp_x0_coeff, lp_x1_coeff, lp_x2_coeff;
 
     SPI dut_0 (.*);
 

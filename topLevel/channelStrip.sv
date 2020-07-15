@@ -3,6 +3,8 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
                         input logic  [3:0] kpr,  // rows, active-low w/ pull-ups
                         output logic [7:0] leds,  // 7-seg LED cathodes
                         output logic [3:0] ct, // digit enable
+                        input logic SCLK, CS, MOSI, // SPI inputs
+                        output logic MISO, // SPI output
                         input logic  reset_n, CLOCK_50 ) ;
 
     logic clk_48;
@@ -11,7 +13,8 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
     logic [2:0] lowpassSelect, highpassSelect;
     logic phase, mute;
     logic [15:0] gain;
-    logic signed [15:0] stage1, stage2, stage3, stage4, stage5, stage6;
+    logic signed [15:0] stage1_l, stage2_l, stage3_l, stage4_l, stage5_l, stage6_l;
+    logic signed [15:0] stage1_r, stage2_r, stage3_r, stage4_r, stage5_r, stage6_r;
 
     logic [1:0] digit;
     logic [3:0] num3, num2, num1, num0;
@@ -33,7 +36,7 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
     7 - 10 kHz*/
 
 
-    //assign freqSelect = 4;
+    assign freqSelect = 4;
     //assign lowpassSelect = 1;
     //assign highpassSelect = 3;
 
@@ -73,35 +76,59 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
         digit <= digit + 1'b1 ;
 
 
-    sineWaveGen sineWaveGen_0 ( .clk_48, .reset_n,
+    sineWaveGen sineWaveGen_l ( .clk_48, .reset_n,
                                 .freq(freqSelect),
-                                .outWave(stage1));
+                                .outWave(stage1_l));
+    sineWaveGen sineWaveGen_r ( .clk_48, .reset_n,
+                                .freq(freqSelect),
+                                .outWave(stage1_r));
 
-    lowpass lowpass_0         ( .clk_48, .reset_n,
+    lowpass lowpass_l         ( .clk_48, .reset_n,
                                 .filter(lowpassSelect),
-                                .lowpassIn(stage1),
-                                .lowpassOut(stage2));
+                                .lowpassIn(stage1_l),
+                                .lowpassOut(stage2_l));
+    lowpass lowpass_r         ( .clk_48, .reset_n,
+                                .filter(lowpassSelect),
+                                .lowpassIn(stage1_r),
+                                .lowpassOut(stage2_r));
 
-    highpass highpass_0       ( .clk_48, .reset_n,
+    highpass highpass_l       ( .clk_48, .reset_n,
                                 .filter(highpassSelect),
-                                .highpassIn(stage2),
-                                .highpassOut(stage3));
+                                .highpassIn(stage2_l),
+                                .highpassOut(stage3_r));
+    highpass highpass_r       ( .clk_48, .reset_n,
+                                .filter(highpassSelect),
+                                .highpassIn(stage2_r),
+                                .highpassOut(stage3_r));
 
-    phase phase_0             ( .phase,
-                                .phaseIn(stage3),
-                                .phaseOut(stage4));
+    phase phase_l             ( .phase,
+                                .phaseIn(stage3_l),
+                                .phaseOut(stage4_l));
+    phase phase_r             ( .phase,
+                                .phaseIn(stage3_r),
+                                .phaseOut(stage4_r));
 
-    outputGain outputGain_0   ( .gain,
-                                .outputGainIn(stage4),
-                                .outputGainOut(stage5));
+    outputGain outputGain_l   ( .gain,
+                                .outputGainIn(stage4_l),
+                                .outputGainOut(stage5_l));
+    outputGain outputGain_r   ( .gain,
+                                .outputGainIn(stage4_r),
+                                .outputGainOut(stage5_r));
 
-    mute mute_0               ( .mute,
-                                .muteIn(stage5),
-                                .muteOut(stage6));
+    mute mute_l               ( .mute,
+                                .muteIn(stage5_l),
+                                .muteOut(stage6_l));
+    mute mute_r               ( .mute,
+                                .muteIn(stage5_r),
+                                .muteOut(stage6_r));
 
     outputLevel outputLevel_0 ( .clk_48, .reset_n,
-                                .inWave(stage1), .outWave(stage6),
+                                .inWave(stage1_l), .outWave(stage6_l),
                                 .num3, .num2, .num1, .num0 );
+
+    SPI SPI_0                 ( .SCLK, .CS, .MOSI, .MISO,
+                                .clk_48, .reset_n,
+                                .left(stage1_l), .right(stage1_r));
 
 
     displayMux displayMux_0   ( .digit,
@@ -127,7 +154,7 @@ module channelStrip (   output logic [3:0] kpc,  // column select, active-low
     encodeButton encodeButton_0(.buttons,
                                 .clk_48, .reset_n,
                                 .mute,
-                                .freqSelect,
+                                .freqSelect(freqSelect1),
                                 .lowpassSelect, .highpassSelect);
 
 
