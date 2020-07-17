@@ -6,15 +6,20 @@ import numpy as np
 REQ_SAMPLE = [0x01,0x00,0x00,0x00,0x00]
 
 spi = spidev.SpiDev()
-spi.open(0,1)
-spi.max_speed_hz(62.5e6)
+spi.open(0,0)
+spi.max_speed_hz = 31200000
 
 def getSample(outdata, frames, time, status):
-    data = np.int32()
+    #data = np.int32()
     data = spi.xfer2(REQ_SAMPLE)
-    left = np.int16((data >> 16) & 0xffff)
-    right = np.int16(data & 0xffff)
+    left_MS = np.int16(data[1])
+    left_LS = np.int16(data[2])
+    right_MS = np.int16(data[3])
+    right_LS = np.int16(data[4])
+    left = np.int16((left_MS << 8) | left_LS)
+    right = np.int16((right_MS << 8) | right_LS)
     outdata[:] = left, right
+    #print(data, outdata, REQ_SAMPLE)
 
 stream = sd.OutputStream(
     samplerate=48e3,
