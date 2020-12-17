@@ -2,6 +2,7 @@
 >A real-time FPGA audio processing channel strip, implemented using SystemVerilog for the DE0-Nano-SoC. Developed by John Matson and Igor Gasovic-Varga for BCIT's ELEX 7660, taught by Robert Trost.
 
 ## Usage
+This is a hardware descritption project, designed for the FPGA in the the DE0-Nano-SoC. The system is designed to be used in combination with the AD1877 ADC and the AD1866 DAC, or in verification mode with a 4x4 keypad and an array of four 7-segment displays. The platform has been tested using ModelSim simulation software and verified and synthesized using Quartus Prime. The channel strip operates as a mono, stand-alone unit and should be used to process an individual line-level signal, such as guitar or vocal audio.
 
 ## Progress
 Objective | Description | Status
@@ -150,3 +151,6 @@ The decodeButton module decodes the button number as received from kpdecode to t
 The colseq module receives the kpr input, and outputs kpc. These refer to the keypad columns and rows which are used in the kpdecode module to determine which button is being pressed. The module uses sequential logic, clocked at 48 kHz, to sequence the 4-bit keypad column output. The colseq module is identical to the one used in several ELEX 7660 labs.
 
 ## Conclusions & Future Work
+We originally set out to create a real-time single channel audio processor with an FPGA at the heart of the design to perform the digital processing, accompanied by an ADC and DAC for I/O. With recently learned course material from ELEX 7660 - Digital System Design and ELEX 7620 - Signal Processing and Filters, we were able to implement a chain of digital audio processing with digital logic on the FPGA. Due to the Covid-19 pandemic, we were unable to access the lab equipment required to integrate the ADC and DAC, however, we made use of FPGA and several DE0-Nano-SoC peripherals to demonstrate the functionality of the channel strip.
+
+In terms of ongoing developmemt, integrating a working ADC and DAC is a top priority. Additional processing modules including compression and equalization are also among the top priorities, although the addition of an external control and monitoring unit will likely take precedence. Although the FPGA platform is excellent for low-latency parallel processing, user-interface elements are very difficult to develop for FPGA. As such, we turn to the Raspberry Pi platform where the user will be able to control channel strip parameters and view metering information, leaving the FPGA to handle the low-level signal processing. Once these changes have been implemented, we can focus on the integration of additional audio channels. Stay tuned for continued development.
